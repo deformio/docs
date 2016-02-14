@@ -1,0 +1,18 @@
+site_name: Deform
+theme: readthedocs
+markdown_extensions:
+    - markdown_include.include
+pages:
+- Home: index.md
+- Quickstart: quickstart/index.md
+- Projects: cli.md
+- Collections: collections.md
+- Documents: cli.md
+- Schemas: cli.md
+- Files: cli.md
+- Tokens: cli.md
+- Processors: cli.md
+- Embeds: cli.md
+- Hooks: cli.md
+- CLI Reference: cli.md
+- HTTP API Reference: cli.md

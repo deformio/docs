@@ -1,0 +1,10 @@
+<div>
+  <h3>{{ venue.name }}</h3>
+  <div>
+    {% for photo in venue.photos %}
+      <img src="https://mysquare.deform.io/api/collections/venues/{{venue._id}}/photos/{{loop.index}}/content/"
+           style="width: 100px; height: 100px"
+           alt="" />
+    {% endfor %}
+  </div>
+</div>
