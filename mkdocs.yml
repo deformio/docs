@@ -2,6 +2,7 @@ site_name: Deform
 theme: readthedocs
 markdown_extensions:
     - markdown_include.include
+    - admonition
 pages:
 - Home: index.md
 - Quickstart: quickstart/index.md

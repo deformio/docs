@@ -20,9 +20,10 @@ Provide an initial project with the name and the identifier:
           --project-name 'My mysquare' \
           --project-id 'mysquare'
 
-Be careful with the `--project-id`.
-It should be unique across the all Deform projects (even if it doesn't belong to your account!).
-If you have some conflict errors just set the project's id as `mysquare1`, `mysquare2`, etc...
+!!! note
+    Be careful with the `--project-id`.
+    It should be unique across the all Deform projects (even if it doesn't belong to your account!).
+    If you have some conflict errors just set the project's id as `mysquare1`, `mysquare2`, etc...
 
 When you create the account you automatically become logged in.
 
@@ -605,11 +606,47 @@ Open the [http://127.0.0.1:5000/subway](http://127.0.0.1:5000/subway) page:
 
 ![venue detail](examples/005/screens/venue_detail.png)
 
+As you remember it's possible to get file's content with CLI. For retrieving
+file's content with HTTP API you can build a full url by next pattern:
+
+```
+https://<project-id>.deform.io/api/collections/<collection-id>/documents/<document-id>/<path-to-file-property>/content/
+```
+
+Why don't we see the images on the venue page? Let's look at the developer console:
+
+![developer console](examples/005/screens/developer_console.png)
+
+You should remember that Deform does not allow to work with the project data without authorization.
+Browser is yet another client that should authorize it's requests to the HTTP API.
+It's possible to send authorization token with `token` query parameter. For example:
+
+```
+https://<project-id>.deform.io/.../content/?token=<token>
+```
+
+Let's send the token to the template context:
+
+```python
+{!docs/quickstart/examples/006/code/mysquare.py!}
+```
+
+Use the token in image's content url:
+
+**templates/venue_detail.html**
+
+```html
+{!docs/quickstart/examples/006/code/templates/venue_detail.html!}
+```
+
 ## Todo:
 
+* Image resize processors
 * Reprocess images (for subway)
-
 * Geolocation
+* Search:
+    * By name
+    * By compound field (with template processors)
 
 show on map
 show location near venue (on detail page)
