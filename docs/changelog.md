@@ -2,6 +2,10 @@
 
 ## v0.0.1
 
+### 21.02.2016
+  
+  * New system collection `_users` added.
+
 ### 20.02.2016
   
   * User email validation
