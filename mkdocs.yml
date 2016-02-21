@@ -17,3 +17,4 @@ pages:
 - Hooks: cli.md
 - CLI Reference: cli.md
 - HTTP API Reference: cli.md
+- Changelog: changelog.md
