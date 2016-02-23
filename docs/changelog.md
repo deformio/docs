@@ -2,6 +2,10 @@
 
 ## v0.0.1
 
+### 23.02.2016
+  
+  * Hooks has a timeout 10 seconds
+
 ### 21.02.2016
   
   * New system collection `_users` added.
