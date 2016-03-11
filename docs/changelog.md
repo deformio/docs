@@ -2,6 +2,27 @@
 
 ## v0.0.1
 
+### 11.03.2016
+
+  * Token permissions migrated from
+
+        {
+            "permission": {
+                all: true
+            }
+        }
+
+    to 
+
+        {
+            "permission": {
+                "allow": {
+                    "all": true
+                }
+            }
+        }
+
+
 ### 23.02.2016
   
   * Hooks has a timeout 10 seconds
