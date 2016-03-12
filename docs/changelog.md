@@ -2,13 +2,36 @@
 
 ## v0.0.1
 
+### 12.03.2016
+
+  * Http Api Response interface migrated from
+
+        {
+            "error": [
+            ]
+        }
+
+    to 
+
+        {
+            "result": {
+                "message": "",
+                "errors": [
+                ],
+            }
+        }
+
 ### 11.03.2016
 
   * Token permissions migrated from
 
         {
             "permission": {
-                all: true
+                "all": true,
+                "read": [],
+                "write": [],
+                "delete": [],
+                "update": []
             }
         }
 
@@ -17,7 +40,11 @@
         {
             "permission": {
                 "allow": {
-                    "all": true
+                    "all": true,
+                    "read": [],
+                    "write": [],
+                    "delete": [],
+                    "update": []
                 }
             }
         }
