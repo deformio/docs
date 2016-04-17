@@ -2,6 +2,20 @@
 
 ## v0.0.1
 
+### 17.04.2016
+
+  * Collection and Project support `fields` and `fields_exclude`.
+
+### 30.03.2016
+
+  * Watermark processor fix. No url required. Watermark file is required.
+  
+### 18.03.2016
+
+  * Processor dependency recursion detection implemented.
+  * ProcessOnly mechanism implemented.
+  
+
 ### 12.03.2016
 
   * Http Api Response interface migrated from
@@ -56,7 +70,8 @@
 
 ### 21.02.2016
   
-  * New system collection `_users` added.
+  * New system collection `_users`.
+  * New system collection `_notification`.
 
 ### 20.02.2016
   
