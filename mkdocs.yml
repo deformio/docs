@@ -6,15 +6,15 @@ markdown_extensions:
 pages:
 - Home: index.md
 - Quickstart: quickstart/index.md
-- Projects: cli.md
+- Projects: projects.md
 - Collections: collections.md
-- Documents: cli.md
-- Schemas: cli.md
-- Files: cli.md
-- Tokens: cli.md
-- Processors: cli.md
-- Embeds: cli.md
-- Hooks: cli.md
+- Documents: documents.md
+- Schemas: schemas.md
+- Files: files.md
+- Tokens: tokens.md
+- Processors: processors.md
+- Embeds: embeds.md
+- Hooks: hooks.md
 - CLI Reference: cli.md
 - HTTP API Reference: cli.md
 - Changelog: changelog.md

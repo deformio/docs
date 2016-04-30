@@ -2,6 +2,10 @@
 
 ## v0.0.1
 
+### 30.04.2016
+  
+  * User can have **5** projects.
+
 ### 17.04.2016
 
   * Collection and Project support `fields` and `fields_exclude`.
