@@ -2,7 +2,7 @@
 
 We've implemented new type `embed`. 
 
-This type can access your project's collection document and set a property equal to document json content.
+This type can access your project's collection document. If a document exists set a property equal it's JSON.
 
 ## Example: Countries & Cities
 

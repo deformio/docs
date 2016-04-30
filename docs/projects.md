@@ -1,29 +1,60 @@
 # Projects
 
-Project is an entity which contains collections. 
+Project is an entrypoint to your DeformIO world.
 
-You can request your project's entities by adding it's `_id` to our domain. 
+## Project properties
 
-For example your project has `_id` equal to `hello`. Request it's collections as easy as:
+	{
+	    "_id": "project-35567587-35567587",
+	    "name": "post-created-project-name",
+	    "settings": {
+	        "check_limits_period": "24h0m0s",
+	        "data_size_limit": 5242880,
+	        "delete_files": false,
+	        "files_size_limit": 10485760,
+	        "orphan_files_ttl": "168h0m0s",
+	        "rate_limit": 30
+	    },
+	    "status": {
+	        "data_size": 7584,
+	        "files_size": 0,
+	        "rate": 0
+	    }
+	}
 
-    curl -H "Authorization: Token <ACCESS_TOKEN>" https://hello.deform.io/api/collections/
+
+Property     | Type          | Description
+-------------|---------------|-------------
+_id          | string | id of a project
+name         | string | name of a project
+settings     | object | project settings
+status       | object | project status
+
+### settings
+
+Property     | Type          | Editable | Description
+-------------|---------------|:--------:|-----------
+check_limits_period | string |          |How often limits of a project will be checked
+data_size_limit     | int    |          |Database size limit. Bytes
+delete_files        | bool   | *        |Delete files after related documents and collections were deleted
+files_size_limit    | int    |          |Files size limit. Bytes
+orphan_files_ttl    | string | *        |TTL of a file without document since `last_access`
+rate_limit          | int    |          |NIY. Requests per second limit
+
+### status
+
+Property     | Type          | Description
+-------------|---------------|-------------
+data_size    | int           | Database size
+files_size   | int           | Files size
+rate         | int           | NYI. Requests per second
 
 
-## Limitations
+## Current limitations
 
-By default user can have maximum `5` projects.
+By default user can have up to `5` projects.
 
 Project default settings:
 
   * `database` size: **5 Mb**
   * `files` size: **10 Mb**
-
-
-## Status and Usage
-
-Current usage can be found in `status` property of a requested project.
-
-You can modify `settings`:
-  
-  * `settings.delete_files` - files should be deleted in the moment when related documents/collections are deleted ( **default false** )
-  * `settings.orphan_files_ttl` - time orphan files to live if `settings.delete_files:false` since `last_access` of a file.
