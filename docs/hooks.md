@@ -1,12 +1,14 @@
 # Hooks
 
-Webhooks are meant to commit a request somewhere when some event is being started.
+Webhooks are meant to commit a request when some event happens.
 
-They **works only for documents**.
+Hooks **is being triggered by documents** only.
 
 We have implemented webhooks as our needs were, but fill free to send us a feedback if you see something we missed.
 
 ## Hook properties
+
+Response to `/api/collections/_hooks/documents/<hook_id>/`
 
 	{
 	    "_id": "57114ee832d2c668de756b5d",
@@ -38,7 +40,7 @@ We have implemented webhooks as our needs were, but fill free to send us a feedb
 
 Property                | Type          | Description
 ------------------------|---------------|-------------
-_id                     | string        | id of a project
+_id                     | string        | unique identity of the  project
 name                    | string        | name of a project
 collection              | string        | collection which contains a documents called hook to trigger
 condition               | object        | condition of a successful hook trigger
@@ -73,8 +75,8 @@ Hook will contain these headers in a request:
 Header              | Description
 ------------------- | ------------
 X-Hook-ID           | `_id`  of a hook
-X-Hook-Trigger      | event` of a document which caused hook to trigger
-X-Hook-Operation-ID | operation `_id` of a hook. Can be found in a `_hooks_history`
+X-Hook-Trigger      | event of a document which caused hook to trigger
+X-Hook-Operation-ID | operation is `_id` of a hook. Can be found in a `_hooks_history`
 
 If `method` is `PUT`, `PATCH` or `POST`:
 

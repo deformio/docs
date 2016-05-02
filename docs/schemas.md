@@ -46,21 +46,21 @@ datetime | string | format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 embed    | object | makes possible to set a data source
 
 
-### Datetime
+### datetime
 
 These two are valid datetimes:
  
  * `2009-11-10T23:00:00Z`
  * `2015-06-03T15:55:59.073Z`
 
-### Embed
+All datetime without a timezone will be assumed to be a UTC.
+
+You can set a date to `2015-06-03T18:55:59.073+03:00` this will be converted to UTC and properly saved to database.
+
+### embed
 
 Property     | Type   | Required | Description
 -------------|--------|:--------:|-----------
 collection   | string | *        | points to collection for data to fetch from
-field        | string |          | `_id`  or a collection schema's field
-
-All datetime without a timezone will be assumed to be a UTC.
-
-You can set a date to `2015-06-03T18:55:59.073+03:00` this will be converted to UTC and properly saved to database.
+field        | string |          | the field of a collection. default is `_id`
 

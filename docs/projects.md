@@ -4,6 +4,8 @@ Project is an entrypoint to your DeformIO world.
 
 ## Project properties
 
+Response to `/api/user/project/<project_id>/`
+
 	{
 	    "_id": "project-35567587-35567587",
 	    "name": "post-created-project-name",
@@ -25,21 +27,22 @@ Project is an entrypoint to your DeformIO world.
 
 Property     | Type          | Description
 -------------|---------------|-------------
-_id          | string | id of a project
-name         | string | name of a project
-settings     | object | project settings
-status       | object | project status
+_id          | string        | Unique identity of the project
+name         | string        | Name of a project
+settings     | object        | Project settings
+status       | object        | Project status
 
 ### settings
 
 Property     | Type          | Editable | Description
 -------------|---------------|:--------:|-----------
-check_limits_period | string |          |How often limits of a project will be checked
-data_size_limit     | int    |          |Database size limit. Bytes
-delete_files        | bool   | *        |Delete files after related documents and collections were deleted
-files_size_limit    | int    |          |Files size limit. Bytes
-orphan_files_ttl    | string | *        |TTL of a file without document since `last_access`
-rate_limit          | int    |          |NIY. Requests per second limit
+check_limits_period | string |          | How often limits of a project will be checked
+data_size_limit     | int    |          | Database size limit. Bytes
+delete_files        | bool   | *        | Delete files after related documents and collections were deleted
+files_size_limit    | int    |          | Files size limit. Bytes
+orphan_files_ttl    | string | *        | TTL of a file without document since `last_access`
+rate_limit          | int    |          | NIY. Requests per second limit
+
 
 ### status
 
