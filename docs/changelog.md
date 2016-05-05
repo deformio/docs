@@ -2,6 +2,24 @@
 
 ## v0.0.1
 
+### 04.05.2016
+
+  * Create collection property response interface has changed to
+
+    {
+        "collection_created": true,
+        "property": {
+            "type": "string",
+            "description": "created collection property"
+        }
+    }
+
+### 03.05.2016
+  
+  * Processors changed:
+      * apiai - has customer settings now
+
+
 ### 30.04.2016
   
   * User can have **5** projects.
