@@ -4,7 +4,7 @@ Project is an entrypoint to your DeformIO world.
 
 ## Project properties
 
-Response to `/api/user/project/<project_id>/`
+`/api/user/project/<project_id>/`
 
 	{
 	    "_id": "project-35567587-35567587",
@@ -25,23 +25,23 @@ Response to `/api/user/project/<project_id>/`
 	}
 
 
-Property     | Type          | Description
--------------|---------------|-------------
-_id          | string        | Unique identity of the project
-name         | string        | Name of a project
-settings     | object        | Project settings
-status       | object        | Project status
+Property      | Type          | Description
+--------------|---------------|-------------
+\_id          | string        | Unique identity of the project
+name          | string        | Name of a project
+settings      | object        | Project settings
+status        | object        | Project status
 
 ### settings
 
 Property     | Type          | Editable | Description
 -------------|---------------|:--------:|-----------
-check_limits_period | string |          | How often limits of a project will be checked
-data_size_limit     | int    |          | Database size limit. Bytes
-delete_files        | bool   | *        | Delete files after related documents and collections were deleted
-files_size_limit    | int    |          | Files size limit. Bytes
-orphan_files_ttl    | string | *        | TTL of a file without document since `last_access`
-rate_limit          | int    |          | NIY. Requests per second limit
+check\_limits\_period | string |          | How often limits of a project will be checked
+data\_size\_limit     | int    |          | Database size limit. Bytes
+delete\_files         | bool   | *        | Delete files after related documents and collections were deleted
+files\_size\_limit    | int    |          | Files size limit. Bytes
+orphan\_files\_ttl    | string | *        | TTL of a file without document since `last_access`
+rate\_limit           | int    |          | NIY. Requests per second limit
 
 
 ### status

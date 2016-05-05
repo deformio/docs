@@ -9,7 +9,7 @@ Tokens **cannot** be used to operate with:
 
 ## Token properties
 
-Response to `/api/collections/_tokens/documents/<token_id>/`
+`/api/collections/_tokens/documents/<token_id>/`
 
 	{
 	    "_id": "57114edc32d2c668de756b0c",
@@ -54,12 +54,12 @@ Response to `/api/collections/_tokens/documents/<token_id>/`
 	}
 
 
-Property     | Type          | Description
--------------|---------------|-------------
-_id          | string        | Unique identity of the token
-name         | string        | Name of a token
-is_active    | bool          | Is token active or not
-permission   | object        | Token access levels
+Property      | Type          | Description
+--------------|---------------|-------------
+\_id          | string        | Unique identity of the token
+name          | string        | Name of a token
+is\_active    | bool          | Is token active or not
+permission    | object        | Token access levels
 
 
 ### permission
@@ -82,8 +82,8 @@ delete       | array         | List of [entities](/tokens/#access-entity) which 
 
 ##### access entity
 
-Property     | Type          | Description
--------------|---------------|-------------
-what         | string        | Values: `collection`, `document`
-what_id      | string        | Unique identifier of a `what` entity to perate with
-where        | string        | If `what:document` this will be the `_id` of a collection
+Property      | Type          | Description
+--------------|---------------|-------------
+what          | string        | Values: `collection`, `document`
+what\_id      | string        | Unique identifier of a `what` entity to perate with
+where         | string        | If `what:document` this will be the `_id` of a collection

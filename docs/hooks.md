@@ -4,11 +4,9 @@ Webhooks are meant to commit a request when some event happens.
 
 Hooks **is being triggered by documents** only.
 
-We have implemented webhooks as our needs were, but fill free to send us a feedback if you see something we missed.
-
 ## Hook properties
 
-Response to `/api/collections/_hooks/documents/<hook_id>/`
+`/api/collections/_hooks/documents/<hook_id>/`
 
 	{
 	    "_id": "57114ee832d2c668de756b5d",
@@ -38,17 +36,17 @@ Response to `/api/collections/_hooks/documents/<hook_id>/`
 	}
 
 
-Property                | Type          | Description
-------------------------|---------------|-------------
-_id                     | string        | unique identity of the  project
-name                    | string        | name of a project
-collection              | string        | collection which contains a documents called hook to trigger
-condition               | object        | condition of a successful hook trigger
-headers                 | object        | http request headers
-method                  | string        | http method to commit a request
-triggers                | array         | document event to trigger a hook
-request_payload_wrapper | string        | name of `payload` property
-url                     | string        | url to commit a http request
+Property                  | Type          | Description
+--------------------------|---------------|-------------
+\_id                      | string        | unique identity of the hook
+name                      | string        | name of a hook
+collection                | string        | collection which contains a documents called hook to trigger
+condition                 | object        | condition of a successful hook trigger
+headers                   | object        | http request headers
+method                    | string        | http method to commit a request
+triggers                  | array         | document event to trigger a hook
+request\_payload\_wrapper | string        | name of `payload` property
+url                       | string        | url to commit a http request
 
 
 ### collection
@@ -59,7 +57,7 @@ All documents from this collection will be used to be a hook trigger
 
 This is a schema. If a document which triggered this hook matches this `condition` schema - this hook will commit an operation, otherwise it won't.
 
-If you want all documents to trigger a hook - make it's value equal a
+If you want all documents to trigger a hook - make `condition` value equal to
 
     {
         "type": "object",
@@ -106,7 +104,7 @@ In some cases you may need a webhook to `PUT` a processed document to your cache
 
 When a document event matches `created`, `updated`, `deleted` the webhook triggers.
 
-### request_payload_wrapper
+### request\_payload\_wrapper
 
 By default a payload of a webhook is wrapped to `payload` property. 
 

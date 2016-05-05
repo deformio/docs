@@ -1,10 +1,10 @@
 # Collections
 
-Collection contains documents. It used to group, validate and process documents.
+It used to group, validate and process documents.
 
 ## Collection properties
 
-Response to `/api/collections/<collection_id>/`
+`/api/collections/<collection_id>/`
 
 General collection looks like:
 
@@ -26,15 +26,15 @@ General collection looks like:
     }
 
 
-Property              | Type          | Description
---------------------- | ------------- | ------------
-_id                   | string        | Unique identity of the collection
-documents_permissions | object        | Documents access permissions
-indexes               | array         | A list of indexes
-is_system             | bool          | If is true then this is a [system collection](/collections/#system-collections)
-name                  | string        | Name of a collection
-repr_property         | string        | Reproducive property of a collection
-schema                | object        | Is a [JSON Schema](/schemas/) a documents should match
+Property               | Type          | Description
+---------------------- | ------------- | ------------
+\_id                   | string        | Unique identity of the collection
+documents\_permissions | object        | Documents access permissions
+indexes                | array         | A list of indexes
+is\_system             | bool          | If is true then this is a [system collection](/collections/#system-collections)
+name                   | string        | Name of a collection
+repr_property          | string        | Reproducive property of a collection
+schema                 | object        | Is a [JSON Schema](/schemas/) a documents should match
 
 
 ## indexes
@@ -80,21 +80,21 @@ Currently supported languages are:
 
 Code   | Name
 :-----:|------
-da     |  danish
-nl     |  dutch
-en     |  english
-fi     |  finnish
-fr     |  french
-de     |  german
-hu     |  hungarian
-it     |  italian
-nb     |  norwegian
-pt     |  portuguese
-ro     |  romanian
-ru     |  russian
-es     |  spanish
-sv     |  swedish
-tr     |  turkish
+da     | danish
+nl     | dutch
+en     | english
+fi     | finnish
+fr     | french
+de     | german
+hu     | hungarian
+it     | italian
+nb     | norwegian
+pt     | portuguese
+ro     | romanian
+ru     | russian
+es     | spanish
+sv     | swedish
+tr     | turkish
 ara    | arabic
 prs    | dari
 pes    | iranian persian
@@ -118,10 +118,33 @@ You cannot **create**, **delete**, **update** system collections.
 
 Name           | Description
 -------------- | ------------
-_notifications | System notifications will be saved here
-_files         | Uploaded and generated files
-_tokens        | Access tokens to your project
-_hooks         | Hooks
-_hooks_history | Hook history with responses and status codes
-_users         | List of users allowed to your project. If you delete yourself you will have access to a project
+\_notifications | System notifications will be saved here
+\_files         | Uploaded and generated files
+\_tokens        | Access tokens to your project
+\_hooks         | Hooks
+\_hooks_history | Hook history with responses and status codes
+\_users         | List of users allowed to your project. If you delete yourself you will have access to a project
 
+### \_notifications
+
+All notifications from a system.
+
+### \_files
+
+Uploaded and generated files.
+
+### \_tokens
+
+Manage access tokens in this collection.
+
+### \_hooks
+
+List of hooks and their conditions.
+
+### \_hooks_history
+
+Hook history is a collection
+
+### \_users
+
+List of users allowed to access to the project. If you delete yourself you will still have an access to the project.

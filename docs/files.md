@@ -6,9 +6,9 @@ Total size of all files could be found in a [project's status](/projects/#status
 
 ## Document and Content
 
-Every file can be retrieved as a document and as a raw bytes.
+Every file can be retrieved as JSON document and raw bytes.
 
-  * `/collections/_files/documents/<file_id>/` - as a json document
-  * `/collections/_files/documents/<file_id>/content/` - as raw bytes
-  * `/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/` - as a json document
-  * `/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/content/` - as raw bytes
+  * `/collections/_files/documents/<file_id>/` - JSON document
+  * `/collections/_files/documents/<file_id>/content/` - raw bytes
+  * `/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/` - JSON document
+  * `/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/content/` - raw bytes
