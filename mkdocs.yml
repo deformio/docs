@@ -15,6 +15,7 @@ pages:
 - Processors: processors.md
 - Embeds: embeds.md
 - Hooks: hooks.md
+- HTTP Status Codes: http_status_codes.md
 - CLI Reference: cli.md
 - HTTP API Reference: cli.md
 - Changelog: changelog.md

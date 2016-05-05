@@ -1,57 +1,63 @@
 # Hooks
 
-Webhooks are meant to commit a request somewhere when some event is being started.
+Webhooks are meant to commit a request when some event happens.
 
-They **works only for documents**.
+Hooks **is being triggered by documents** only.
 
-We have implemented webhooks as our needs were, but fill free to send us a feedback if you see something we missed.
+## Hook properties
 
-## Features
+`/api/collections/_hooks/documents/<hook_id>/`
 
-### Headers
+	{
+	    "_id": "57114ee832d2c668de756b5d",
+	    "collection": "_files",
+	    "condition": {
+	        "additionalProperties": true,
+	        "properties": {
+	            "name": {
+	                "enum": [
+	                    "small.jpg"
+	                ],
+	                "type": "string"
+	            }
+	        },
+	        "type": "object"
+	    },
+	    "headers": {
+	        "Authorization": "Bearer <secret-value>",
+	        "Content-Type": "application/json"
+	    },
+	    "method": "GET",
+	    "name": "files_hook",
+	    "triggers": [
+	        "created"
+	    ],
+	    "url": "https://example.com/url-to-post-to"
+	}
 
-Hook has a property `headers`. 
 
-Every webhook will these headers in a request:
-  
-  * `X-Hook-ID` - `_id` of a hook
-  * `X-Hook-Trigger` - `event` of a document which caused hook to trigger
-  * `X-Hook-Operation-ID` - operation `_id` of a hook. Can be found in a `_hooks_history`
+Property                  | Type          | Description
+--------------------------|---------------|-------------
+\_id                      | string        | unique identity of the hook
+name                      | string        | name of a hook
+collection                | string        | collection which contains a documents called hook to trigger
+condition                 | object        | condition of a successful hook trigger
+headers                   | object        | http request headers
+method                    | string        | http method to commit a request
+triggers                  | array         | document event to trigger a hook
+request\_payload\_wrapper | string        | name of `payload` property
+url                       | string        | url to commit a http request
 
-In case of method equals `PUT`, `PATCH` or `POST`:
 
-  * Header `Content-Type` will always be `application/json`
-  * Header `Content-Length` will be passed with length of a payload
+### collection
 
-In some cases you may need a webhook to pass a custom header with a request it commits.
+All documents from this collection will be used to be a hook trigger
 
-### Methods
+### condition
 
-This Method is being used to commit a HTTP Request.
+This is a schema. If a document which triggered this hook matches this `condition` schema - this hook will commit an operation, otherwise it won't.
 
-Hook has a property `method`. Possible values are `["GET", "POST", "DELETE", "PUT"]`. 
-
-Methods `PUT`, `PATCH`, `POST` will contain a body. 
-
-Methods `GET`, `DELETE` will not contain a body.
-
-In some cases you may need a webhook to `PUT` a processed document to your cache or database with REST.
-
-### Events
-
-Hook has a property `triggers`. When a document event matches `["created", "updated", "deleted"]` the webhook triggers.
-
-### Wrapper
-
-Hook has a property `request_payload_wrapper`. By default a payload of a webhook is wrapped to `payload` property. 
-
-Sometimes you may need it to be a different root property.
-
-### Condition
-
-Hook has a property `condition`. This is a schema. If a document which triggered this hook matches this `condition` schema - this hook will commit an operation, otherwise it won't.
-
-If you want all documents to trigger a hook - make it's value equal a
+If you want all documents to trigger a hook - make `condition` value equal to
 
     {
         "type": "object",
@@ -59,3 +65,47 @@ If you want all documents to trigger a hook - make it's value equal a
     }
 
 All documents will match this schema and a hook will trigger
+
+### headers
+
+Hook will contain these headers in a request:
+
+Header              | Description
+------------------- | ------------
+X-Hook-ID           | `_id`  of a hook
+X-Hook-Trigger      | event of a document which caused hook to trigger
+X-Hook-Operation-ID | operation is `_id` of a hook. Can be found in a `_hooks_history`
+
+If `method` is `PUT`, `PATCH` or `POST`:
+
+Header         | Value              | Description
+-------------- | ------------------ | ------------
+Content-Type   | `application/json` | Body will contain document's JSON
+Content-Length |                    | Length of document's JSON
+
+In some cases you may need a webhook to pass a custom header with a request it commits.
+
+### method
+
+A **method** is being used to commit a HTTP Request. Valud values are `GET`, `POST`, `DELETE` or `PUT`.
+
+Method |  Body | Content-Type
+-------|:-----:|------------------
+PUT    | *     | `application/json`
+PATCH  | *     | `application/json`
+POST   | *     | `application/json`
+GET    |       |
+DELETE |       |
+
+
+In some cases you may need a webhook to `PUT` a processed document to your cache or database.
+
+### triggers
+
+When a document event matches `created`, `updated`, `deleted` the webhook triggers.
+
+### request\_payload\_wrapper
+
+By default a payload of a webhook is wrapped to `payload` property. 
+
+Sometimes you may need it to be a different root property.
