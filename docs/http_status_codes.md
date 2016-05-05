@@ -1,4 +1,6 @@
-## HTTP Status codes
+# HTTP Interface
+
+## Status Codes
 
 Code |  Description
 ---- | ------------
