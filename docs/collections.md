@@ -6,8 +6,6 @@ It used to group, validate and process documents.
 
 `/api/collections/<collection_id>/`
 
-General collection looks like:
-
     {
         "_id": "example-collection",
         "documents_permissions": {
