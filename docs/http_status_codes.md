@@ -1,28 +1,3 @@
-# Errors
-
-Deform uses standard HTTP status codes when returning errors. We provide additional info about error in a response body.
-
-It can contain `message`
-
-    {
-    	"result": {
-    		"message": "Not authorized"
-    	}
-    }
-
-or `errors`
-
-    {
-    	"result": {
-	    	"errors": [
-	    		{
-	    			"property": "File",
-	    			"message": "is required"
-	    		}
-	    	]
-	    }
-    }
-
 ## HTTP Status codes
 
 Code |  Description
@@ -85,3 +60,29 @@ Unprocessable entity.See response body for details.
 ### 50x
 
 Server error.
+
+
+## Errors
+
+Deform uses standard HTTP status codes when returning errors. We provide additional info about error in a response body.
+
+It can contain `message`
+
+    {
+    	"result": {
+    		"message": "Not authorized"
+    	}
+    }
+
+or `errors`
+
+    {
+    	"result": {
+	    	"errors": [
+	    		{
+	    			"property": "File",
+	    			"message": "is required"
+	    		}
+	    	]
+	    }
+    }
