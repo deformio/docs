@@ -2,17 +2,28 @@
 
 ## v0.0.1
 
+### 07.05.2016
+  
+  * Project `status.is_active` property added.
+  * 404 now has general error interface.
+
+        {
+            "result": {
+                "message": "Page not found."
+            }
+        }
+
 ### 04.05.2016
 
   * Create collection property response interface has changed to
 
-    {
-        "collection_created": true,
-        "property": {
-            "type": "string",
-            "description": "created collection property"
+        {
+            "collection_created": true,
+            "property": {
+                "type": "string",
+                "description": "created collection property"
+            }
         }
-    }
 
 ### 03.05.2016
   
