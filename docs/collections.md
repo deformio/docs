@@ -114,14 +114,15 @@ Every project has a set of system collections. Their names start with `_` prefix
 
 You cannot **create**, **delete**, **update** system collections.
 
-Name           | Description
--------------- | ------------
+Name            | Description
+--------------- | ------------
 \_notifications | System notifications will be saved here
 \_files         | Uploaded and generated files
 \_tokens        | Access tokens to your project
 \_hooks         | Hooks
 \_hooks_history | Hook history with responses and status codes
-\_users         | List of users allowed to your project. If you delete yourself you will have access to a project
+\_usage         | Project usage
+\_users         | List of users allowed to your project. Owner removal has no effect.
 
 ### \_notifications
 
@@ -141,7 +142,11 @@ List of hooks and their conditions.
 
 ### \_hooks_history
 
-Hook history is a collection
+History of hook triggers.. Documents inside this collection **are not affected by hooks**
+
+### \_usage
+
+Project usage. Documents inside this collection **are not affected by hooks**
 
 ### \_users
 
