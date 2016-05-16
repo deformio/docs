@@ -2,6 +2,24 @@
 
 ## v0.0.1
 
+### 07.05.2016
+  
+  * System collection `_usage` added.
+  * Project `status.is_active` property added.
+  * 404 now has general error interface.
+
+        {
+            "result": {
+                "message": "Page not found."
+            }
+        }
+
+### 03.05.2016
+  
+  * Processors changed:
+      * apiai - has customer settings now
+
+
 ### 30.04.2016
   
   * User can have **5** projects.
