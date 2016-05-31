@@ -2,7 +2,7 @@
 
 Webhooks are meant to commit a request when some event happens.
 
-Hooks **is being triggered by documents** only.
+Hooks **are triggered by documents** only.
 
 ## Hook properties
 
@@ -56,15 +56,6 @@ All documents from this collection will be used to be a hook trigger
 ### condition
 
 This is a schema. If a document which triggered this hook matches this `condition` schema - this hook will commit an operation, otherwise it won't.
-
-If you want all documents to trigger a hook - make `condition` value equal to
-
-    {
-        "type": "object",
-        "additionalProperties": true
-    }
-
-All documents will match this schema and a hook will trigger
 
 ### headers
 

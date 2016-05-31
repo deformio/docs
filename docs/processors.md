@@ -10,7 +10,7 @@ Feel free to send us a feedback about processors you are missing.
 
 ## Limitations
 
-As for now processor cannot process array fields. In future we will implement this feature.
+As for now processor cannot process properties of type **array**. In future we will implement this feature.
 
 ## Current processors implemented
 
