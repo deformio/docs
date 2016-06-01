@@ -2,6 +2,12 @@
 
 ## v0.0.1
 
+### 31.05.2016
+  
+  * Processor's schema part `source` is no longer required.
+  * Multipart upload. Uploading **array of files to a collection without schema** will upload first file.
+  * Hooks creation no longer requires `conditions` property. If you pass it - all documents will be allowed to trigger a hook.
+
 ### 07.05.2016
   
   * System collection `_usage` added.

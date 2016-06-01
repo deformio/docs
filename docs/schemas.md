@@ -1,6 +1,6 @@
 # Schemas
 
-We use JSON Schema as a core feature for data description.
+We use JSON Schema ( draft v4 ) as a core feature for data description.
 
 [Here](http://json-schema.org/) you can find docs and examples. 
 
