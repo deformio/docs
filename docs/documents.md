@@ -2,14 +2,21 @@
 
 The `document` is a simple JSON entity. It is stored in a [collection](/collections/).
 
+## Document without collection
+
+You can create a document without creating a collection. 
+
+But you'll miss some [features](/documents/#features) collection provides.
+
+
 ## Features
 
-Feature        | Description
----------------|--------------------------
-[storage](/documents/#storage)       | attach files to documents
-[validation](/documents/#validation) | validate a document
-[processing](/documents/#processing) | process a document according collection's schema
-[hooks](/documents/#hooks)           | trigger a hook after document event
+Feature                              | Collection Required | Description
+-------------------------------------|---------------------|----
+[storage](/documents/#storage)       |   | attach files to documents
+[validation](/documents/#validation) | * | validate a document
+[processing](/documents/#processing) | * | process a document according collection's schema
+[hooks](/documents/#hooks)           |   | trigger a hook after document event
 
 
 ### storage
