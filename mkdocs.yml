@@ -6,6 +6,7 @@ markdown_extensions:
 pages:
 - Home: index.md
 - Quickstart: quickstart/index.md
+- User: user.md
 - Projects: projects.md
 - Collections: collections.md
 - Documents: documents.md

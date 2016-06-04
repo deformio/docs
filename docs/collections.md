@@ -1,6 +1,14 @@
 # Collections
 
-It used to group, validate and process documents.
+Collections are used to group, validate and process documents.
+
+You can also create a document without collection.
+
+## Collection advantages 
+
+A collection is used to gain features like validation/processing.
+
+Full list of features is located [here](/documents/#features).
 
 ## Collection properties
 
