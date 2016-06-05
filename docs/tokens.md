@@ -7,6 +7,64 @@ Tokens **cannot** be used to operate with:
   * user
   * project
 
+Tokens **can** be used to operate with:
+  
+  * collections
+  * documents
+
+Every entity in a project is a [document](/documents/) contained in a [collection](/collections/). 
+
+This means you can create a token **able only to create other tokens**:
+
+    {
+	    "_id": "57114edc32d2c668de756b0c",
+	    "is_active": true,
+	    "name": "token_to_create_token",
+	    "permission": {
+	        "allow": {
+	            "create": [
+	                {
+	                    "what": "document",
+	                    "where": "_tokens"
+	                }
+	            ]
+	        }
+	    }
+	}
+
+
+Or you can create a token **able to read only one `document` in a collection `vacations` with id `september`**:
+
+    {
+	    "_id": "57114edc32d2c668de756b0c",
+	    "is_active": true,
+	    "name": "token-35567587",
+	    "permission": {
+	        "allow": {
+	            "read": [
+	                {
+	                    "what": "document",
+	                    "where": "vacations",
+	                    "what_id": "september"
+	                }
+	            ]
+	        }
+	    }
+	}
+
+
+## Token in a Request
+
+You can pass a token in request header as:
+
+  * `"Authorization": "Token TokenId"`
+
+Also you can pass it in URL:
+  
+  * `https://myproject.deform.io/api/collections/_files/documents/vacation/content/?token=TokenId`
+
+
+
 ## Token properties
 
 `/api/collections/_tokens/documents/<token_id>/`

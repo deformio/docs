@@ -38,7 +38,7 @@ resp = deform.document.save(
 
 Now it's time to get uploaded file.
 
-GET `/collections/photos/documents/september_vacation/avatar/` will return you a JSON document
+GET `/api/collections/photos/documents/september_vacation/avatar/` will return you a JSON document
 
 ```json
 {
@@ -55,7 +55,7 @@ GET `/collections/photos/documents/september_vacation/avatar/` will return you a
 ```
 
 
-GET `/collections/_files/documents/574c9a266dff87000562eaf6/` will return you the same
+GET `/api/collections/_files/documents/574c9a266dff87000562eaf6/` will return you the same
 
 ```json
 {
@@ -78,10 +78,10 @@ The difference is - you need to know `_id` of a file to access it while in `_fil
 
 Every file can be retrieved as JSON document and raw bytes.
 
-  * `/collections/_files/documents/<file_id>/` - JSON document
-  * `/collections/_files/documents/<file_id>/content/` - raw bytes
-  * `/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/` - JSON document
-  * `/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/content/` - raw bytes
+  * `/api/collections/_files/documents/<file_id>/` - JSON document
+  * `/api/collections/_files/documents/<file_id>/content/` - raw bytes
+  * `/api/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/` - JSON document
+  * `/api/collections/<collection_with_a_document>/documents/<document_id>/my/file/path/content/` - raw bytes
 
 ## File raw bytes
 
