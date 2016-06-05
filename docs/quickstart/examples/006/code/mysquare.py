@@ -19,7 +19,7 @@ def venues_list():
     response.raise_for_status()
     return render_template(
         'venues_list.html',
-        venues=response.json()['result']
+        venues=response.json()['result']['items']
     )
 
 @app.route("/<venue_id>")

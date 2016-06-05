@@ -4,137 +4,49 @@ Deform command line client (CLI) allows you talk to and operate Deform using the
 
 ## Installation
 
-### Mac OS X
-
-    $ brew install deform-cli
-
-### Ubuntu
-
-    $ apt-get install deform-cli
-
-### From binaries
-
-todo: like [docker](https://docs.docker.com/engine/installation/binaries/)
+    $ pip install python-deform
 
 ## Configuration
 
-## Use mode
+## Usage
 
-Sometimes it's annoying to repeat your project name or path you're navigating.
-For example let's get the document with `_id` equals `starbucks`:
+CLI
 
-    $ deform get mysquare.collections.venues.documents.starbucks
+deform user
+deform register
+deform login
+deform auth-by-token
+deform logout
+deform confirm
 
-You can shorten this line by remembering the base path for the navigation:
+deform projects
 
-    $ deform use mysquare
-    $ deform get .collections.venues.documents.starbucks
+deform use-project <project-id>
+deform project [get|update] <project-id>
 
-Going deeper:
+deform collections [find]
+    --project <project_id>
+    [--query <query>]
+    --fields <field1,field2>
+    --exclude-fields <field1,field2>
 
-    $ deform use .collections.venues
-    $ deform get .documents
+deform collection [get|save|create|update|remove] <collection_id>
+    --project <project_id>
+    [--property <path.to.property>]
+    --fields <field1,field2>
+    --exclude-fields <field1,field2>
 
-With the command above you will get all the documents from the `venues` collection.
-Let's get the exact document:
+deform documents [find|update|upsert|remove]
+    --project <project_id>
+    --collection <collection_id>
+    [--query <query>]
+    [--data <data>]
+    --fields <field1,field2>
+    --exclude-fields <field1,field2>
 
-    $ deform get .documents.starbucks
-
-In "use" mode there is no limitation for working with absolute paths:
-
-    $ deform get mysquare.collections.venues.documents.starbucks
-
-## Verbosity
-
-By default CLI returns as simple response as possible. For example:
-
-    $ deform get mysquare.collections.venues.documents --per-page 3
-
-```json
-[
-  {
-    "id": "starbucks",
-    "name": "Starbucks"
-  },
-  {
-    "id": "",
-    "name": "Starbucks"
-  },
-  {
-    "id": "starbucks",
-    "name": "Starbucks"
-  }
-]
-```
-
-We've limited response by 3 documents. With `-v` flag we can see how many pages
-left:
-
-    $ deform get mysquare.collections.venues.documents --per-page 3 -v
-
-```json
-[
-  {
-    "id": "starbucks",
-    "name": "Starbucks"
-  },
-  {
-    "id": "",
-    "name": "Starbucks"
-  },
-  {
-    "id": "starbucks",
-    "name": "Starbucks"
-  }
-]
-
-Page: 1
-Pages: 2
-Per page: 3
-Total: 6
-Time: 1.0 sec
-```
-
-## Raw HTTP requests
-
-If you want to see raw data used by CLI to communicate with API and raw response
-just provide `--http` flag:
-
-    $ deform get mysqaure.collections --http
-
-# todo: use real example
-
-```json
-PUT /put HTTP/1.1
-Accept: application/json
-Accept-Encoding: gzip, deflate
-Content-Type: application/json
-Host: httpbin.org
-User-Agent: HTTPie/0.2.7dev
-
-{
-    "hello": "world"
-}
-
-
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 477
-Content-Type: application/json
-Date: Sun, 05 Aug 2012 00:25:23 GMT
-Server: gunicorn/0.13.4
-
-{
-    […]
-}
-
-```
-
-## Account
-
-* `deform account`
-* `deform account create`
-
-## Authentication
-
-## Creating project
+deform document [get|save|create|update|remove] <document_id>
+    --project <project_id>
+    --collection <collection_id>
+    [--property <path.to.property>]
+    --fields <field1,field2>
+    --exclude-fields <field1,field2>

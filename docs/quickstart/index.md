@@ -3,39 +3,63 @@
 This quickstart assumes you have a working installation of [Deform cli](/cli/).
 To verify cli is installed, use the following command:
 
-    $ deform info
+```bash
+$ deform
+```
 
 If you get `deform: command not found` you must install the CLI by
-[following instructions](/cli/#installation). If you're a mac user you can install
-it with `brew`:
+[following instructions](/cli/#installation).
 
-    $ brew install deform-cli
+```bash
+$ pip install python-deform
+```
 
 ## Registration
 
-If you are new to Deform you must create an account.
-Provide an initial project with the name and the identifier:
+If you are new to Deform you must create an account:
 
-    $ deform account create -e email@example.com -p mypassword \
-          --project-name 'My mysquare' \
-          --project-id 'mysquare'
+```bash
+$ deform signup -e email@example.com -p mypassword
+```
+
+On the email you will get a confirmation code. Use it for confirming you identity:
+
+```bash
+$ deform confirm CODE
+```
+
+When you confirm the email you automatically become logged in.
+
+```bash
+$ deform whoami
+
+You are email@example.com
+```
+
+Let's create a new project:
+
+```bash
+$ deform project create -d '{"_id": "mysquare", "name": "My square"}'
+
+Project created
+```
 
 !!! note
-    Be careful with the `--project-id`.
-    It should be unique across the all Deform projects (even if it doesn't belong to your account!).
+    Be careful with the `_id`.
+    It should be unique across the all the Deform projects (even if it doesn't belong to your account!).
     If you have some conflict errors just set the project's id as `mysquare1`, `mysquare2`, etc...
-
-When you create the account you automatically become logged in.
-
-    $ deform account
 
 Let's look at the `mysquare` project info:
 
-    $ deform get mysquare
+    $ deform project get mysquare
 
 If you created the project with the id `mysquare3000` then use it:
 
-    $ deform get mysquare3000
+```bash
+$ deform use-project mysquare3000
+
+Switched to project mysquare3000
+```
 
 We will use `mysquare` project id through all the documentation. Just don't forget
 to use your own id.
@@ -44,90 +68,50 @@ to use your own id.
 
 Deform follows the [MongoDB](https://docs.mongodb.org/manual/reference/glossary/) paradigm
 and operates over `collections` and `documents`. To see what collections are already in
-project you can type command with `get <project-id>.collections` pattern:
+project you can type command:
 
-    $ deform get mysquare.collections
+    $ deform collections find --pretty
 
 ```json
-[  
-  {  
+{  
     "_id": "_files",
     "name": "Files",
     "schema": ...,
     "indexes": ...,
-    ...
-  },
-  ...
-]
-```
-
-We intentionally shortened response because by default this command returns
-name, schema, indexes and other information.
-
-We can ask to show only the fields we want to see:
-
-    $ deform get mysquare.collections --fields name
-
-```json
-[  
-  {  
-    "_id": "_files",
-    "name": "Files"
-  },
-  {
-    "_id": "_tokens",
-    "name": "Tokens"
-  },
-  {
-    "_id": "_hooks",
-    "name": "Hooks"
-  },
-  {
-    "_id": "_hooks_history",
-    "name": "Hooks history"
-  },
-  {
-    "_id": "_notifications",
-    "name": "Notifications"
-  }
-]
+...
+},
+...
 ```
 
 Every project in Deform contains system collections which names starts with `_` prefix.
-You can not remove them. [Read more about system collections](/collections/#system-collections).
+You can't remove them. [Read more about system collections](/collections/#system-collections).
 
 ## Documents
 
 Let's create a document in a collection called `venues`:
 
-    $ deform create mysquare.collections.venues.documents name=Starbucks
+```bash
+$ deform document create -c venues -d '{"name": "Starbucks"}'
 
-```json
-{
-  "_id": "56bcbb310640fd0be9fdba88",
-  "name": "Starbucks"
-}
+{"_id": "5754065208888f00052b7315","name": "Starbucks"}
 ```
 
 We don't have to create the collection before inserting documents. If there is no collection
 `venues` in the project it will be created automatically.
 
 If you don't provide `_id` for the document it will be generated. `_id` is the only
-system field. It should be unique and can not be changed. We can remove the document
+system field. It should be unique and can't be changed. We can remove the document
 and recreate it with a custom id:
 
-```
-$ deform remove mysquare.collections.venues.documents.56bcbb310640fd0be9fdba88
-$ deform create mysquare.collections.venues.documents \
-    _id=starbucks \
-    name=Starbucks
-```
+```bash
+$ deform document remove 5754065208888f00052b7315 -c venues
 
-```json
-{
-  "_id": "starbucks",
-  "name": "Starbucks"
-}
+Document removed
+
+$ deform document create -c venues \
+    -d '{"_id": "starbucks", "name": "Starbucks"}'
+
+{"_id": "starbucks","name": "Starbucks"}
 ```
 
 [Read more about documents](/documents).
@@ -137,19 +121,13 @@ $ deform create mysquare.collections.venues.documents \
 
 Deform doesn't force you to use a schema for the documents in any collection. This
 is the power of the nosql databases.
-You can insert a venues without the `name` property but with a `rating` property:
+You can create a venue without the `name` property but with a `rating` property:
 
-```
-$ deform create mysquare.collections.venues.documents \
-    _id=mcdonalds \
-    rating:=5
-```
+```bash
+$ deform document create -c venues \
+    -d '{"_id": "mcdonalds", "rating": 5}'
 
-```json
-{
-  "_id": "mcdonalds",
-  "rating": 5
-}
+{"_id": "mcdonalds","rating": 5}
 ```
 
 But what if you want the `name` property to be mandatory? That's where you can change
@@ -157,13 +135,13 @@ the schema of the `venues` collection.
 Deform uses [JSON schema](http://json-schema.org/) and by default it allows you to insert
 any properties. Let's look at the `venues` collection schema:
 
-    $ deform get mysquare.collections.venues.schema
+```bash
+$ deform collection get venues --property schema --pretty
 
-```json
 {  
-  "type": "object",
-  "properties": {},
-  "additionalProperties": true
+    "type": "object",
+    "properties": {},
+    "additionalProperties": true
 }
 ```
 
@@ -171,12 +149,18 @@ Providing `additionalProperties` is `true` you are not limited to use any proper
 
 Let's make the `name` property required:
 
-```
-$ deform update --partial mysquare.collections.venues.schema \
-    properties.name:='{"type": "string", "required": true}'
+```bash
+$ deform collection save venues --property schema.properties.name \
+    -d '{"type": "string", "required": true}'
+
+Property updated
 ```
 
-```json
+Let's look at the schema again:
+
+```bash
+$ deform collection get venues --property schema --pretty
+
 {  
   "type": "object",
   "properties": {
@@ -191,95 +175,59 @@ $ deform update --partial mysquare.collections.venues.schema \
 
 Let's try to create a venue without the `name` property:
 
-```
-$ deform create mysquare.collections.venues.documents \
-    _id=kfc \
-    rating:=5
-```
+```bash
+$ deform document create -c venues -d '{"_id": "kfc", "rating": 5}'
 
-```json
-{  
-  "error": [
-    {
-      "property": "name",
-      "message": "required"
-    }
-  ]
-}
+Validation error:
+* "name" - name is required
 ```
 
 Oops. Validation error. That's what we've expected. Let's provide the `name`:
 
-```
-$ deform create mysquare.collections.venues.documents \
-    _id=kfc \
-    name=KFC \
-    rating:=5
+```bash
+$ deform document create -c venues \
+    -d '{"_id": "kfc", "name": "KFC", "rating": 5}'
+
+{"_id": "kfc","name": "KFC","rating": 5}
 ```
 
-```json
-{
-  "_id": "kfc",
-  "name": "KFC",
-  "rating": 5
-}
-```
-
-The document've been successfully created. You could be curious what've happened with
+The document've been successfully created. You may be curious what've happened with
 the `mcdonalds` venue? Actually nothing, it's still in the `venues` collection:
 
-    $ deform get mysquare.collections.venues.documents
+```bash
+$ deform documents find -c venues --pretty
 
-```json
-[
-  {
+{
     "_id": "starbucks",
     "name": "Starbucks"
-  },
-  {
+}
+{
     "_id": "mcdonalds",
     "rating": 10
-  },
-  {
+}
+{
     "_id": "kfc",
     "name": "KFC",
     "rating": 5
-  }
-]
+}
 ```
 
 Deform doesn't force you to migrate existing documents when the collection's schema is changed.
 But when you try to update a document you will be asked to provide the required property:
 
-```
-$ deform update --partial mysquare.collections.venues.documents.mcdonalds \
-    rating:=6
-```
+```bash
+$ deform document update mcdonalds -c venues -d '{"rating": 6}'
 
-```json
-{  
-  "error": [
-    {
-      "property": "name",
-      "message": "required"
-    }
-  ]
-}
+Validation error:
+* "name" - name is required
 ```
 
 Let's set the name for McDonalds:
 
-```
-$ deform update --partial mysquare.collections.venues.documents.mcdonalds \
-    name=McDonalds
-```
+```bash
+$ deform document update mcdonalds -c venues -d '{"name": "McDonalds"}'
 
-```json
-{
-  "_id": "mcdonalds",
-  "name": "McDonalds",
-  "rating": 10
-}
+{"_id": "mcdonalds","name": "McDonalds","rating": 5}
 ```
 
 [Read more about schemas](/schemas).
@@ -293,12 +241,18 @@ Let's add some photos!
 Deform operates with files like with any data.
 Let's add an array property which will contain all the venue photos:
 
-```
-$ deform update --partial mysquare.collections.venues.schema \
-    properties.photos:='{"type": "array", "items": {"type": "file"}}'
+```bash
+$ deform collection save venues --property schema.properties.photos \
+    -d '{"type": "array", "items": {"type": "file"}}'
+
+Property saved
 ```
 
-```json
+Let's look at the schema:
+
+```bash
+$ deform collection get venues --property schema --pretty
+
 {  
   "type": "object",
   "properties": {
@@ -317,7 +271,7 @@ $ deform update --partial mysquare.collections.venues.schema \
 }
 ```
 
-Providing directory `/photos/` on your local machine contains two photos:
+Providing directory `/tmp/` on your local machine contains two photos:
 
 **1.jpg**
 
@@ -329,13 +283,19 @@ Providing directory `/photos/` on your local machine contains two photos:
 
 Let's create a new venue:
 
+```bash
+$ deform document create -c venues \
+    -d '{
+            "_id":"subway",
+            "name":"Subway",
+            "photos": [
+                @"/tmp/1.jpg",
+                @"/tmp/2.jpg"
+            ]
+        }'
 ```
-$ deform create mysquare.collections.venues \
-    _id=subway \
-    name=Subway \
-    photos@/photos/1.jpg \
-    photos@/photos/2.jpg
-```
+
+The output is:
 
 ```json
 {
@@ -343,26 +303,26 @@ $ deform create mysquare.collections.venues \
   "name": "Subway",
   "photos": [
     {
-      "_id": "55bcab67a44765000a000031",
+      "_id": "57540c5b94d5de000528f78a",
       "collection_id": "venues",
       "content_type": "image/jpeg",
-      "date_created": "2016-02-01T11:20:07.141Z",
+      "date_created": "2016-06-05T11:26:19.810844798Z",
       "document_id": "subway",
-      "last_access": "2016-02-01T11:20:07.141Z",
-      "md5": "bfcd3c186b72829a7eab15e3469d2958",
+      "last_access": "2016-06-05T11:26:19.810844798Z",
+      "md5": "18517f889a64cf4e00e14fe9c85f8cac",
       "name": "1.jpg",
-      "size": 3191459
+      "size": 185679
     },
     {
-      "_id": "66bcab67a44766000a000031",
+      "_id": "57540c5c94d5de000528f78c",
       "collection_id": "venues",
       "content_type": "image/jpeg",
-      "date_created": "2016-02-01T11:20:08.141Z",
+      "date_created": "2016-06-05T11:26:20.262771094Z",
       "document_id": "subway",
-      "last_access": "2016-02-01T11:20:08.141Z",
-      "md5": "cfcd3c186c72829a7eac15e3469d2958",
+      "last_access": "2016-06-05T11:26:20.262771094Z",
+      "md5": "75b44ca2849e817b58435d6a80fff5fd",
       "name": "2.jpg",
-      "size": 4191459
+      "size": 171555
     }
   ]
 }
@@ -371,7 +331,10 @@ $ deform create mysquare.collections.venues \
 Every item in `photos` attribute contains information about saved files.
 Let's get a content of the first image:
 
-    $ deform get mysquare.collections.venues.subway.photos.0.content > download.jpg
+```bash
+$ deform document get-file subway -c venues \
+    --property photos[0] > download.jpg
+```
 
 If you open downloaded image you will see the original `1.jpg`:
 
@@ -392,6 +355,11 @@ Let's build a small website with two pages:
 We will use python with [Flask](http://flask.pocoo.org/) and [requests](http://docs.python-requests.org/en/master/). Install both packages first:
 
     $ pip install Flask requests
+
+!!! note
+    There is a [deform's python client](http://deformio.github.io/python-deform/).
+    Use it for your python projects. For this tutorial we'll use [HTTP API](/api/)
+    for more general overview.
 
 Let's create a `mysquare.py` file and write some code:
 
@@ -452,7 +420,7 @@ project you must create the [authorization token](/tokens). Let's create the tok
 and allow the clients using this token to read the documents from the `venues` collection:
 
 ```
-$ deform create mysquare.collections.tokens.documents \
+$ deform document create -p mysquare -c _tokens \
     _id=TFWaTgjB \
     name="Read venues" \
     permissions.allow.read:='{"what": "document", "where": "venues"}'
@@ -461,90 +429,22 @@ $ deform create mysquare.collections.tokens.documents \
 ```json
 {
   "_id": "TFWaTgjB",
-  "name": "Read venues",
   "is_active": true,
-  "permissions": {
+  "name": "Read venues",
+  "permission": {
     "allow": {
-      "read": {
-        "what": "document",
-        "where": "venues"
-      }
+      "read": [
+        {
+          "what": "document",
+          "where": "venues"
+        }
+      ]
     }
   }
 }
 ```
 
-You can check the token with CLI providing `--auth-token` flag:
-
-```
-$ deform get mysquare.collections.venues.documents \
-    --auth-token TFWaTgjB
-```
-
-```json
-[
-  {
-    "_id": "starbucks",
-    "name": "Starbucks"
-  },
-  {
-    "_id": "mcdonalds",
-    "name": "McDonalds",
-    "rating": 10
-  },
-  {
-    "_id": "kfc",
-    "name": "KFC",
-    "rating": 5
-  },
-  {
-    "_id": "subway",
-    "name": "Subway",
-    "photos": [
-      {
-        "_id": "55bcab67a44765000a000031",
-        "collection_id": "venues",
-        "content_type": "image/jpeg",
-        "date_created": "2016-02-01T11:20:07.141Z",
-        "document_id": "subway",
-        "last_access": "2016-02-01T11:20:07.141Z",
-        "md5": "bfcd3c186b72829a7eab15e3469d2958",
-        "name": "1.jpg",
-        "size": 3191459
-      },
-      {
-        "_id": "66bcab67a44766000a000031",
-        "collection_id": "venues",
-        "content_type": "image/jpeg",
-        "date_created": "2016-02-01T11:20:08.141Z",
-        "document_id": "subway",
-        "last_access": "2016-02-01T11:20:08.141Z",
-        "md5": "cfcd3c186c72829a7eac15e3469d2958",
-        "name": "2.jpg",
-        "size": 4191459
-      }
-    ]
-  }
-]
-```
-
-If you try to retrieve data from the other collection or create a document in the
-`venues` collection you will get the authorization error:
-
-```
-$ deform create mysquare.collections.venues.documents \
-    --auth-token TFWaTgjB \
-    _id=pizzahut \
-    name=Pizza hut
-```
-
-```json
-{
-  "error": "Forbidden"
-}
-```
-
-Let's use the token for retrieving document with HTTP API. You must provide
+Let's use the token for retrieving document with [HTTP API](/api/). You must provide
 `Authorization` header with value compound by template `Token <token-id>`:
 
 ```python
@@ -638,6 +538,10 @@ Use the token in image's content url:
 ```html
 {!docs/quickstart/examples/006/code/templates/venue_detail.html!}
 ```
+
+Now all the images are shown.
+
+![venue detail](examples/006/screens/venue_detail.png)
 
 ## Todo:
 

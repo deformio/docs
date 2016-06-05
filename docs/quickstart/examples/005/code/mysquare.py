@@ -17,7 +17,7 @@ def venues_list():
     # render venues_list.html template
     return render_template(
         'venues_list.html',
-        venues=response.json()['result']
+        venues=response.json()['result']['items']
     )
 
 @app.route("/<venue_id>")

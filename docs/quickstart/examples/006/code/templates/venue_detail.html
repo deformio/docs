@@ -3,7 +3,7 @@
   <div>
     {% for photo in venue.photos %}
       <!-- Use the token as the query parameter (at the and of the next line) -->
-      <img src="https://mysquare.deform.io/api/collections/venues/{{venue._id}}/photos/{{loop.index}}/content/?token={{token}}"
+      <img src="https://mysquare.deform.io/api/collections/venues/documents/{{venue._id}}/photos[{{loop.index-1}}]/content/?token={{token}}"
            style="width: 100px; height: 100px"
            alt="" />
     {% endfor %}

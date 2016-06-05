@@ -6,15 +6,15 @@ contains all the information you need to get started using all
 
 ## Features
 
-* REST HTTP API
-* Command line interface
-* Web GUI
+* REST HTTP API (todo)
+* [Command line interface](/cli/)
 * [MongoDB](https://www.mongodb.org) like query language
-* Schema validation
-* Data processors
-* File storage
-* Authorization
+* [Schema validation](/schemas/)
+* [Data processors](/processors/)
+* [File storage](/files/)
+* [Auth tokens](/tokens/)
 * [REST Hooks](http://resthooks.org)
+* Web GUI (coming soon)
 
 ## How it works
 
