@@ -56,27 +56,21 @@ Process natural language
             			"name": "apiai",
             			"in": {
 							"text": {
-								"source": "property",
 								"property": "human_text"
 							},
 							"language": {
-								"source": "value",
 								"value": "EN"
 							},
 							"language_token": {
-								"source": "value",
 								"value": "<YOUR_LANGUAGE_TOKEN>"
 							},
 							"subscription_key": {
-								"source": "value",
 								"value": "<YOUR_SUBSCTIPTION_KEY>"	
 							},
 							"timezone": {
-								"source":"value",
 								"value": "Europe/Moscow"
 							},
 							"contexts": {
-								"source": "value",
 								"value": ["calendar"]
 							}
 						}
@@ -139,11 +133,9 @@ Detect the language of a text string
         				"name": "google_detect_language",
         				"in": {
                             "text": {
-                                "source": "property",
                                 "property": "text"
                             },
                             "api_key": {
-                                "source": "value",
                                 "value": "<YOUR_API_KEY>"
                             }
                         }
@@ -188,19 +180,15 @@ Translate text from one language to another language
         				"name": "google_translate",
         				"in": {
                             "text": {
-                                "source": "property",
                                 "property": "text"
                             },
                             "from": {
-                                "source": "value",
                                 "value": "ru"
                             },
 							"to": {
-                                "source": "value",
                                 "value": "en"
                             },
 							"api_key": {
-                                "source": "value",
                                 "value": "<YOUR_API_KEY>"
                             }
                         }
@@ -245,7 +233,6 @@ Remove html tags from text
         				"name": "html_to_text",
         				"in": {
                             "html": {
-                                "source": "property",
                                 "property": "html"
                             }
                         }
@@ -292,7 +279,6 @@ Render a html from a markdown
 						"name": "markdown",
 						"in": {
 							"text": {
-								"source": "property",
 								"property": "markdown"
 							}
 						}
@@ -388,11 +374,9 @@ Make a random value
 						"name": "random",
 						"in": {
 							"random_type": {
-								"source": "value",
 								"value": "string"
 							},
 							"length": {
-								"source": "value",
 								"value": 20
 							}
 						}
@@ -458,7 +442,6 @@ Makes a text readable
 						"name": "readability",
 						"in": {
 							"text": {
-								"source": "property",
 								"property": "html_content"
 							}
 						}
@@ -510,11 +493,9 @@ Use [readability.com](https://readability.com/) to turn any web page into a clea
         				"name": "readability_com",
         				"in": {
                             "url": {
-                                "source": "property",
                                 "property": "url_to_make_readable"
                             },
 							"api_key": {
-                                "source": "value",
                                 "value": "<YOUR_API_KEY>"
                             }
                         }
@@ -575,11 +556,9 @@ Resize an image
 						"name": "resize",
 						"in": {
 					        "original_image": {
-					            "source": "property",
 					            "property": "original"
 					       	},
 							"size": {
-								"source": "value",
 								"value": [200,200]
 							}
 						}
@@ -641,7 +620,6 @@ Sentiment analysis aims to determine the attitude of a speaker or a writer with 
 						"name": "sentiment",
 						"in": {
 							"text": {
-								"source": "property",
 								"property": "text"
 							}
 						}
@@ -697,20 +675,16 @@ Make a string from template
 						"in": {
                         	"context": {
                         		"code": {
-                        			"source": "property",
                         			"property": "country.code"
                         		},
                         		"name": {
-                        			"source": "property",
                         			"property": "country.name"
                         		}
                         	},
                             "syntax": {
-                            	"source": "value",
                             	"value": "handlebars"
                             },
                             "template_string": {
-                            	"source": "value",
                             	"value": "{{code}} - {{name}}"
                         	}
                     	}
@@ -773,24 +747,19 @@ Text to speech processor
 						"in": {
 							"context": {
                         		"firstName": {
-                        			"source": "property",
                         			"property": "user_info.firstName"
                         		},
                         		"lastName": {
-                        			"source": "property",
                         			"property": "user_info.lastName"
                         		},
                         		"age": {
-                        			"source": "property",
                         			"property": "user_info.age"
                         		}
                         	},
 							"syntax": {
-								"source":"value",
 								"value":"handlebars"
 							},
                             "template_string": {
-                            	"source": "value",
                             	"value":"{{lastName}} {{firstName}} is {{age}} years"
                             }
 						}
@@ -804,11 +773,9 @@ Text to speech processor
 						"name": "text_to_speech",
 						"in": {
 							"text": {
-								"source": "property",
 								"property": "message"
 							},
 							"language": {
-								"source":"value",
 								"value": "en-US"
 							}
 						}
@@ -882,11 +849,9 @@ Detect the language of a text string
         				"name": "yandex_detect_language",
         				"in": {
                             "text": {
-                                "source": "property",
                                 "property": "text"
                             },
 							"api_key": {
-                                "source": "value",
                                 "value": "<YOUR_API_KEY>"
                             }
                         }
@@ -931,15 +896,12 @@ Translate text from one language to another language
         				"name": "yandex_translate",
         				"in": {
                             "text": {
-                                "source": "property",
                                 "property": "text"
                             },
                             "lang": {
-                                "source": "value",
                                 "value": "ru-en"
                             },
 							"api_key": {
-                                "source": "value",
                                 "value": "<YOUR_API_KEY>"
                             }
                         }
