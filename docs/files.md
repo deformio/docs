@@ -6,7 +6,7 @@ Total size of all files could be found in a [project's status](/projects/#status
 
 ## Upload files
 
-You can upload files using [cli-deform](https://github.com/deformio/cli-deform/):
+You can upload files using [CLI](/cli/):
 
 ```bash
 deform document create -c users -d '{
@@ -22,8 +22,8 @@ from pydeform import Client
 deform = Client(
     host='deform.io'
 ).auth(
-    'token', 
-    'MYTOKEN', 
+    'token',
+    'MYTOKEN',
     project_id='MYPROJECT'
 )
 
@@ -137,7 +137,7 @@ Identity of a document file attached to.
 
 ### last_access
 
-Date of last access to file. 
+Date of last access to file.
 
 
 ### md5
@@ -155,7 +155,7 @@ Size of a uploaded file.
 
 ### content_type
 
-File's content-type is determined automatically. 
+File's content-type is determined automatically.
 
 If your file's content-type is not in allowed list you will get 422 error when uploading a file.
 

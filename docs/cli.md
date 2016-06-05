@@ -1,52 +1,53 @@
 # CLI Reference
 
 Deform command line client (CLI) allows you talk to and operate Deform using the command line interface. It talks to the Deform using the public API.
+Source code could be found here [https://github.com/deformio/cli-deform](https://github.com/deformio/cli-deform).
 
 ## Installation
 
-    $ pip install python-deform
+    $ pip install cli-deform
 
-## Configuration
+## Commands
 
-## Usage
+```
+$ deform
 
-CLI
+Usage: deform [OPTIONS] COMMAND [ARGS]...
 
-deform user
-deform register
-deform login
-deform auth-by-token
-deform logout
-deform confirm
+  Command-line client for Deform.io
 
-deform projects
+Options:
+  -h, --help  Show this message and exit.
 
-deform use-project <project-id>
-deform project [get|update] <project-id>
+Commands:
+  collection       Collection manipulation commands
+  collections      Collections manipulation commands
+  confirm          Confirms email by code
+  current-project  Outputs a current project
+  document         Document manipulation commands
+  documents        Documents manipulation commands
+  login            Authenticates against the API
+  logout           Logs out current user
+  project          Project manipulation commands
+  projects         User's projects
+  settings         CLI settings
+  signup           Creates an account
+  use-project      Sets a current project
+  version          Outputs the client version
+  whoami           Outputs the current user
+```
 
-deform collections [find]
-    --project <project_id>
-    [--query <query>]
-    --fields <field1,field2>
-    --exclude-fields <field1,field2>
+Every command has a help option:
 
-deform collection [get|save|create|update|remove] <collection_id>
-    --project <project_id>
-    [--property <path.to.property>]
-    --fields <field1,field2>
-    --exclude-fields <field1,field2>
+```bash
+$ deform signup -h
 
-deform documents [find|update|upsert|remove]
-    --project <project_id>
-    --collection <collection_id>
-    [--query <query>]
-    [--data <data>]
-    --fields <field1,field2>
-    --exclude-fields <field1,field2>
+Usage: deform signup [OPTIONS]
 
-deform document [get|save|create|update|remove] <document_id>
-    --project <project_id>
-    --collection <collection_id>
-    [--property <path.to.property>]
-    --fields <field1,field2>
-    --exclude-fields <field1,field2>
+  Creates an account
+
+Options:
+  -e, --email TEXT
+  -p, --password TEXT
+  -h, --help           Show this message and exit.
+```

@@ -556,58 +556,190 @@ Now all the images are shown.
 
 [Read more about tokens](/tokens/).
 
-# Processing
+# Search
 
-On the previous step we've shown the venue's photos on the detail page. But the
-problem is we've shown full-sized images. It's better to show small photo thumbnail.
-Click on the thumbnail will open full-sized image at the new page.
-
-Deform comes with [image resizing processor](/processors/#resize).
-Processors should be assigned to collection's schema properties. Every time
-document is created or updated processors do their job.
-
-Let's add image resizing processor to `venues` collection schema:
+Let's add a search input at the venues list page. We're going to use a new
+`info` field for venues. Deform comes with [full-text search indexes](/collections/#indexes). Let's add an full-text index:
 
 ```bash
-$ deform collection update venues --property schema.properties.photos \
-    -d '{
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "original": {
-            "type": "file"
-          },
-          "thumb": {
-            "type": "file",
-            "processors": [
-              {
-                "name": "resize",
-                "in": {
-                  "original_image": {
-                    "property": "photos.original"
-                  },
-                  "size": {
-                    "value": [100, 100]
-                  }
-                }
-              }
-            ]
-          },
+$ deform collection update venues -d '{
+    "indexes": [
+        {
+            "type": "text",
+            "property": "info",
+            "language": "en"
         }
-      },
-    }'
-
+    ]
+}'
 ```
 
-## Todo:
+Let's update `info` field for every venue:
 
-* Image resize processors
-* Reprocess images (for subway)
-* Geolocation
-* Search:
-    * By name
-    * By compound field (with template processors)
+```bash
+$ deform document save subway -c venues --property info \
+    -d '"Breakfast, Sandwiches, Salads & More"'
 
-show on map
-show location near venue (on detail page)
+$ deform document save mcdonalds -c venues --property info \
+    -d '"the largest chain of hamburger fast food restaurants"'
+
+$ deform document save kfc -c venues --property info \
+    -d '"Kentucky Fried Chicken"'
+
+$ deform document save starbucks -c venues --property info \
+    -d '"coffee company and coffeehouse chain"'
+```
+
+You can try to search by CLI:
+
+```bash
+$ deform documents find -c venues --text 'chicken or coffee' --pretty
+
+{
+    "_id": "kfc",
+    "info": "Kentucky Fried Chicken",
+    "name": "KFC",
+    "rating": 5
+}
+{
+    "_id": "starbucks",
+    "info": "coffee company and coffeehouse chain",
+    "name": "Starbucks"
+}
+```
+
+Add search form to the template:
+
+**templates/venues_list.html**
+
+```html
+{!docs/quickstart/examples/007/code/templates/venues_list.html!}
+```
+
+Add search logic to the view:
+
+```python
+{!docs/quickstart/examples/007/code/mysquare.py!}
+```
+
+Open the venues list page and try to search for a chicken or coffee:
+
+![venue detail](examples/007/screens/search_results.png)
+
+[Read more about indexes](/collections/#indexes).
+
+# Processing
+
+There is one problem with our full-text search. If you try to search for a venue
+name you won't see any results.
+
+![venue detail](examples/007/screens/search_no_results.png)
+
+That's because we have full-text index on `info` field. If this field doesn't contain
+venue's name it won't be found. How would we solve such kind of problem?
+
+Deform comes with [template processor](/processors/#template).
+Processors should be assigned to collection's schema properties. Every time
+document is created or updated processors do their job. We're going to set
+full-text index to another field called `search_data` and automatically save
+venue's `name` and `info` to that field.
+
+First of all we must add `info` field to the schema. Only the fields from schema
+could be used in processors:
+
+```bash
+$ deform collection save venues --property schema.properties.info -d '{
+    "type": "string"
+}'
+```
+
+Let's add the new `search_data` field and the template processor to the `venues` collection schema:
+
+```bash
+$ deform collection save venues --property schema.properties.search_data -d '{
+    "type": "string",
+    "processors": [
+        {
+            "name": "template",
+            "in": {
+                "context": {
+                    "name": {
+                        "property": "name"
+                    },
+                    "info": {
+                        "property": "info"
+                    }
+                },
+                "syntax": {
+                    "value": "handlebars"
+                },
+                "template_string": {
+                    "value": "{{name}}, {{info}}"
+                }
+            }  
+        }
+    ]
+}'
+```
+
+Let's check the `mcdonalds` venue:
+
+```bash
+$ deform document get mcdonalds -c venues --pretty
+
+{
+    "_id": "mcdonalds",
+    "info": "the largest chain of hamburger fast food restaurants",
+    "name": "McDonalds",
+    "rating": 5
+}
+```
+
+As mentioned above processors works only when document is created or updated.
+We have to "touch" our documents to perform processing:
+
+```bash
+$ deform document save mcdonalds -c venues \
+  -d "$(deform document get mcdonalds -c venues)" --pretty
+
+{
+    "created": false,
+    "result": {
+        "_id": "mcdonalds",
+        "info": "the largest chain of hamburger fast food restaurants",
+        "name": "McDonalds",
+        "rating": 5,
+        "search_data": "McDonalds, the largest chain of hamburger fast food restaurants"
+    }
+}
+```
+
+Let's touch other venues:
+
+```bash
+$ deform document save subway -c venues \
+  -d "$(deform document get subway -c venues)"
+
+$ deform document save kfc -c venues \
+  -d "$(deform document get kfc -c venues)"
+
+$ deform document save starbucks -c venues \
+  -d "$(deform document get starbucks -c venues)"
+```
+
+The last step is to change the full-text index field:
+
+```bash
+$ deform collection update venues -d '{
+    "indexes": [
+        {
+            "type": "text",
+            "property": "search_data",
+            "language": "en"
+        }
+    ]
+}'
+```
+
+Let's search for KFC or coffee:
+
+![venue detail](examples/007/screens/name_and_info_search.png)

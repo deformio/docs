@@ -6,7 +6,7 @@ contains all the information you need to get started using all
 
 ## Features
 
-* REST HTTP API (todo)
+* [REST HTTP API](/api/)
 * [Command line interface](/cli/)
 * [MongoDB](https://www.mongodb.org) like query language
 * [Schema validation](/schemas/)
@@ -15,7 +15,3 @@ contains all the information you need to get started using all
 * [Auth tokens](/tokens/)
 * [REST Hooks](http://resthooks.org)
 * Web GUI (coming soon)
-
-## How it works
-
-todo: image with an architecture overview

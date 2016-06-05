@@ -4,7 +4,7 @@ The `document` is a simple JSON entity. It is stored in a [collection](/collecti
 
 ## Document without collection
 
-You can create a document without creating a collection. 
+You can create a document without creating a collection.
 
 But you'll miss some [features](/documents/#features) collection provides.
 
@@ -25,7 +25,7 @@ You can upload files with data to your document in a single request.
 
 It will create a document with a file reference. File will be saved as a document to [_files](/files/) collection.
 
-Create a document using [cli-deform](https://github.com/deformio/cli-deform):
+Create a document using [CLI](/cli/):
 
 ```bash
 deform document create -c users -d '{
@@ -91,7 +91,7 @@ Schema validation:
 		}
 	}
 
-Document              | Valid 
+Document              | Valid
 ----------------------|--------
 {"integer_price": 1.2}|
 {"integer_price": 1}  | *
@@ -105,7 +105,7 @@ Document              | Valid
 
 Document can trigger a [hook](/hooks/).
 
-Hooks has `triggers` property of type array. 
+Hooks has `triggers` property of type array.
 
 Every document operation via interfaces pushes this event to hook's queue.
 
@@ -135,7 +135,7 @@ There are 4 steps to achieve the result:
   * add a webhook for `user` document creation. Hook will send it `slack_notifications`
   * add a webhook for `slack_notifications` document creation. Hook will send it to [Slack](https://slack.com).
 
-Let's use [cli-deform](https://github.com/deformio/cli-deform). 
+Let's use [CLI](/cli/).
 
 ### step 1
 
@@ -143,8 +143,8 @@ Create a collection for users.
 
 ```bash
 deform collection create -d '{
-	"_id": "users", 
-	"name":"users", 
+	"_id": "users",
+	"name":"users",
 	"schema": {
 		"type": "object",
 		"properties": {
@@ -211,7 +211,7 @@ deform collection create -d '{
 
 ### step 3
 
-Add a hook for new user registration. We must insert his data to `slack_notifications` collection. 
+Add a hook for new user registration. We must insert his data to `slack_notifications` collection.
 
 ```bash
 deform document save -c _hooks -d '{
@@ -230,7 +230,7 @@ deform document save -c _hooks -d '{
 
 Notes:
 
-  * `method` set to `PUT`. This will create or update existing slack notification. 
+  * `method` set to `PUT`. This will create or update existing slack notification.
   * `url` set to our collection `slack_notifications`
   * `triggers` set to `created`. Only new users will trigger this hook
   * `headers` has an item with `AUTHORIZATION` header. We recommend you to create a [token](/tokens/) allowed to `create` documents inside of `slack_notifications` collection.
@@ -255,7 +255,7 @@ Notes:
 ### step 4
 
 
-Now we need to create a hook for `slack_notifications` collection. 
+Now we need to create a hook for `slack_notifications` collection.
 
 It will send a document to a [Slack](https://slack.com).
 
@@ -280,7 +280,7 @@ Notes:
 New User registation in your service causes a document to be `created` inside `users` collection.
 
 Collection `users` has a hook triggering by `create` event. This hook will commit a HTTP Request:
-   
+
    * use a HTTP Method `PUT` to **create or update**
    * use a `Authorization` header
    * send a document to a `slack_notifications` collection

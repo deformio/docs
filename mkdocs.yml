@@ -19,6 +19,6 @@ pages:
 - Embeds: embeds.md
 - Hooks: hooks.md
 - HTTP Status Codes: http_status_codes.md
-- CLI Reference: cli.md
+- CLI: cli.md
 - HTTP API: api/index.md
 - Changelog: changelog.md

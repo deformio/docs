@@ -5,13 +5,13 @@
 In order to use a service you will need to **register** with your email.
 
 Registration contains two steps:
-  
+
   * Use your email to signup
   * Confirm email using a code received
 
 ### Signup
 
-Use a [cli-deform](https://github.com/deformio/cli-deform) to register:
+Use a [CLI](/cli/) to register:
 
 ```bash
 deform signup -e EMAIL -pPASSWORD
@@ -21,7 +21,7 @@ This will send you a unique code to proceed.
 
 ### Confirm
 
-Now you need to confirm an email you used for [signup](/user/#signup). Use a `CONFIRMATION_CODE` received in an email we've sent you. 
+Now you need to confirm an email you used for [signup](/user/#signup). Use a `CONFIRMATION_CODE` received in an email we've sent you.
 
 If you accidentally deleted or lost an email - signup again. We'll send you email with another code.
 
@@ -45,4 +45,4 @@ Use this project.
 deform use-project my-first-project
 ```
 
-Great, you've created a project :D 
+Great, you've created a project :D
