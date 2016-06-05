@@ -419,11 +419,22 @@ If you want to authorize any client making changes or retrieving data from any
 project you must create the [authorization token](/tokens). Let's create the token
 and allow the clients using this token to read the documents from the `venues` collection:
 
-```
-$ deform document create -p mysquare -c _tokens \
-    _id=TFWaTgjB \
-    name="Read venues" \
-    permissions.allow.read:='{"what": "document", "where": "venues"}'
+```bash
+$ deform document create -c _tokens -d '{
+    "_id":"TFWaTgjB",
+    "name": "Read venues",
+    "is_active": true,
+    "permission": {
+      "allow": {
+        "read": [
+          {
+            "what": "document",
+            "where": "venues"
+          }
+        ]
+      }
+    }
+  }'
 ```
 
 ```json
@@ -542,6 +553,52 @@ Use the token in image's content url:
 Now all the images are shown.
 
 ![venue detail](examples/006/screens/venue_detail.png)
+
+[Read more about tokens](/tokens/).
+
+# Processing
+
+On the previous step we've shown the venue's photos on the detail page. But the
+problem is we've shown full-sized images. It's better to show small photo thumbnail.
+Click on the thumbnail will open full-sized image at the new page.
+
+Deform comes with [image resizing processor](/processors/#resize).
+Processors should be assigned to collection's schema properties. Every time
+document is created or updated processors do their job.
+
+Let's add image resizing processor to `venues` collection schema:
+
+```bash
+$ deform collection update venues --property schema.properties.photos \
+    -d '{
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "original": {
+            "type": "file"
+          },
+          "thumb": {
+            "type": "file",
+            "processors": [
+              {
+                "name": "resize",
+                "in": {
+                  "original_image": {
+                    "property": "photos.original"
+                  },
+                  "size": {
+                    "value": [100, 100]
+                  }
+                }
+              }
+            ]
+          },
+        }
+      },
+    }'
+
+```
 
 ## Todo:
 

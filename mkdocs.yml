@@ -3,6 +3,8 @@ theme: readthedocs
 markdown_extensions:
     - markdown_include.include
     - admonition
+    - toc:
+        anchorlink: True
 pages:
 - Home: index.md
 - Quickstart: quickstart/index.md
