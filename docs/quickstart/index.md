@@ -11,7 +11,7 @@ If you get `deform: command not found` you must install the CLI by
 [following instructions](/cli/#installation).
 
 ```bash
-$ pip install python-deform
+$ pip install cli-deform
 ```
 
 ## Registration
