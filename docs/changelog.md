@@ -2,6 +2,26 @@
 
 ## v0.0.1
 
+### 12.06.2016
+
+  * HTTP Interface changes:
+
+    * `result` changed from
+
+            {
+                "result": {
+                    "message": "Page not found."
+                }
+            }
+
+      to
+
+          {
+              "message": "Page not found."
+          }
+
+    * `payload` no longer required
+
 ### 31.05.2016
   
   * Processor's schema part `source` is no longer required.
