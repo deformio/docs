@@ -4,12 +4,11 @@ Project is an entrypoint to your DeformIO world.
 
 ## Project properties
 
-`/api/user/project/<project_id>/`
-
 	{
 	    "_id": "project-35567587-35567587",
 	    "name": "post-created-project-name",
 	    "settings": {
+	    	"debug": false,
 	        "check_limits_period": "24h0m0s",
 	        "data_size_limit": 5242880,
 	        "delete_files": false,
@@ -36,12 +35,17 @@ status        | object        | Project status
 
 Property              | Type   | Editable | Description
 ----------------------|--------|:--------:|-----------
+debug                 | bool   | *        | Debug all requests sent to a project
 check\_limits\_period | string |          | How often limits of a project will be checked
-data\_size\_limit     | int    | *        | Database size limit
+data\_size\_limit     | integer| *        | Database size limit
 delete\_files         | bool   | *        | Delete files after related documents and collections were deleted
-files\_size\_limit    | int    | *        | Files total size limit
+files\_size\_limit    | integer| *        | Files total size limit
 orphan\_files\_ttl    | string | *        | TTL of a file without document since `last_access`
-rate\_limit           | int    |          | NIY. Requests per second limit
+rate\_limit           | integer|          | NIY. Requests per second limit
+
+#### settings.debug
+
+Enabling this will write all requests information into a system collection `_debug`.
 
 #### settings.data\_size\_limit
 
@@ -64,10 +68,10 @@ Set to `0` to make unlimited.
 
 Property     | Type          | Description
 -------------|---------------|-------------
-data_size    | int           | Database size
-files_size   | int           | Files size
+data_size    | integer       | Database size
+files_size   | integer       | Files size
 is_active    | bool          | Project is active
-rate         | int           | NYI. Requests per second
+rate         | integer       | NYI. Requests per second
 
 
 ## Notifications

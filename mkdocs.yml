@@ -10,11 +10,15 @@ pages:
 - Quickstart: quickstart/index.md
 - User: user.md
 - Projects: projects.md
+- Users: users.md
+- Debug: debug.md
 - Collections: collections.md
 - Documents: documents.md
 - Schemas: schemas.md
 - Files: files.md
 - Tokens: tokens.md
+- Notifications: notifications.md
+- Usage: usage.md
 - Processors: processors.md
 - Embeds: embeds.md
 - Hooks: hooks.md
