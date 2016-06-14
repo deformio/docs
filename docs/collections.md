@@ -12,8 +12,6 @@ Full list of features is located [here](/documents/#features).
 
 ## Collection properties
 
-`/api/collections/<collection_id>/`
-
     {
         "_id": "example-collection",
         "documents_permissions": {
@@ -122,19 +120,24 @@ Every project has a set of system collections. Their names start with `_` prefix
 
 You cannot **create**, **delete**, **update** system collections.
 
-Name            | Description
---------------- | ------------
-\_notifications | System notifications will be saved here
-\_files         | Uploaded and generated files
-\_tokens        | Access tokens to your project
-\_hooks         | Hooks
-\_hooks_history | Hook history with responses and status codes
-\_usage         | Project usage
-\_users         | List of users allowed to your project. Owner removal has no effect.
+Name                      | Description
+------------------------- | ------------
+[\_debug](/debug)         | Writes all requests and responses. If `project.settings.debug` is enabled.
+[\_files](/files)         | Uploaded and generated files
+[\_hooks](/hooks)         | Hooks
+[\_hooks_history](/hooks) | Hook history with responses and status codes
+[\_notifications](/notifications) | System notifications will be saved here
+[\_tokens](/tokens)        | Access tokens to your project
+[\_usage](/usage)         | Project usage
+[\_users](/users)         | Users allowed to your project. Project's Owner removal has no effect.
 
 ### \_notifications
 
 All notifications from a system.
+
+### \_debug
+
+Writes all requests and responses. Toggle via `project.settings.debug`
 
 ### \_files
 

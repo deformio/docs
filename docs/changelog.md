@@ -2,6 +2,10 @@
 
 ## v0.0.1
 
+### 14.06.2016
+
+  * Project `_debug` system collection added.
+
 ### 12.06.2016
 
   * HTTP Interface changes:
