@@ -67,8 +67,6 @@ Also you can pass it in URL:
 
 ## Token properties
 
-`/api/collections/_tokens/documents/<token_id>/`
-
 	{
 	    "_id": "57114edc32d2c668de756b0c",
 	    "is_active": true,
@@ -77,7 +75,8 @@ Also you can pass it in URL:
 	        "allow": {
 	            "create": [
 	                {
-	                    "what": "document"
+	                    "what": "document",
+	                    "where": "venues"
 	                },
 	                {
 	                    "what": "collection"
@@ -85,15 +84,19 @@ Also you can pass it in URL:
 	            ],
 	            "delete": [
 	                {
-	                    "what": "document"
+	                    "what": "document",
+	                    "where": "venues",
+	                    "what_id": "removeable-cafe"
 	                },
 	                {
-	                    "what": "collection"
+	                    "what": "collection",
+	                    "what_id": "removable-collection"
 	                }
 	            ],
 	            "read": [
 	                {
-	                    "what": "document"
+	                    "what": "document",
+	                    "where": "read-only-collection"
 	                },
 	                {
 	                    "what": "collection"
@@ -104,7 +107,8 @@ Also you can pass it in URL:
 	                    "what": "document"
 	                },
 	                {
-	                    "what": "collection"
+	                    "what": "collection",
+	                    "what_id": "update-only-collection"
 	                }
 	            ]
 	        }

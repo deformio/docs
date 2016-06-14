@@ -6,8 +6,6 @@ Hooks **are triggered by documents** only.
 
 ## Hook properties
 
-`/api/collections/_hooks/documents/<hook_id>/`
-
 	{
 	    "_id": "57114ee832d2c668de756b5d",
 	    "collection": "_files",
@@ -100,3 +98,20 @@ When a document event matches `created`, `updated`, `deleted` the webhook trigge
 By default a payload of a webhook is wrapped to `payload` property. 
 
 Sometimes you may need it to be a different root property.
+
+## Hook retry policy
+
+If [url](/hooks/#url) response contains the header `Retry-After` the hook will tolerate it. 
+
+If response contains redirects - the hook will also follow redirects. Up to `5` redirects are allowed.
+
+## Hook results
+
+The item of a history will have a status according received HTTP response Status Code.
+
+Status    | Status Codes
+----------|-------------------
+Success   | 200, 201, 202, 204
+Error     | 500, 501, 502, 503, 504, 505, 400, 401, 403, 404, 405, 410
+Redirect  | 301, 302, 305, 307
+

@@ -118,7 +118,7 @@ document_id               | string        | identity of a document file attached
 last_access               | datetime      | date when the file was accessed
 md5                       | string        | md5 of a file's content
 name                      | string        | name of a file
-size                      | int           | size of a file's content
+size                      | integer       | size of a file's content
 
 ### collection_id
 
