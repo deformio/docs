@@ -71,20 +71,16 @@ Deform uses standard HTTP status codes when returning errors. We provide additio
 It can contain `message`
 
     {
-    	"result": {
-    		"message": "Not authorized"
-    	}
+    	"message": "Not authorized"
     }
 
 or `errors`
 
     {
-    	"result": {
-	    	"errors": [
-	    		{
-	    			"property": "File",
-	    			"message": "is required"
-	    		}
-	    	]
-	    }
+		"errors": [
+    		{
+    			"property": "File",
+    			"message": "is required"
+    		}
+    	]
     }

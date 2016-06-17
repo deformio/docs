@@ -2,6 +2,10 @@
 
 ## v0.0.1
 
+### 17.06.2016
+
+  * New processor added. `yandex_speechkit_tts` - text to speech processor.
+
 ### 14.06.2016
 
   * Project `_debug` system collection added.
