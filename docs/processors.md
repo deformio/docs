@@ -31,6 +31,7 @@ Name                     | Description
 [text_to_speech](/processors/#text_to_speech)         | Text to speech processor
 [watermark](/processors/#watermark)                | Watermark an image
 [yandex_detect_language](/processors/#yandex_detect_language) | Detect the language of a text string
+[yandex_speechkit_tts](/processors/#yandex_speechkit_tts) | Text to speech processor
 [yandex_translate](/processors/#yandex_translate)        | Translate text from one language to another language
 
     
@@ -41,7 +42,6 @@ Name                     | Description
 Process natural language
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"human_text": {
@@ -81,7 +81,7 @@ Process natural language
 	}
 
 
-Request payload::
+Request body:
 
 	{
 		"human_text": "schedule lunch at 1 pm tomorrow.",
@@ -90,28 +90,27 @@ Request payload::
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b676a32d2c61886cda77b",
-	        "ai_obj": {
-	            "action": "calendar.add",
-	            "metadata": {
-	                "contexts": [],
-	                "inputContexts": [],
-	                "outputContexts": []
-	            },
-	            "parameters": {
-	                "endDate": "2016-05-06T13:00:00+03:00",
-	                "startDate": "2016-05-06T13:00:00+03:00",
-	                "summary_predefined": "lunch"
-	            },
-	            "resolvedQuery": "schedule lunch at 1 pm tomorrow.",
-	            "score": 0,
-	            "source": "domains",
-	            "speech": ""
-	        },
-	        "human_text": "schedule lunch at 1 pm tomorrow."
-	    }
-	}
+        "_id": "572b676a32d2c61886cda77b",
+        "ai_obj": {
+            "action": "calendar.add",
+            "metadata": {
+                "contexts": [],
+                "inputContexts": [],
+                "outputContexts": []
+            },
+            "parameters": {
+                "endDate": "2016-05-06T13:00:00+03:00",
+                "startDate": "2016-05-06T13:00:00+03:00",
+                "summary_predefined": "lunch"
+            },
+            "resolvedQuery": "schedule lunch at 1 pm tomorrow.",
+            "score": 0,
+            "source": "domains",
+            "speech": ""
+        },
+        "human_text": "schedule lunch at 1 pm tomorrow."
+    }
+
 
 
 
@@ -120,7 +119,6 @@ Response:
 Detect the language of a text string
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"text": {
@@ -145,7 +143,7 @@ Detect the language of a text string
 	    }
 	}
 
-Request payload:
+Request body:
 	
 	{
 		"text": "Привет"
@@ -154,12 +152,11 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "572a45ed32d2c602098508e0",
-	        "text": "Привет",
-	        "detected": "ru"
-	    }
-	}
+    
+        "_id": "572a45ed32d2c602098508e0",
+        "text": "Привет",
+        "detected": "ru"
+    }
 
 
 ### google_translate
@@ -167,7 +164,6 @@ Response:
 Translate text from one language to another language
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"text": {
@@ -198,7 +194,7 @@ Translate text from one language to another language
 	    }
 	}
 
-Request payload:
+Request body:
 	
 	{
 		"text": "Привет"
@@ -207,11 +203,9 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "572a45ec32d2c602098508d5",
-	        "text": "Привет",
-	        "translated": "Hi"
-	    }
+        "_id": "572a45ec32d2c602098508d5",
+        "text": "Привет",
+        "translated": "Hi"
 	}
 
 
@@ -220,7 +214,6 @@ Response:
 Remove html tags from text
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"html": {
@@ -242,7 +235,7 @@ Remove html tags from text
 	    }
 	}
 
-Request payload:
+Request body:
 	
 	{
 		"html": "<html><head><title>Hello</title></head><body>World</body></html>"
@@ -251,11 +244,9 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b75f632d2c620e67a8908",
-	        "html": "<html><head><title>Hello</title></head><body>World</body></html>",
-	        "text": "World"
-	    }
+        "_id": "572b75f632d2c620e67a8908",
+        "html": "<html><head><title>Hello</title></head><body>World</body></html>",
+        "text": "World"
 	}
 
 
@@ -264,7 +255,6 @@ Response:
 Render a html from a markdown
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"markdown": {
@@ -288,7 +278,7 @@ Render a html from a markdown
 	    }
 	}
 
-Request payload:
+Request body:
 
 	{
 		"markdown": "**hello** __world__"
@@ -297,11 +287,9 @@ Request payload:
 Response:
 	
 	{
-	    "result": {
-	        "_id": "572b746a32d2c61f0a366d87",
-	        "html": "<p><strong>hello</strong> <strong>world</strong></p>\n",
-	        "markdown": "**hello** __world__"
-	    }
+        "_id": "572b746a32d2c61f0a366d87",
+        "html": "<p><strong>hello</strong> <strong>world</strong></p>\n",
+        "markdown": "**hello** __world__"
 	}
 
 
@@ -310,7 +298,6 @@ Response:
 Calculate a message-digest fingerprint (checksum)
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"firstName": {
@@ -332,7 +319,7 @@ Calculate a message-digest fingerprint (checksum)
 	    }
 	}
 
-Request payload:
+Request body:
 	
 	{
 		"firstName": "Andrey",
@@ -343,12 +330,10 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "jKmLOGOunnNrLe",
-	        "firstName": "Andrey",
-	        "lastName": "Chibisov",
-	        "password_md5ed": "e807f1fcf82d132f9bb018ca6738a19f"
-	    }
+        "_id": "jKmLOGOunnNrLe",
+        "firstName": "Andrey",
+        "lastName": "Chibisov",
+        "password_md5ed": "e807f1fcf82d132f9bb018ca6738a19f"
 	}
 
 
@@ -357,7 +342,6 @@ Response:
 Make a random value
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    "firstName": {
@@ -391,7 +375,7 @@ Make a random value
 	}
 
 
-Request payload:
+Request body:
 	
 	{
 		"firstName": "Gennady",
@@ -402,12 +386,10 @@ Response:
 	
 
 	{
-	    "result": {
-	        "_id": "572b722a32d2c61d34331ef0",
-	        "firstName": "Gennady",
-	        "lastName": "Chibisov",
-	        "password": "1591bbef3c4792bf9e102b10cad32b1c"
-	    }
+        "_id": "572b722a32d2c61d34331ef0",
+        "firstName": "Gennady",
+        "lastName": "Chibisov",
+        "password": "1591bbef3c4792bf9e102b10cad32b1c"
 	}
 
 ### readability
@@ -415,7 +397,6 @@ Response:
 Makes a text readable
 	
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	{
@@ -451,7 +432,7 @@ Makes a text readable
 	    }
 	}
 
-Request payload:
+Request body:
 
 	{
 		"html_content": "<html><head><title>Hello</title></head><body>World</body></html>",
@@ -460,16 +441,14 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b70b932d2c61c27a112bb",
-	        "html_content": "<html><head><title>Hello</title></head><body>World</body></html>",
-	        "plaintext": "World",
-	        "readable": {
-	            "content": "<body id=\"readabilityBody\">World</body>",
-	            "short_title": "Hello",
-	            "title": "Hello"
-	        }
-	    }
+        "_id": "572b70b932d2c61c27a112bb",
+        "html_content": "<html><head><title>Hello</title></head><body>World</body></html>",
+        "plaintext": "World",
+        "readable": {
+            "content": "<body id=\"readabilityBody\">World</body>",
+            "short_title": "Hello",
+            "title": "Hello"
+        }
 	}
 
 
@@ -479,7 +458,6 @@ Response:
 Use [readability.com](https://readability.com/) to turn any web page into a clean view for reading
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"url_to_make_readable": {
@@ -505,7 +483,7 @@ Use [readability.com](https://readability.com/) to turn any web page into a clea
 	    }
 	}
 
-Request payload:
+Request body:
 	
 	{
 		"url_to_make_readable": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/",
@@ -515,35 +493,33 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b7cb032d2c628585e1fa9",
-	        "readable": {
-	            "author": null,
-	            "content": "............",
-	            "date_published": "2016-02-07 13:03:06",
-	            "dek": null,
-	            "direction": "ltr",
-	            "domain": "blog.chib.me",
-	            "excerpt": "07 February 2016 Have you ever wanted to convert mysql database to sqlite? Or postgres to mysql? Or mysql to postgres? Recently I've been migrating my django project from MySQL to SQLite. I tried to&hellip;",
-	            "lead_image_url": null,
-	            "next_page_id": null,
-	            "rendered_pages": 1,
-	            "short_url": "http://rdd.me/7gou967w",
-	            "title": "How to convert databases with one line of code",
-	            "total_pages": 0,
-	            "url": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/",
-	            "word_count": 421
-	        },
-	        "url_to_make_readable": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/"
-	    }
+        "_id": "572b7cb032d2c628585e1fa9",
+        "readable": {
+            "author": null,
+            "content": "............",
+            "date_published": "2016-02-07 13:03:06",
+            "dek": null,
+            "direction": "ltr",
+            "domain": "blog.chib.me",
+            "excerpt": "07 February 2016 Have you ever wanted to convert mysql database to sqlite? Or postgres to mysql? Or mysql to postgres? Recently I've been migrating my django project from MySQL to SQLite. I tried to&hellip;",
+            "lead_image_url": null,
+            "next_page_id": null,
+            "rendered_pages": 1,
+            "short_url": "http://rdd.me/7gou967w",
+            "title": "How to convert databases with one line of code",
+            "total_pages": 0,
+            "url": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/",
+            "word_count": 421
+        },
+        "url_to_make_readable": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/"
 	}
+
 
 ### resize
 
 Resize an image
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"original": {
@@ -573,31 +549,29 @@ Commit a `PUT`/`POST`/`PATCH` with `Content-Type: multipart/form-data` and file 
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b6e7732d2c61b066cee6e",
-	        "original": {
-	            "_id": "572b6e7732d2c61b066cee6f",
-	            "collection_id": "QSMHdGfXIQIXOv",
-	            "content_type": "image/gif",
-	            "date_created": "2016-05-05T16:01:59.614410146Z",
-	            "document_id": "572b6e7732d2c61b066cee6e",
-	            "last_access": "2016-05-05T16:01:59.614410146Z",
-	            "md5": "8c4c6953f0b9003eb9ceb7a923cc208e",
-	            "name": "test_helpers/data/animated.gif",
-	            "size": 991109
-	        },
-	        "resized": {
-	            "_id": "572b6e7832d2c61b066cee71",
-	            "collection_id": "QSMHdGfXIQIXOv",
-	            "content_type": "image/gif",
-	            "date_created": "2016-05-05T16:02:00.475956835Z",
-	            "document_id": "572b6e7732d2c61b066cee6e",
-	            "last_access": "2016-05-05T16:02:00.475956835Z",
-	            "md5": "d741fa8da603842a0dd0aec9ec2330df",
-	            "name": "resized_resize_OLYi.gif",
-	            "size": 366404
-	        }
-	    }
+        "_id": "572b6e7732d2c61b066cee6e",
+        "original": {
+            "_id": "572b6e7732d2c61b066cee6f",
+            "collection_id": "QSMHdGfXIQIXOv",
+            "content_type": "image/gif",
+            "date_created": "2016-05-05T16:01:59.614410146Z",
+            "document_id": "572b6e7732d2c61b066cee6e",
+            "last_access": "2016-05-05T16:01:59.614410146Z",
+            "md5": "8c4c6953f0b9003eb9ceb7a923cc208e",
+            "name": "test_helpers/data/animated.gif",
+            "size": 991109
+        },
+        "resized": {
+            "_id": "572b6e7832d2c61b066cee71",
+            "collection_id": "QSMHdGfXIQIXOv",
+            "content_type": "image/gif",
+            "date_created": "2016-05-05T16:02:00.475956835Z",
+            "document_id": "572b6e7732d2c61b066cee6e",
+            "last_access": "2016-05-05T16:02:00.475956835Z",
+            "md5": "d741fa8da603842a0dd0aec9ec2330df",
+            "name": "resized_resize_OLYi.gif",
+            "size": 366404
+        }
 	}
 
 
@@ -606,7 +580,6 @@ Response:
 Sentiment analysis aims to determine the attitude of a speaker or a writer with respect to some topic or the overall contextual polarity of a text
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"text": {
@@ -629,7 +602,7 @@ Sentiment analysis aims to determine the attitude of a speaker or a writer with 
 	    }
 	}
 
-Request payload:
+Request body:
 
 	{
 		"text": "this restaurant is great",
@@ -638,11 +611,9 @@ Request payload:
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b6d4132d2c61a78927e5d",
-	        "sentiment": 0.8,
-	        "text": "this restaurant is great"
-	    }
+        "_id": "572b6d4132d2c61a78927e5d",
+        "sentiment": 0.8,
+        "text": "this restaurant is great"
 	}
 
 
@@ -651,7 +622,6 @@ Response:
 Make a string from template
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 			"country": {
@@ -694,7 +664,7 @@ Make a string from template
 		}
 	}
 
-Request payload:
+Request body:
 
     {
     	"country": {
@@ -720,7 +690,6 @@ Response:
 Text to speech processor
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 			"user_info": {
@@ -786,7 +755,7 @@ Text to speech processor
 	}
 
 
-Request payload::
+Request body:
 
 	{
         "user_info": {
@@ -799,44 +768,81 @@ Request payload::
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b6b7832d2c619e83aa4fd",
-	        "message": "Chibisov Andrey is 27 years",
-	        "tts_field": {
-	            "_id": "572b6b7a32d2c619e83aa4fe",
-	            "collection_id": "example_schema_tts-MuVVGXLnShseQO",
-	            "content_type": "audio/x-wav",
-	            "date_created": "2016-05-05T15:49:14.342821384Z",
-	            "document_id": "572b6b7832d2c619e83aa4fd",
-	            "last_access": "2016-05-05T15:49:14.342821384Z",
-	            "md5": "8a2bab3a7b3752028e9dfbfa326d5e73",
-	            "name": "tts_field_text_to_speech_trde.wav",
-	            "size": 59206
-	        },
-	        "user_info": {
-	            "age": 27,
-	            "firstName": "Andrey",
-	            "lastName": "Chibisov"
-	        }
-	    }
+        "_id": "572b6b7832d2c619e83aa4fd",
+        "message": "Chibisov Andrey is 27 years",
+        "tts_field": {
+            "_id": "572b6b7a32d2c619e83aa4fe",
+            "collection_id": "example_schema_tts-MuVVGXLnShseQO",
+            "content_type": "audio/x-wav",
+            "date_created": "2016-05-05T15:49:14.342821384Z",
+            "document_id": "572b6b7832d2c619e83aa4fd",
+            "last_access": "2016-05-05T15:49:14.342821384Z",
+            "md5": "8a2bab3a7b3752028e9dfbfa326d5e73",
+            "name": "tts_field_text_to_speech_trde.wav",
+            "size": 59206
+        },
+        "user_info": {
+            "age": 27,
+            "firstName": "Andrey",
+            "lastName": "Chibisov"
+        }
 	}
-
-
 
 
 ### watermark
 
 Watermark an image
 
-TODO
+	{
+	    "type": "object",
+	    "properties": {
+	        "watermark": {
+	            "type": "file"
+	        },
+	        "photo": {
+	            "type": "file",
+	            "processors": [
+	                {
+	                    "name": "resize",
+	                    "in": {
+	                        "size": {
+	                            "value": [
+	                                100,
+	                                100
+	                            ]
+	                        }
+	                    }
+	                },
+	                {
+	                    "name": "watermark",
+	                    "in": {
+	                        "watermark_image": {
+	                            "property": "watermark"
+	                        },
+	                        "gravity": {
+	                            "value": "SouthEast"
+	                        }
+	                    }
+	                }
+	            ]
+	        }
+	    }
+	}
 
+
+Request body:
+	
+	{
+		"photo": "<YOUR_IMAGE_FILE>",
+		"watermark": "<YOUR_WATERMARK_FILE>"
+	}
+	
 
 ### yandex_detect_language
 
 Detect the language of a text string
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"text": {
@@ -861,7 +867,7 @@ Detect the language of a text string
 	    }
 	}
 
-Request payload::
+Request body:
 
 	{
 		"text": "Hello world",
@@ -870,20 +876,82 @@ Request payload::
 Response:
 
 	{
-	    "result": {
-	        "_id": "572b7a9432d2c6241b8bbe22",
-	        "text": "Hello world",
-	        "detected": "en"
-	    }
+        "_id": "572b7a9432d2c6241b8bbe22",
+        "text": "Hello world",
+        "detected": "en"
 	}
 
+
+### yandex_speechkit_tts
+
+Text to speech processor
+
+	{
+		"type": "object",
+		"properties": {
+			"text_to_speak": {
+				"type": "string"
+			},
+			"speech": {
+				"type": "file",
+				"processors": [
+					{
+						"name": "yandex_speechkit_tts",
+						"in": {
+							"text": {
+								"property": "text_to_speak"
+							},
+							"format": {
+								"value": "wav"
+							},
+							"language": {
+								"value": "ru-RU"
+							},
+							"speaker": {
+								"value": "omazh"
+							},
+							"api_key": {
+								"value": "<YOUR_API_KEY>"
+							},
+							"emotion": {
+								"value": "good"
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+
+Request body:
+	
+	{
+		"text_to_speak": "Как дела?"
+	}
+
+Response:
+	
+	{
+        "_id": "572b791532d2c6226354dd26",
+        "text_to_speak": "Как дела?",
+        "speech": {
+            "_id": "572b6b7a32d2c619e83aa4fe",
+            "collection_id": "example_schema_tts-aA8rCg9UeRQVkm",
+            "content_type": "audio/x-wav",
+            "date_created": "2016-06-17T15:30:37.496648327Z",
+            "document_id": "572b6b7832d2c619e83aa4fd",
+            "last_access": "2016-06-17T13:30:37.496648327~",
+            "md5": "8a2bab3a7b3752028e9dfbfa326d5e73",
+            "name": "tts_field_text_to_speech_trde.wav",
+            "size": 59206
+        }
+	}
 
 ### yandex_translate
 
 Translate text from one language to another language
 
 	{
-	    "description": "Collection schema",
 	    "type": "object",
 	    "properties": {
 	    	"text": {
@@ -911,7 +979,7 @@ Translate text from one language to another language
 	    }
 	}
 
-Request payload:
+Request body:
 	
 	{
 		"text": "Как дела?"
@@ -920,10 +988,8 @@ Request payload:
 Response:
 	
 	{
-	    "result": {
-	        "_id": "572b791532d2c6226354dd26",
-	        "text": "Как дела?",
-	        "translated": "How's it going?"
-	    }
+        "_id": "572b791532d2c6226354dd26",
+        "text": "Как дела?",
+        "translated": "How's it going?"
 	}
 

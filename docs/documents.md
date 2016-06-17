@@ -218,7 +218,6 @@ deform document save -c _hooks -d '{
 	"_id": "user_registered",
     "name": "User joined",
     "url": "https://YOUR_PROJECT.deform.io/api/collections/slack_notifications/documents/",
-    "request_payload_wrapper": "payload",
     "method": "PUT",
     "triggers": ["created"],
     "collection": "users",

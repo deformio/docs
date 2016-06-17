@@ -78,20 +78,16 @@ Valid payloads to match are:
 * As a value:
 
     	{
-    	    "payload": {
-    	        "country": "US"
-    	    }
+    	   "country": "US"
     	}
 	
 
 * As an object
 
     	{
-    	    "payload": {
-    	        "country": {
-    	            "code": "US"
-    	        }
-    	    }
+	        "country": {
+	            "code": "US"
+	        }
     	}
 	
 
