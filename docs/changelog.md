@@ -2,6 +2,33 @@
 
 ## v0.0.1
 
+### 21.06.2016
+  
+  * Hooks now has a property `timeout` which can be used to control timeouts
+
+        {
+            "timeout": {
+                "type": "object",
+                "properties": {
+                    "read": {
+                        "type": "number",
+                        "description": "number of seconds to read response. default is 5",
+                        "minimum": 0.01,
+                        "maximum": 90
+                    },
+                    "connect": {
+                        "minimum": 0.01,
+                        "maximum": 90,
+                        "type": "number",
+                        "description": "number of seconds to establish a connection. default is 1"
+                    }
+                }
+            }
+        }
+
+  * HooksHistory property `uuid` migrated to `id`.
+
+
 ### 17.06.2016
 
   * New processor added. `yandex_speechkit_tts` - text to speech processor.

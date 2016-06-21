@@ -45,6 +45,7 @@ method                    | string        | http method to commit a request
 triggers                  | array         | document event to trigger a hook
 request\_payload\_wrapper | string        | name of `payload` property
 url                       | string        | url to commit a http request
+timeout                   | object        | timeouts to connect and read
 
 
 ### collection
@@ -98,6 +99,16 @@ When a document event matches `created`, `updated`, `deleted` the webhook trigge
 By default a payload of a webhook is wrapped to `payload` property. 
 
 Sometimes you may need it to be a different root property.
+
+## timeout
+
+### timeout.connect
+
+Timeout to connect
+
+### timeout.read
+
+Timeout to read read response
 
 ## Hook retry policy
 
