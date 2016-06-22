@@ -2,6 +2,16 @@
 
 ## v0.0.1
 
+### 22.06.2016
+
+  * Hooks now has a property `retry` which can be used to control retry policy. By Default it's `exponental`
+
+        {
+            "retry": {
+                "strategy": "exponental"
+            }
+        }
+
 ### 21.06.2016
   
   * Hooks now has a property `timeout` which can be used to control timeouts
