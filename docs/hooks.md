@@ -30,22 +30,30 @@ Hooks **are triggered by documents** only.
 	    "triggers": [
 	        "created"
 	    ],
-	    "url": "https://example.com/url-to-post-to"
+	    "url": "https://example.com/url-to-post-to",
+	    "timeout": {
+	    	"read": 10,
+	    	"connect": 1,
+	    },
+	    "retry": {
+	    	"strategy": "exponental"
+	    }
 	}
 
 
 Property                  | Type          | Description
 --------------------------|---------------|-------------
-\_id                      | string        | unique identity of the hook
-name                      | string        | name of a hook
-collection                | string        | collection which contains a documents called hook to trigger
-condition                 | object        | condition of a successful hook trigger
-headers                   | object        | http request headers
-method                    | string        | http method to commit a request
-triggers                  | array         | document event to trigger a hook
-request\_payload\_wrapper | string        | name of `payload` property
-url                       | string        | url to commit a http request
-timeout                   | object        | timeouts to connect and read
+[_id](/hooks/#_id)                      | string        | unique identity of the hook
+[name](/hooks/#name)                      | string        | name of a hook
+[collection](/hooks/#collection)                | string        | collection which contains a documents called hook to trigger
+[condition](/hooks/#condition)                 | object        | condition of a successful hook trigger
+[headers](/hooks/#headers)                   | object        | http request headers
+[method](/hooks/#method)                    | string        | http method to commit a request
+[triggers](/hooks/#triggers)                  | array         | document event to trigger a hook
+[request_payload_wrapper](/hooks/#request_payload_wrapper) | string        | name of `payload` property
+[url](/hooks/#url)                       | string        | url to commit a http request
+[timeout](/hooks/#timeout)                   | object        | timeouts to connect and read
+[retry](/hooks/#retry)                     | object        | retry settings
 
 
 ### collection
@@ -94,21 +102,35 @@ In some cases you may need a webhook to `PUT` a processed document to your cache
 
 When a document event matches `created`, `updated`, `deleted` the webhook triggers.
 
-### request\_payload\_wrapper
+### request_payload_wrapper
 
 By default a payload of a webhook is wrapped to `payload` property. 
 
 Sometimes you may need it to be a different root property.
 
-## timeout
+### timeout
 
-### timeout.connect
+#### timeout.connect
 
 Timeout to connect
 
-### timeout.read
+#### timeout.read
 
 Timeout to read read response
+
+### retry
+
+#### retry.strategy
+
+Strategy can be `exponental` or `constant`
+
+`exponental` strategy requeues hook trigger for 2, 4, 8, 16, 32 ... seconds
+
+`constant` strategy requeues hook trigger for in 2 seconds
+
+### url
+
+hook url to request
 
 ## Hook retry policy
 
