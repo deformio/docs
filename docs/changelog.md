@@ -4,11 +4,11 @@
 
 ### 22.06.2016
 
-  * Hooks now has a property `retry` which can be used to control retry policy. By Default it's `exponental`
+  * Hooks now has a property `retry` which can be used to control retry policy. By Default it's `exponential`
 
         {
             "retry": {
-                "strategy": "exponental"
+                "strategy": "exponential"
             }
         }
 
