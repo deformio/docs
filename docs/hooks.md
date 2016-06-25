@@ -36,7 +36,7 @@ Hooks **are triggered by documents** only.
 	    	"connect": 1,
 	    },
 	    "retry": {
-	    	"strategy": "exponental"
+	    	"strategy": "exponential"
 	    }
 	}
 
@@ -122,9 +122,9 @@ Timeout to read read response
 
 #### retry.strategy
 
-Strategy can be `exponental` or `constant`
+Strategy can be `exponential` or `constant`
 
-`exponental` strategy requeues hook trigger for 2, 4, 8, 16, 32 ... seconds
+`exponential` strategy requeues hook trigger for 2, 4, 8, 16, 32 ... seconds
 
 `constant` strategy requeues hook trigger for in 2 seconds
 
