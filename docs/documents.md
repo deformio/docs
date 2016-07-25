@@ -4,10 +4,82 @@ The `document` is a simple JSON entity. It is stored in a [collection](/collecti
 
 ## Document without collection
 
-You can create a document without creating a collection.
+You can create a document without existing collection, but you'll miss some [features](/documents/#features) collection provides.
 
-But you'll miss some [features](/documents/#features) collection provides.
+## Filter
 
+Documents can be found using a fulltext search or filter. 
+
+This example is about geolocation filter.
+
+Collection `customers_shared_locations`:
+
+```bash
+deform collection create -d '{
+    "_id": "customers_shared_locations",
+    "name": "Customers shared locations",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "location": {
+                "type": "object",
+                "properties": {
+                    "coordinates": {
+                        "items": {
+                            "type": "number"
+                        },
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "type": "array"
+                    },
+                    "type": {
+                        "enum": ["Point"]
+                    }
+                }
+            }
+        }
+    },
+    "indexes": [
+        {
+            "property": "$2dsphere:location",
+            "type": "simple",
+            "unique": false
+        }
+    ]
+}'
+```
+
+Document:
+
+```json
+deform document create -c customers_shared_locations -d '{
+    "_id": "12345",
+    "location": {
+        "coordinates": [
+            40.432121,  -3.707698
+        ],
+        "type": "Point"
+    } 
+}' 
+``` 
+
+
+You can find this document withing **600 meters radius**.
+
+Points [40.432121,  -3.707698] and [40.432446, -3.700996] are **~573 meters away**. 
+
+```bash
+deform documents find -c customers_shared_locations -f '{
+    "location": {
+        "$geoWithin": {
+            "$centerSphere": {
+                40.432446, -3.700996,
+                0.6/6378.137
+            }
+        }
+    }
+}'
+```
 
 ## Features
 
@@ -280,7 +352,7 @@ New User registation in your service causes a document to be `created` inside `u
 
 Collection `users` has a hook triggering by `create` event. This hook will commit a HTTP Request:
 
-   * use a HTTP Method `PUT` to **create or update**
+   * use an HTTP Method `PUT` to **create or update**
    * use a `Authorization` header
    * send a document to a `slack_notifications` collection
 
