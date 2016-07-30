@@ -10,9 +10,9 @@ Project is an entrypoint to your DeformIO world.
 	    "settings": {
 	    	"debug": false,
 	        "check_limits_period": "24h0m0s",
-	        "data_size_limit": 5242880,
+	        "data_size_limit": 52428800,
 	        "delete_files": false,
-	        "files_size_limit": 10485760,
+	        "files_size_limit": 104857600,
 	        "orphan_files_ttl": "168h0m0s",
 	        "rate_limit": 30
 	    },
@@ -91,5 +91,5 @@ By default user can have up to `5` projects.
 
 Project initial settings:
 
-  * `database` size: **5 Mb**
-  * `files` size: **10 Mb**
+  * `database` size: **50 Mb**
+  * `files` size: **100 Mb**
