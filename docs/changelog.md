@@ -2,6 +2,18 @@
 
 ## v0.0.1
 
+### 04.08.2016
+  
+  * HTTP Interface of type `multipart/form-data` now works different. The example:
+
+      Old payload:
+
+        curl -X POST -H "Content-Type: multipart/form-data" -F name=andrey -F age=27 -F hobbies=Programming -F hobbies=Cinema -F hobbies=Music
+      
+      New payload:
+
+        curl -X POST -H "Content-Type: multipart/form-data" -F name='"andrey"' -F age='27' -F hobbies='["Programming", "Cinema", "Music"]'
+
 ### 22.06.2016
 
   * Hooks now has a property `retry` which can be used to control retry policy. By Default it's `exponential`
