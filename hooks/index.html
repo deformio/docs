@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Hooks - Deform</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hooks";
+    var mkdocs_page_input_path = "hooks.md";
+    var mkdocs_page_url = "/hooks/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deform</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">Quickstart</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../user/">User</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../projects/">Projects</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../debug/">Debug</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../collections/">Collections</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../documents/">Documents</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../schemas/">Schemas</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../files/">Files</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tokens/">Tokens</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../notifications/">Notifications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Usage</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../processors/">Processors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../embeds/">Embeds</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Hooks</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#hooks">Hooks</a></li>
+                
+                    <li><a class="toctree-l4" href="#hook-properties">Hook properties</a></li>
+                
+                    <li><a class="toctree-l4" href="#hook-retry-policy">Hook retry policy</a></li>
+                
+                    <li><a class="toctree-l4" href="#hook-results">Hook results</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../http_status_codes/">HTTP Status Codes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cli/">CLI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">HTTP API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/">Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deform</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Hooks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hooks"><a class="toclink" href="#hooks">Hooks</a></h1>
+<p>Webhooks are meant to commit a request when some event happens.</p>
+<p>Hooks <strong>are triggered by documents</strong> only.</p>
+<h2 id="hook-properties"><a class="toclink" href="#hook-properties">Hook properties</a></h2>
+<pre><code>{
+    "_id": "57114ee832d2c668de756b5d",
+    "collection": "_files",
+    "condition": {
+        "additionalProperties": true,
+        "properties": {
+            "name": {
+                "enum": [
+                    "small.jpg"
+                ],
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "headers": {
+        "Authorization": "Bearer &lt;secret-value&gt;",
+        "Content-Type": "application/json"
+    },
+    "method": "GET",
+    "name": "files_hook",
+    "triggers": [
+        "created"
+    ],
+    "url": "https://example.com/url-to-post-to",
+    "timeout": {
+        "read": 10,
+        "connect": 1,
+    },
+    "retry": {
+        "strategy": "exponential"
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../hooks/#_id">_id</a></td>
+<td>string</td>
+<td>unique identity of the hook</td>
+</tr>
+<tr>
+<td><a href="../hooks/#name">name</a></td>
+<td>string</td>
+<td>name of a hook</td>
+</tr>
+<tr>
+<td><a href="../hooks/#collection">collection</a></td>
+<td>string</td>
+<td>collection which contains a documents called hook to trigger</td>
+</tr>
+<tr>
+<td><a href="../hooks/#condition">condition</a></td>
+<td>object</td>
+<td>condition of a successful hook trigger</td>
+</tr>
+<tr>
+<td><a href="../hooks/#headers">headers</a></td>
+<td>object</td>
+<td>http request headers</td>
+</tr>
+<tr>
+<td><a href="../hooks/#method">method</a></td>
+<td>string</td>
+<td>http method to commit a request</td>
+</tr>
+<tr>
+<td><a href="../hooks/#triggers">triggers</a></td>
+<td>array</td>
+<td>document event to trigger a hook</td>
+</tr>
+<tr>
+<td><a href="../hooks/#request_payload_wrapper">request_payload_wrapper</a></td>
+<td>string</td>
+<td>name of <code>payload</code> property</td>
+</tr>
+<tr>
+<td><a href="../hooks/#url">url</a></td>
+<td>string</td>
+<td>url to commit a http request</td>
+</tr>
+<tr>
+<td><a href="../hooks/#timeout">timeout</a></td>
+<td>object</td>
+<td>timeouts to connect and read</td>
+</tr>
+<tr>
+<td><a href="../hooks/#retry">retry</a></td>
+<td>object</td>
+<td>retry settings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collection"><a class="toclink" href="#collection">collection</a></h3>
+<p>All documents from this collection will be used to be a hook trigger</p>
+<h3 id="condition"><a class="toclink" href="#condition">condition</a></h3>
+<p>This is a schema. If a document which triggered this hook matches this <code>condition</code> schema - this hook will commit an operation, otherwise it won't.</p>
+<h3 id="headers"><a class="toclink" href="#headers">headers</a></h3>
+<p>Hook will contain these headers in a request:</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Hook-ID</td>
+<td><code>_id</code>  of a hook</td>
+</tr>
+<tr>
+<td>X-Hook-Trigger</td>
+<td>event of a document which caused hook to trigger</td>
+</tr>
+<tr>
+<td>X-Hook-Operation-ID</td>
+<td>operation is <code>_id</code> of a hook. Can be found in a <code>_hooks_history</code></td>
+</tr>
+</tbody>
+</table>
+<p>If <code>method</code> is <code>PUT</code>, <code>PATCH</code> or <code>POST</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td><code>application/json</code></td>
+<td>Body will contain document's JSON</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td></td>
+<td>Length of document's JSON</td>
+</tr>
+</tbody>
+</table>
+<p>In some cases you may need a webhook to pass a custom header with a request it commits.</p>
+<h3 id="method"><a class="toclink" href="#method">method</a></h3>
+<p>A <strong>method</strong> is being used to commit a HTTP Request. Valud values are <code>GET</code>, <code>POST</code>, <code>DELETE</code> or <code>PUT</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th align="center">Body</th>
+<th>Content-Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PUT</td>
+<td align="center">*</td>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td align="center">*</td>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td align="center">*</td>
+<td><code>application/json</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>In some cases you may need a webhook to <code>PUT</code> a processed document to your cache or database.</p>
+<h3 id="triggers"><a class="toclink" href="#triggers">triggers</a></h3>
+<p>When a document event matches <code>created</code>, <code>updated</code>, <code>deleted</code> the webhook triggers.</p>
+<h3 id="request_payload_wrapper"><a class="toclink" href="#request_payload_wrapper">request_payload_wrapper</a></h3>
+<p>By default a payload of a webhook is wrapped to <code>payload</code> property. </p>
+<p>Sometimes you may need it to be a different root property.</p>
+<h3 id="timeout"><a class="toclink" href="#timeout">timeout</a></h3>
+<h4 id="timeoutconnect"><a class="toclink" href="#timeoutconnect">timeout.connect</a></h4>
+<p>Timeout to connect</p>
+<h4 id="timeoutread"><a class="toclink" href="#timeoutread">timeout.read</a></h4>
+<p>Timeout to read read response</p>
+<h3 id="retry"><a class="toclink" href="#retry">retry</a></h3>
+<h4 id="retrystrategy"><a class="toclink" href="#retrystrategy">retry.strategy</a></h4>
+<p>Strategy can be <code>exponential</code> or <code>constant</code></p>
+<p><code>exponential</code> strategy requeues hook trigger for 2, 4, 8, 16, 32 ... seconds</p>
+<p><code>constant</code> strategy requeues hook trigger for in 2 seconds</p>
+<h3 id="url"><a class="toclink" href="#url">url</a></h3>
+<p>hook url to request</p>
+<h2 id="hook-retry-policy"><a class="toclink" href="#hook-retry-policy">Hook retry policy</a></h2>
+<p>If <a href="../hooks/#url">url</a> response contains the header <code>Retry-After</code> the hook will tolerate it. </p>
+<p>If response contains redirects - the hook will also follow redirects. Up to <code>5</code> redirects are allowed.</p>
+<h2 id="hook-results"><a class="toclink" href="#hook-results">Hook results</a></h2>
+<p>The item of a history will have a status according received HTTP response Status Code.</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Status Codes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>200, 201, 202, 204</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>500, 501, 502, 503, 504, 505, 400, 401, 403, 404, 405, 410</td>
+</tr>
+<tr>
+<td>Redirect</td>
+<td>301, 302, 305, 307</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../http_status_codes/" class="btn btn-neutral float-right" title="HTTP Status Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../embeds/" class="btn btn-neutral" title="Embeds"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38777730 = new Ya.Metrika({ id:38777730, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } });
+var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38777730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../embeds/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../http_status_codes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

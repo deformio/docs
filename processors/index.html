@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Processors - Deform</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Processors";
+    var mkdocs_page_input_path = "processors.md";
+    var mkdocs_page_url = "/processors/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deform</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">Quickstart</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../user/">User</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../projects/">Projects</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../debug/">Debug</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../collections/">Collections</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../documents/">Documents</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../schemas/">Schemas</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../files/">Files</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tokens/">Tokens</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../notifications/">Notifications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Usage</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Processors</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#processors">Processors</a></li>
+                
+                    <li><a class="toctree-l4" href="#limitations">Limitations</a></li>
+                
+                    <li><a class="toctree-l4" href="#current-processors-implemented">Current processors implemented</a></li>
+                
+                    <li><a class="toctree-l4" href="#examples">Examples</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../embeds/">Embeds</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../hooks/">Hooks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../http_status_codes/">HTTP Status Codes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cli/">CLI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">HTTP API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/">Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deform</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Processors</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="processors"><a class="toclink" href="#processors">Processors</a></h1>
+<p>Data processing is one of features deform.io provides. Processors are entities in a schema. They can have access to multiple properties.</p>
+<p>Processors can be chained. </p>
+<p>There is also a processor dependency recursion check.</p>
+<p>Feel free to send us a feedback about processors you are missing.</p>
+<h2 id="limitations"><a class="toclink" href="#limitations">Limitations</a></h2>
+<p>As for now processor cannot process properties of type <strong>array</strong>. In future we will implement this feature.</p>
+<h2 id="current-processors-implemented"><a class="toclink" href="#current-processors-implemented">Current processors implemented</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../processors/#apiai">apiai</a></td>
+<td>Process natural language</td>
+</tr>
+<tr>
+<td><a href="../processors/#google_detect_language">google_detect_language</a></td>
+<td>Detect the language of a text string</td>
+</tr>
+<tr>
+<td><a href="../processors/#google_translate">google_translate</a></td>
+<td>Translate text from one language to another language</td>
+</tr>
+<tr>
+<td><a href="../processors/#html_to_text">html_to_text</a></td>
+<td>Remove html tags from text</td>
+</tr>
+<tr>
+<td><a href="../processors/#markdown">markdown</a></td>
+<td>Render a html from a markdown</td>
+</tr>
+<tr>
+<td><a href="../processors/#md5">md5</a></td>
+<td>Calculate a message-digest fingerprint (checksum)</td>
+</tr>
+<tr>
+<td><a href="../processors/#random">random</a></td>
+<td>Make a random value</td>
+</tr>
+<tr>
+<td><a href="../processors/#readability">readability</a></td>
+<td>Makes a text readable</td>
+</tr>
+<tr>
+<td><a href="../processors/#readability_com">readability_com</a></td>
+<td>Use readability.com to turn any web page into a clean view for reading</td>
+</tr>
+<tr>
+<td><a href="../processors/#resize">resize</a></td>
+<td>Resize an image</td>
+</tr>
+<tr>
+<td><a href="../processors/#sentiment">sentiment</a></td>
+<td>Sentiment analysis aims to determine the attitude of a speaker or a writer with respect to some [topic or the overall contextual polarity of a text</td>
+</tr>
+<tr>
+<td><a href="../processors/#template">template</a></td>
+<td>Make a string from template</td>
+</tr>
+<tr>
+<td><a href="../processors/#text_to_speech">text_to_speech</a></td>
+<td>Text to speech processor</td>
+</tr>
+<tr>
+<td><a href="../processors/#watermark">watermark</a></td>
+<td>Watermark an image</td>
+</tr>
+<tr>
+<td><a href="../processors/#yandex_detect_language">yandex_detect_language</a></td>
+<td>Detect the language of a text string</td>
+</tr>
+<tr>
+<td><a href="../processors/#yandex_speechkit_tts">yandex_speechkit_tts</a></td>
+<td>Text to speech processor</td>
+</tr>
+<tr>
+<td><a href="../processors/#yandex_translate">yandex_translate</a></td>
+<td>Translate text from one language to another language</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<h3 id="apiai"><a class="toclink" href="#apiai">apiai</a></h3>
+<p>Process natural language</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "human_text": {
+            "type": "string",
+            "required": true
+        },
+        "ai_obj": {
+            "type": ["object", "null"],
+            "additionalProperties": true,
+            "processors": [
+                {
+                    "name": "apiai",
+                    "in": {
+                        "text": {
+                            "property": "human_text"
+                        },
+                        "language": {
+                            "value": "EN"
+                        },
+                        "language_token": {
+                            "value": "&lt;YOUR_LANGUAGE_TOKEN&gt;"
+                        },
+                        "subscription_key": {
+                            "value": "&lt;YOUR_SUBSCTIPTION_KEY&gt;"  
+                        },
+                        "timezone": {
+                            "value": "Europe/Moscow"
+                        },
+                        "contexts": {
+                            "value": ["calendar"]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "human_text": "schedule lunch at 1 pm tomorrow.",
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b676a32d2c61886cda77b",
+    "ai_obj": {
+        "action": "calendar.add",
+        "metadata": {
+            "contexts": [],
+            "inputContexts": [],
+            "outputContexts": []
+        },
+        "parameters": {
+            "endDate": "2016-05-06T13:00:00+03:00",
+            "startDate": "2016-05-06T13:00:00+03:00",
+            "summary_predefined": "lunch"
+        },
+        "resolvedQuery": "schedule lunch at 1 pm tomorrow.",
+        "score": 0,
+        "source": "domains",
+        "speech": ""
+    },
+    "human_text": "schedule lunch at 1 pm tomorrow."
+}
+</code></pre>
+<h3 id="google_detect_language"><a class="toclink" href="#google_detect_language">google_detect_language</a></h3>
+<p>Detect the language of a text string</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "detected": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "google_detect_language",
+                    "in": {
+                        "text": {
+                            "property": "text"
+                        },
+                        "api_key": {
+                            "value": "&lt;YOUR_API_KEY&gt;"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "text": "Привет"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+
+    "_id": "572a45ed32d2c602098508e0",
+    "text": "Привет",
+    "detected": "ru"
+}
+</code></pre>
+<h3 id="google_translate"><a class="toclink" href="#google_translate">google_translate</a></h3>
+<p>Translate text from one language to another language</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "translated": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "google_translate",
+                    "in": {
+                        "text": {
+                            "property": "text"
+                        },
+                        "from": {
+                            "value": "ru"
+                        },
+                        "to": {
+                            "value": "en"
+                        },
+                        "api_key": {
+                            "value": "&lt;YOUR_API_KEY&gt;"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "text": "Привет"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572a45ec32d2c602098508d5",
+    "text": "Привет",
+    "translated": "Hi"
+}
+</code></pre>
+<h3 id="html_to_text"><a class="toclink" href="#html_to_text">html_to_text</a></h3>
+<p>Remove html tags from text</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "html": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "html_to_text",
+                    "in": {
+                        "html": {
+                            "property": "html"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "html": "&lt;html&gt;&lt;head&gt;&lt;title&gt;Hello&lt;/title&gt;&lt;/head&gt;&lt;body&gt;World&lt;/body&gt;&lt;/html&gt;"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b75f632d2c620e67a8908",
+    "html": "&lt;html&gt;&lt;head&gt;&lt;title&gt;Hello&lt;/title&gt;&lt;/head&gt;&lt;body&gt;World&lt;/body&gt;&lt;/html&gt;",
+    "text": "World"
+}
+</code></pre>
+<h3 id="markdown"><a class="toclink" href="#markdown">markdown</a></h3>
+<p>Render a html from a markdown</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "markdown": {
+            "type": "string",
+            "required": true
+        },
+        "html": {
+            "type": "string",
+            "description": "rendered markdown",
+            "processors": [
+                {
+                    "name": "markdown",
+                    "in": {
+                        "text": {
+                            "property": "markdown"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "markdown": "**hello** __world__"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b746a32d2c61f0a366d87",
+    "html": "&lt;p&gt;&lt;strong&gt;hello&lt;/strong&gt; &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;\n",
+    "markdown": "**hello** __world__"
+}
+</code></pre>
+<h3 id="md5"><a class="toclink" href="#md5">md5</a></h3>
+<p>Calculate a message-digest fingerprint (checksum)</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "password_md5ed": {
+            "type": "string",
+            "description": "user password",
+            "processors": [
+                {
+                    "name": "md5"
+                }
+            ],
+            "required": true
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "firstName": "Andrey",
+    "lastName": "Chibisov",
+    "password": "1234567890"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "jKmLOGOunnNrLe",
+    "firstName": "Andrey",
+    "lastName": "Chibisov",
+    "password_md5ed": "e807f1fcf82d132f9bb018ca6738a19f"
+}
+</code></pre>
+<h3 id="random"><a class="toclink" href="#random">random</a></h3>
+<p>Make a random value</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+    "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string",
+            "description": "random user password",
+            "processors": [
+                {
+                    "name": "random",
+                    "in": {
+                        "random_type": {
+                            "value": "string"
+                        },
+                        "length": {
+                            "value": 20
+                        }
+                    }
+                },
+                {
+                    "name": "md5"
+                }
+            ]
+        }
+    },
+    "required": ["firstName", "lastName"]
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "firstName": "Gennady",
+    "lastName":  "Chibisov"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b722a32d2c61d34331ef0",
+    "firstName": "Gennady",
+    "lastName": "Chibisov",
+    "password": "1591bbef3c4792bf9e102b10cad32b1c"
+}
+</code></pre>
+<h3 id="readability"><a class="toclink" href="#readability">readability</a></h3>
+<p>Makes a text readable</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        {
+    "type": "object",
+    "properties": {
+        "html_content": {
+            "type": "string"
+        },
+        "readable": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "type": "string"
+                },
+                "short_title": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            },
+            "processors": [
+                {
+                    "name": "readability",
+                    "in": {
+                        "text": {
+                            "property": "html_content"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "html_content": "&lt;html&gt;&lt;head&gt;&lt;title&gt;Hello&lt;/title&gt;&lt;/head&gt;&lt;body&gt;World&lt;/body&gt;&lt;/html&gt;",
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b70b932d2c61c27a112bb",
+    "html_content": "&lt;html&gt;&lt;head&gt;&lt;title&gt;Hello&lt;/title&gt;&lt;/head&gt;&lt;body&gt;World&lt;/body&gt;&lt;/html&gt;",
+    "plaintext": "World",
+    "readable": {
+        "content": "&lt;body id=\"readabilityBody\"&gt;World&lt;/body&gt;",
+        "short_title": "Hello",
+        "title": "Hello"
+    }
+}
+</code></pre>
+<h3 id="readability_com"><a class="toclink" href="#readability_com">readability_com</a></h3>
+<p>Use <a href="https://readability.com/">readability.com</a> to turn any web page into a clean view for reading</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "url_to_make_readable": {
+            "type": "string"
+        },
+        "readable": {
+            "type": "object",
+            "additionalProperties": true,
+            "processors": [
+                {
+                    "name": "readability_com",
+                    "in": {
+                        "url": {
+                            "property": "url_to_make_readable"
+                        },
+                        "api_key": {
+                            "value": "&lt;YOUR_API_KEY&gt;"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "url_to_make_readable": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/",
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b7cb032d2c628585e1fa9",
+    "readable": {
+        "author": null,
+        "content": "............",
+        "date_published": "2016-02-07 13:03:06",
+        "dek": null,
+        "direction": "ltr",
+        "domain": "blog.chib.me",
+        "excerpt": "07 February 2016 Have you ever wanted to convert mysql database to sqlite? Or postgres to mysql? Or mysql to postgres? Recently I've been migrating my django project from MySQL to SQLite. I tried to&amp;hellip;",
+        "lead_image_url": null,
+        "next_page_id": null,
+        "rendered_pages": 1,
+        "short_url": "http://rdd.me/7gou967w",
+        "title": "How to convert databases with one line of code",
+        "total_pages": 0,
+        "url": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/",
+        "word_count": 421
+    },
+    "url_to_make_readable": "https://blog.chib.me/how-to-convert-databases-with-one-line-of-code/"
+}
+</code></pre>
+<h3 id="resize"><a class="toclink" href="#resize">resize</a></h3>
+<p>Resize an image</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "original": {
+            "type": "file"
+        },
+        "resized": {
+            "type": "file",
+            "processors": [
+                {
+                    "name": "resize",
+                    "in": {
+                        "original_image": {
+                            "property": "original"
+                        },
+                        "size": {
+                            "value": [200,200]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Commit a <code>PUT</code>/<code>POST</code>/<code>PATCH</code> with <code>Content-Type: multipart/form-data</code> and file assigned to <code>original</code> property</p>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b6e7732d2c61b066cee6e",
+    "original": {
+        "_id": "572b6e7732d2c61b066cee6f",
+        "collection_id": "QSMHdGfXIQIXOv",
+        "content_type": "image/gif",
+        "date_created": "2016-05-05T16:01:59.614410146Z",
+        "document_id": "572b6e7732d2c61b066cee6e",
+        "last_access": "2016-05-05T16:01:59.614410146Z",
+        "md5": "8c4c6953f0b9003eb9ceb7a923cc208e",
+        "name": "test_helpers/data/animated.gif",
+        "size": 991109
+    },
+    "resized": {
+        "_id": "572b6e7832d2c61b066cee71",
+        "collection_id": "QSMHdGfXIQIXOv",
+        "content_type": "image/gif",
+        "date_created": "2016-05-05T16:02:00.475956835Z",
+        "document_id": "572b6e7732d2c61b066cee6e",
+        "last_access": "2016-05-05T16:02:00.475956835Z",
+        "md5": "d741fa8da603842a0dd0aec9ec2330df",
+        "name": "resized_resize_OLYi.gif",
+        "size": 366404
+    }
+}
+</code></pre>
+<h3 id="sentiment"><a class="toclink" href="#sentiment">sentiment</a></h3>
+<p>Sentiment analysis aims to determine the attitude of a speaker or a writer with respect to some topic or the overall contextual polarity of a text</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "sentiment": {
+            "type": "number",
+            "description": "text to sentiment",
+            "processors": [
+                {
+                    "name": "sentiment",
+                    "in": {
+                        "text": {
+                            "property": "text"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "text": "this restaurant is great",
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b6d4132d2c61a78927e5d",
+    "sentiment": 0.8,
+    "text": "this restaurant is great"
+}
+</code></pre>
+<h3 id="template"><a class="toclink" href="#template">template</a></h3>
+<p>Make a string from template</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "country": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "required": true
+                },
+                "code": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        },
+        "representation": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "template",
+                    "in": {
+                        "context": {
+                            "code": {
+                                "property": "country.code"
+                            },
+                            "name": {
+                                "property": "country.name"
+                            }
+                        },
+                        "syntax": {
+                            "value": "handlebars"
+                        },
+                        "template_string": {
+                            "value": "{{code}} - {{name}}"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "country": {
+        "name": "Russian Federation",
+        "code": "RU"
+    }
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "562b6b7a32e3c118e83aa4fa",
+    "country": {
+        "name": "Russian Federation",
+        "code": "RU"
+    },
+    "representation": "RU - Russian Federation"
+}
+</code></pre>
+<h3 id="text_to_speech"><a class="toclink" href="#text_to_speech">text_to_speech</a></h3>
+<p>Text to speech processor</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "user_info": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "age": {
+                    "description": "Age in years",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "message": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "template",
+                    "in": {
+                        "context": {
+                            "firstName": {
+                                "property": "user_info.firstName"
+                            },
+                            "lastName": {
+                                "property": "user_info.lastName"
+                            },
+                            "age": {
+                                "property": "user_info.age"
+                            }
+                        },
+                        "syntax": {
+                            "value":"handlebars"
+                        },
+                        "template_string": {
+                            "value":"{{lastName}} {{firstName}} is {{age}} years"
+                        }
+                    }
+                }
+            ]
+        },
+        "tts_field": {
+            "type": "file",
+            "processors": [
+                {
+                    "name": "text_to_speech",
+                    "in": {
+                        "text": {
+                            "property": "message"
+                        },
+                        "language": {
+                            "value": "en-US"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "user_info": {
+        "lastName":  "Chibisov",
+        "firstName": "Andrey",
+        "age":       27
+    }
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b6b7832d2c619e83aa4fd",
+    "message": "Chibisov Andrey is 27 years",
+    "tts_field": {
+        "_id": "572b6b7a32d2c619e83aa4fe",
+        "collection_id": "example_schema_tts-MuVVGXLnShseQO",
+        "content_type": "audio/x-wav",
+        "date_created": "2016-05-05T15:49:14.342821384Z",
+        "document_id": "572b6b7832d2c619e83aa4fd",
+        "last_access": "2016-05-05T15:49:14.342821384Z",
+        "md5": "8a2bab3a7b3752028e9dfbfa326d5e73",
+        "name": "tts_field_text_to_speech_trde.wav",
+        "size": 59206
+    },
+    "user_info": {
+        "age": 27,
+        "firstName": "Andrey",
+        "lastName": "Chibisov"
+    }
+}
+</code></pre>
+<h3 id="watermark"><a class="toclink" href="#watermark">watermark</a></h3>
+<p>Watermark an image</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "watermark": {
+            "type": "file"
+        },
+        "photo": {
+            "type": "file",
+            "processors": [
+                {
+                    "name": "resize",
+                    "in": {
+                        "size": {
+                            "value": [
+                                100,
+                                100
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "watermark",
+                    "in": {
+                        "watermark_image": {
+                            "property": "watermark"
+                        },
+                        "gravity": {
+                            "value": "SouthEast"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "photo": "&lt;YOUR_IMAGE_FILE&gt;",
+    "watermark": "&lt;YOUR_WATERMARK_FILE&gt;"
+}
+</code></pre>
+<h3 id="yandex_detect_language"><a class="toclink" href="#yandex_detect_language">yandex_detect_language</a></h3>
+<p>Detect the language of a text string</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "detected": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "yandex_detect_language",
+                    "in": {
+                        "text": {
+                            "property": "text"
+                        },
+                        "api_key": {
+                            "value": "&lt;YOUR_API_KEY&gt;"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "text": "Hello world",
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b7a9432d2c6241b8bbe22",
+    "text": "Hello world",
+    "detected": "en"
+}
+</code></pre>
+<h3 id="yandex_speechkit_tts"><a class="toclink" href="#yandex_speechkit_tts">yandex_speechkit_tts</a></h3>
+<p>Text to speech processor</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "text_to_speak": {
+            "type": "string"
+        },
+        "speech": {
+            "type": "file",
+            "processors": [
+                {
+                    "name": "yandex_speechkit_tts",
+                    "in": {
+                        "text": {
+                            "property": "text_to_speak"
+                        },
+                        "format": {
+                            "value": "wav"
+                        },
+                        "language": {
+                            "value": "ru-RU"
+                        },
+                        "speaker": {
+                            "value": "omazh"
+                        },
+                        "api_key": {
+                            "value": "&lt;YOUR_API_KEY&gt;"
+                        },
+                        "emotion": {
+                            "value": "good"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "text_to_speak": "Как дела?"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b791532d2c6226354dd26",
+    "text_to_speak": "Как дела?",
+    "speech": {
+        "_id": "572b6b7a32d2c619e83aa4fe",
+        "collection_id": "example_schema_tts-aA8rCg9UeRQVkm",
+        "content_type": "audio/x-wav",
+        "date_created": "2016-06-17T15:30:37.496648327Z",
+        "document_id": "572b6b7832d2c619e83aa4fd",
+        "last_access": "2016-06-17T13:30:37.496648327~",
+        "md5": "8a2bab3a7b3752028e9dfbfa326d5e73",
+        "name": "tts_field_text_to_speech_trde.wav",
+        "size": 59206
+    }
+}
+</code></pre>
+<h3 id="yandex_translate"><a class="toclink" href="#yandex_translate">yandex_translate</a></h3>
+<p>Translate text from one language to another language</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "translated": {
+            "type": "string",
+            "processors": [
+                {
+                    "name": "yandex_translate",
+                    "in": {
+                        "text": {
+                            "property": "text"
+                        },
+                        "lang": {
+                            "value": "ru-en"
+                        },
+                        "api_key": {
+                            "value": "&lt;YOUR_API_KEY&gt;"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Request body:</p>
+<pre><code>{
+    "text": "Как дела?"
+}
+</code></pre>
+<p>Response:</p>
+<pre><code>{
+    "_id": "572b791532d2c6226354dd26",
+    "text": "Как дела?",
+    "translated": "How's it going?"
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../embeds/" class="btn btn-neutral float-right" title="Embeds">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../usage/" class="btn btn-neutral" title="Usage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38777730 = new Ya.Metrika({ id:38777730, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } });
+var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38777730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../usage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../embeds/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<form action="" method="get">
+  <input type="text" name="search" value="{{ search_text }}">
+  <input type="submit" value="search">
+</form>
+
+<ul>
+  {% for venue in venues %}
+  <li>
+    <a href="{{ venue._id }}">{{ venue.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

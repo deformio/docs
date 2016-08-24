@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Tokens - Deform</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tokens";
+    var mkdocs_page_input_path = "tokens.md";
+    var mkdocs_page_url = "/tokens/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deform</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">Quickstart</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../user/">User</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../projects/">Projects</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../debug/">Debug</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../collections/">Collections</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../documents/">Documents</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../schemas/">Schemas</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../files/">Files</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Tokens</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#tokens">Tokens</a></li>
+                
+                    <li><a class="toctree-l4" href="#token-in-a-request">Token in a Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#token-properties">Token properties</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../notifications/">Notifications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Usage</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../processors/">Processors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../embeds/">Embeds</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../hooks/">Hooks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../http_status_codes/">HTTP Status Codes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cli/">CLI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">HTTP API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/">Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deform</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tokens</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tokens"><a class="toclink" href="#tokens">Tokens</a></h1>
+<p>Tokens are entities which can modify access levels to your documents and collections. </p>
+<p>Tokens <strong>cannot</strong> be used to operate with:</p>
+<ul>
+<li>user</li>
+<li>project</li>
+</ul>
+<p>Tokens <strong>can</strong> be used to operate with:</p>
+<ul>
+<li>collections</li>
+<li>documents</li>
+</ul>
+<p>Every entity in a project is a <a href="../documents/">document</a> contained in a <a href="../collections/">collection</a>. </p>
+<p>This means you can create a token <strong>able only to create other tokens</strong>:</p>
+<pre><code>{
+    "_id": "57114edc32d2c668de756b0c",
+    "is_active": true,
+    "name": "token_to_create_token",
+    "permission": {
+        "allow": {
+            "create": [
+                {
+                    "what": "document",
+                    "where": "_tokens"
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<p>Or you can create a token <strong>able to read only one <code>document</code> in a collection <code>vacations</code> with id <code>september</code></strong>:</p>
+<pre><code>{
+    "_id": "57114edc32d2c668de756b0c",
+    "is_active": true,
+    "name": "token-35567587",
+    "permission": {
+        "allow": {
+            "read": [
+                {
+                    "what": "document",
+                    "where": "vacations",
+                    "what_id": "september"
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<h2 id="token-in-a-request"><a class="toclink" href="#token-in-a-request">Token in a Request</a></h2>
+<p>You can pass a token in request header as:</p>
+<ul>
+<li><code>"Authorization": "Token TokenId"</code></li>
+</ul>
+<p>Also you can pass it in URL:</p>
+<ul>
+<li><code>https://myproject.deform.io/api/collections/_files/documents/vacation/content/?token=TokenId</code></li>
+</ul>
+<h2 id="token-properties"><a class="toclink" href="#token-properties">Token properties</a></h2>
+<pre><code>{
+    "_id": "57114edc32d2c668de756b0c",
+    "is_active": true,
+    "name": "token-35567587",
+    "permission": {
+        "allow": {
+            "create": [
+                {
+                    "what": "document",
+                    "where": "venues"
+                },
+                {
+                    "what": "collection"
+                }
+            ],
+            "delete": [
+                {
+                    "what": "document",
+                    "where": "venues",
+                    "what_id": "removeable-cafe"
+                },
+                {
+                    "what": "collection",
+                    "what_id": "removable-collection"
+                }
+            ],
+            "read": [
+                {
+                    "what": "document",
+                    "where": "read-only-collection"
+                },
+                {
+                    "what": "collection"
+                }
+            ],
+            "update": [
+                {
+                    "what": "document"
+                },
+                {
+                    "what": "collection",
+                    "what_id": "update-only-collection"
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_id</td>
+<td>string</td>
+<td>Unique identity of the token</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of a token</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>bool</td>
+<td>Is token active or not</td>
+</tr>
+<tr>
+<td>permission</td>
+<td>object</td>
+<td>Token access levels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission"><a class="toclink" href="#permission">permission</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow</td>
+<td>object</td>
+<td>Token allow access levels</td>
+</tr>
+</tbody>
+</table>
+<h4 id="allow"><a class="toclink" href="#allow">allow</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all</td>
+<td>bool</td>
+<td>Allow all</td>
+</tr>
+<tr>
+<td>create</td>
+<td>array</td>
+<td>List of <a href="../tokens/#access-entity">entities</a> which can be created</td>
+</tr>
+<tr>
+<td>update</td>
+<td>array</td>
+<td>List of <a href="../tokens/#access-entity">entities</a> which can be updated</td>
+</tr>
+<tr>
+<td>read</td>
+<td>array</td>
+<td>List of <a href="../tokens/#access-entity">entities</a> which can be read</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>array</td>
+<td>List of <a href="../tokens/#access-entity">entities</a> which can be deleted</td>
+</tr>
+</tbody>
+</table>
+<h5 id="access-entity"><a class="toclink" href="#access-entity">access entity</a></h5>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>what</td>
+<td>string</td>
+<td>Values: <code>collection</code>, <code>document</code></td>
+</tr>
+<tr>
+<td>what_id</td>
+<td>string</td>
+<td>Unique identifier of a <code>what</code> entity to perate with</td>
+</tr>
+<tr>
+<td>where</td>
+<td>string</td>
+<td>If <code>what:document</code> this will be the <code>_id</code> of a collection</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../notifications/" class="btn btn-neutral float-right" title="Notifications">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../files/" class="btn btn-neutral" title="Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38777730 = new Ya.Metrika({ id:38777730, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } });
+var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38777730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../files/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../notifications/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

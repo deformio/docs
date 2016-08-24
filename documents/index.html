@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Documents - Deform</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Documents";
+    var mkdocs_page_input_path = "documents.md";
+    var mkdocs_page_url = "/documents/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deform</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">Quickstart</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../user/">User</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../projects/">Projects</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../debug/">Debug</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../collections/">Collections</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Documents</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#documents">Documents</a></li>
+                
+                    <li><a class="toctree-l4" href="#document-without-collection">Document without collection</a></li>
+                
+                    <li><a class="toctree-l4" href="#filter">Filter</a></li>
+                
+                    <li><a class="toctree-l4" href="#features">Features</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-usage">Example usage</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../schemas/">Schemas</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../files/">Files</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tokens/">Tokens</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../notifications/">Notifications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Usage</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../processors/">Processors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../embeds/">Embeds</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../hooks/">Hooks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../http_status_codes/">HTTP Status Codes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cli/">CLI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">HTTP API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/">Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deform</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Documents</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="documents"><a class="toclink" href="#documents">Documents</a></h1>
+<p>The <code>document</code> is a simple JSON entity. It is stored in a <a href="../collections/">collection</a>.</p>
+<h2 id="document-without-collection"><a class="toclink" href="#document-without-collection">Document without collection</a></h2>
+<p>You can create a document without existing collection, but you'll miss some <a href="../documents/#features">features</a> collection provides.</p>
+<h2 id="filter"><a class="toclink" href="#filter">Filter</a></h2>
+<p>Documents can be found using a fulltext search or filter. </p>
+<p>This example is about geolocation filter.</p>
+<p>Collection <code>customers_shared_locations</code>:</p>
+<pre><code class="bash">deform collection create -d '{
+    &quot;_id&quot;: &quot;customers_shared_locations&quot;,
+    &quot;name&quot;: &quot;Customers shared locations&quot;,
+    &quot;schema&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;location&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                    &quot;coordinates&quot;: {
+                        &quot;items&quot;: {
+                            &quot;type&quot;: &quot;number&quot;
+                        },
+                        &quot;maxLength&quot;: 2,
+                        &quot;minLength&quot;: 2,
+                        &quot;type&quot;: &quot;array&quot;
+                    },
+                    &quot;type&quot;: {
+                        &quot;enum&quot;: [&quot;Point&quot;]
+                    }
+                }
+            }
+        }
+    },
+    &quot;indexes&quot;: [
+        {
+            &quot;property&quot;: &quot;$2dsphere:location&quot;,
+            &quot;type&quot;: &quot;simple&quot;,
+            &quot;unique&quot;: false
+        }
+    ]
+}'
+</code></pre>
+
+<p>Document:</p>
+<pre><code class="json">deform document create -c customers_shared_locations -d '{
+    &quot;_id&quot;: &quot;12345&quot;,
+    &quot;location&quot;: {
+        &quot;coordinates&quot;: [
+            40.432121,  -3.707698
+        ],
+        &quot;type&quot;: &quot;Point&quot;
+    } 
+}' 
+</code></pre>
+
+<p>You can find this document withing <strong>600 meters radius</strong>.</p>
+<p>Points [40.432121,  -3.707698] and [40.432446, -3.700996] are <strong>~573 meters away</strong>. </p>
+<pre><code class="bash">deform documents find -c customers_shared_locations -f '{
+    &quot;location&quot;: {
+        &quot;$geoWithin&quot;: {
+            &quot;$centerSphere&quot;: {
+                40.432446, -3.700996,
+                0.6/6378.137
+            }
+        }
+    }
+}'
+</code></pre>
+
+<h2 id="features"><a class="toclink" href="#features">Features</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Collection Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../documents/#storage">storage</a></td>
+<td></td>
+<td>attach files to documents</td>
+</tr>
+<tr>
+<td><a href="../documents/#validation">validation</a></td>
+<td>*</td>
+<td>validate a document</td>
+</tr>
+<tr>
+<td><a href="../documents/#processing">processing</a></td>
+<td>*</td>
+<td>process a document according collection's schema</td>
+</tr>
+<tr>
+<td><a href="../documents/#hooks">hooks</a></td>
+<td></td>
+<td>trigger a hook after document event</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage"><a class="toclink" href="#storage">storage</a></h3>
+<p>You can upload files with data to your document in a single request.</p>
+<p>It will create a document with a file reference. File will be saved as a document to <a href="../files/">_files</a> collection.</p>
+<p>Create a document using <a href="../cli/">CLI</a>:</p>
+<pre><code class="bash">deform document create -c users -d '{
+    &quot;name&quot;: &quot;Andrey&quot;,
+    &quot;avatar&quot;: @&quot;/home/andrey/files/avatar.jpg&quot;
+}'
+</code></pre>
+
+<pre><code class="bash">deform documents find -c users -f '{&quot;name&quot;: &quot;Andrey&quot;}' --pretty
+
+{
+    &quot;_id&quot;: &quot;574d48cf32d2c69274322585&quot;,
+    &quot;name&quot;: &quot;andrey&quot;,
+    &quot;avatar&quot;: {
+        &quot;_id&quot;: &quot;574c9a266dff87000562eaf6&quot;,
+        &quot;collection_id&quot;: &quot;users&quot;,
+        &quot;content_type&quot;: &quot;image/png&quot;,
+        &quot;date_created&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+        &quot;document_id&quot;: &quot;574d48cf32d2c69274322585&quot;,
+        &quot;last_access&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+        &quot;md5&quot;: &quot;a6a859273c133cdf168295a3b7d83a0f&quot;,
+        &quot;name&quot;: &quot;avatar.png&quot;,
+        &quot;size&quot;: 3421
+    }
+}
+</code></pre>
+
+<p>Also a <code>_files</code> collection will contain a file document.</p>
+<pre><code class="bash">deform documents find -c _files -f '{&quot;_id&quot;: &quot;574c9a266dff87000562eaf6&quot;}' --pretty
+
+{
+    &quot;_id&quot;: &quot;574c9a266dff87000562eaf6&quot;,
+    &quot;collection_id&quot;: &quot;users&quot;,
+    &quot;content_type&quot;: &quot;image/png&quot;,
+    &quot;date_created&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;document_id&quot;: &quot;574d48cf32d2c69274322585&quot;,
+    &quot;last_access&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;md5&quot;: &quot;a6a859273c133cdf168295a3b7d83a0f&quot;,
+    &quot;name&quot;: &quot;avatar.png&quot;,
+    &quot;size&quot;: 3421
+}
+</code></pre>
+
+<h3 id="validation"><a class="toclink" href="#validation">validation</a></h3>
+<p>We are using JSON Schema <a href="../schemas/">customized</a> draft v4.</p>
+<p>Schema validation:</p>
+<pre><code>{
+    "type": "object",
+    "properties": {
+        "integer_price": {
+            "type": "integer"
+        },
+        "float_price": {
+            "type": "number"
+        }
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Valid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{"integer_price": 1.2}</td>
+<td></td>
+</tr>
+<tr>
+<td>{"integer_price": 1}</td>
+<td>*</td>
+</tr>
+<tr>
+<td>{"float_price": 1.2}</td>
+<td>*</td>
+</tr>
+<tr>
+<td>{"float_price": 1}</td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+<h3 id="processing"><a class="toclink" href="#processing">processing</a></h3>
+<h3 id="hooks"><a class="toclink" href="#hooks">hooks</a></h3>
+<p>Document can trigger a <a href="../hooks/">hook</a>.</p>
+<p>Hooks has <code>triggers</code> property of type array.</p>
+<p>Every document operation via interfaces pushes this event to hook's queue.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Hook trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>created</code></td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>updated</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>deleted</code></td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><code>updated</code>. If document exists</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><code>created</code>. If document does not exist</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Cli-Deform method</th>
+<th>Hook trigger</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Python-Deform method</th>
+<th>Hook trigger</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<h2 id="example-usage"><a class="toclink" href="#example-usage">Example usage</a></h2>
+<p>We need to receive a slack notification every time new user registers in one of our services.</p>
+<p>There are 4 steps to achieve the result:</p>
+<ul>
+<li>create a collection for users. <code>users</code></li>
+<li>create a collection for slack notifications. <code>slack_notifications</code></li>
+<li>add a webhook for <code>user</code> document creation. Hook will send it <code>slack_notifications</code></li>
+<li>add a webhook for <code>slack_notifications</code> document creation. Hook will send it to <a href="https://slack.com">Slack</a>.</li>
+</ul>
+<p>Let's use <a href="../cli/">CLI</a>.</p>
+<h3 id="step-1"><a class="toclink" href="#step-1">step 1</a></h3>
+<p>Create a collection for users.</p>
+<pre><code class="bash">deform collection create -d '{
+    &quot;_id&quot;: &quot;users&quot;,
+    &quot;name&quot;:&quot;users&quot;,
+    &quot;schema&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;username&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;email&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;avatar&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+            }
+        }
+    }
+}'
+</code></pre>
+
+<h3 id="step-2"><a class="toclink" href="#step-2">step 2</a></h3>
+<p>Create a collection for slack notifications.</p>
+<pre><code class="bash">deform collection create -d '{
+    &quot;_id&quot;: &quot;slack_notifications&quot;,
+    &quot;name&quot;: &quot;Slack Notifications&quot;,
+    &quot;schema&quot;: {
+        &quot;title&quot;: &quot;Slack specific hook wrapper&quot;,
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;text&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;processors&quot;: [
+                    {
+                        &quot;name&quot;: &quot;template&quot;,
+                        &quot;in&quot;: {
+                            &quot;context&quot;: {
+                                &quot;profile&quot;: {
+                                    &quot;property&quot;: &quot;user&quot;
+                                }
+                            },
+                            &quot;syntax&quot;: {
+                                &quot;value&quot;: &quot;handlebars&quot;
+                            },
+                            &quot;template_string&quot;: {
+                                &quot;value&quot;: &quot;{{#if profile}} Welcome &lt;{{profile.username}}&gt;{{/if}}&quot;
+                            }
+                        }
+                    }
+                ]
+            },
+            &quot;user&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                    &quot;username&quot;: {
+                        &quot;type&quot;: &quot;string&quot;
+                    }
+                },
+                &quot;additionalProperties&quot;: true
+            }
+        }
+    }
+}'
+</code></pre>
+
+<h3 id="step-3"><a class="toclink" href="#step-3">step 3</a></h3>
+<p>Add a hook for new user registration. We must insert his data to <code>slack_notifications</code> collection.</p>
+<pre><code class="bash">deform document save -c _hooks -d '{
+    &quot;_id&quot;: &quot;user_registered&quot;,
+    &quot;name&quot;: &quot;User joined&quot;,
+    &quot;url&quot;: &quot;https://YOUR_PROJECT.deform.io/api/collections/slack_notifications/documents/&quot;,
+    &quot;method&quot;: &quot;PUT&quot;,
+    &quot;triggers&quot;: [&quot;created&quot;],
+    &quot;collection&quot;: &quot;users&quot;,
+    &quot;headers&quot;: {
+        &quot;Authorization&quot;: &quot;Token slack_notifications_creation_token&quot;
+    }
+}'
+</code></pre>
+
+<p>Notes:</p>
+<ul>
+<li><code>method</code> set to <code>PUT</code>. This will create or update existing slack notification.</li>
+<li><code>url</code> set to our collection <code>slack_notifications</code></li>
+<li><code>triggers</code> set to <code>created</code>. Only new users will trigger this hook</li>
+<li><code>headers</code> has an item with <code>AUTHORIZATION</code> header. We recommend you to create a <a href="../tokens/">token</a> allowed to <code>create</code> documents inside of <code>slack_notifications</code> collection.<pre><code>deform document save -c _tokens -d '{
+    "_id": "slack_notifications_creation_token",
+    "name": "Slack notification",
+    "is_active": true,
+    "permission": {
+        "allow": {
+            "create": [
+                {
+                    "what": "document",
+                    "where": "slack_notifications"
+                }
+            ]
+        }
+    }
+}'
+</code></pre>
+</li>
+</ul>
+<h3 id="step-4"><a class="toclink" href="#step-4">step 4</a></h3>
+<p>Now we need to create a hook for <code>slack_notifications</code> collection.</p>
+<p>It will send a document to a <a href="https://slack.com">Slack</a>.</p>
+<pre><code class="bash">deform document save -c _hooks -d '{
+    &quot;_id&quot;: &quot;send_slack_notification&quot;,
+    &quot;name&quot;: &quot;Slack notification&quot;,
+    &quot;url&quot;: &quot;https://hooks.slack.com/services/YOUR_SLACK_DETAILS&quot;,
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;triggers&quot;: [&quot;created&quot;],
+    &quot;collection&quot;: &quot;slack_notifications&quot;
+}'
+</code></pre>
+
+<p>Notes:</p>
+<ul>
+<li><code>url</code> replace to a correct slack webhook url.</li>
+</ul>
+<h3 id="how-does-it-work"><a class="toclink" href="#how-does-it-work">How does it work.</a></h3>
+<p>New User registation in your service causes a document to be <code>created</code> inside <code>users</code> collection.</p>
+<p>Collection <code>users</code> has a hook triggering by <code>create</code> event. This hook will commit a HTTP Request:</p>
+<ul>
+<li>use an HTTP Method <code>PUT</code> to <strong>create or update</strong></li>
+<li>use a <code>Authorization</code> header</li>
+<li>send a document to a <code>slack_notifications</code> collection</li>
+</ul>
+<p>Collection <code>slack_notifications</code> has a hook triggering by <code>create</code> event. This hook will send a document directly to a <a href="https://slack.com">Slack</a></p>
+<p>In a few moments you will get a Slack notification.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../schemas/" class="btn btn-neutral float-right" title="Schemas">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../collections/" class="btn btn-neutral" title="Collections"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38777730 = new Ya.Metrika({ id:38777730, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } });
+var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38777730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../collections/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../schemas/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

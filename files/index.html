@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Files - Deform</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Files";
+    var mkdocs_page_input_path = "files.md";
+    var mkdocs_page_url = "/files/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deform</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">Quickstart</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../user/">User</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../projects/">Projects</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../debug/">Debug</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../collections/">Collections</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../documents/">Documents</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../schemas/">Schemas</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Files</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#files">Files</a></li>
+                
+                    <li><a class="toctree-l4" href="#upload-files">Upload files</a></li>
+                
+                    <li><a class="toctree-l4" href="#document-and-content">Document and Content</a></li>
+                
+                    <li><a class="toctree-l4" href="#file-raw-bytes">File raw bytes</a></li>
+                
+                    <li><a class="toctree-l4" href="#file-as-json-document">File as JSON document</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tokens/">Tokens</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../notifications/">Notifications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Usage</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../processors/">Processors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../embeds/">Embeds</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../hooks/">Hooks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../http_status_codes/">HTTP Status Codes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cli/">CLI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">HTTP API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/">Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deform</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Files</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="files"><a class="toclink" href="#files">Files</a></h1>
+<p>Your files are stored in a <code>_files</code> system collection as a <a href="../documents/">documents</a>.</p>
+<p>Total size of all files could be found in a <a href="../projects/#status">project's status</a> <code>files_size</code> property</p>
+<h2 id="upload-files"><a class="toclink" href="#upload-files">Upload files</a></h2>
+<p>You can upload files using <a href="../cli/">CLI</a>:</p>
+<pre><code class="bash">deform document create -c users -d '{
+    &quot;_id&quot;: &quot;september_vacation&quot;,
+    &quot;avatar&quot;: @&quot;/var/files/vacation.png&quot;
+}'
+</code></pre>
+
+<p>Also you can use a <a href="http://deformio.github.io/python-deform/">python-deform</a>:</p>
+<pre><code class="python">from pydeform import Client
+deform = Client(
+    host='deform.io'
+).auth(
+    'token',
+    'MYTOKEN',
+    project_id='MYPROJECT'
+)
+
+resp = deform.document.save(
+    collection='photos',
+    data={
+        &quot;_id&quot;: &quot;september_vacation&quot;,
+        &quot;avatar&quot;: open(&quot;/var/files/vacation.png&quot;, 'rb'),
+    }
+)
+</code></pre>
+
+<p>Now it's time to get uploaded file.</p>
+<p>GET <code>/api/collections/photos/documents/september_vacation/avatar/</code> will return you a JSON document</p>
+<pre><code class="json">{
+    &quot;_id&quot;: &quot;574c9a266dff87000562eaf6&quot;,
+    &quot;collection_id&quot;: &quot;september_vacation&quot;,
+    &quot;content_type&quot;: &quot;image/png&quot;,
+    &quot;date_created&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;document_id&quot;: &quot;574d48cf32d2c69274322585&quot;,
+    &quot;last_access&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;md5&quot;: &quot;a6a859273c133cdf168295a3b7d83a0f&quot;,
+    &quot;name&quot;: &quot;vacation.png&quot;,
+    &quot;size&quot;: 3421
+}
+</code></pre>
+
+<p>GET <code>/api/collections/_files/documents/574c9a266dff87000562eaf6/</code> will return you the same</p>
+<pre><code class="json">{
+    &quot;_id&quot;: &quot;574c9a266dff87000562eaf6&quot;,
+    &quot;collection_id&quot;: &quot;september_vacation&quot;,
+    &quot;content_type&quot;: &quot;image/png&quot;,
+    &quot;date_created&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;document_id&quot;: &quot;574d48cf32d2c69274322585&quot;,
+    &quot;last_access&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;md5&quot;: &quot;a6a859273c133cdf168295a3b7d83a0f&quot;,
+    &quot;name&quot;: &quot;vacation.png&quot;,
+    &quot;size&quot;: 3421
+}
+</code></pre>
+
+<p>The difference is - you need to know <code>_id</code> of a file to access it while in <code>_files</code> collection.</p>
+<h2 id="document-and-content"><a class="toclink" href="#document-and-content">Document and Content</a></h2>
+<p>Every file can be retrieved as JSON document and raw bytes.</p>
+<ul>
+<li><code>/api/collections/_files/documents/&lt;file_id&gt;/</code> - JSON document</li>
+<li><code>/api/collections/_files/documents/&lt;file_id&gt;/content/</code> - raw bytes</li>
+<li><code>/api/collections/&lt;collection_with_a_document&gt;/documents/&lt;document_id&gt;/my/file/path/</code> - JSON document</li>
+<li><code>/api/collections/&lt;collection_with_a_document&gt;/documents/&lt;document_id&gt;/my/file/path/content/</code> - raw bytes</li>
+</ul>
+<h2 id="file-raw-bytes"><a class="toclink" href="#file-raw-bytes">File raw bytes</a></h2>
+<p>Want to get file's content - use the <code>/content/</code> suffix.</p>
+<p>Deform also supports <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#206">file partial content</a>.</p>
+<h2 id="file-as-json-document"><a class="toclink" href="#file-as-json-document">File as JSON document</a></h2>
+<p>This is how the document will look like:</p>
+<pre><code class="json">{
+    &quot;_id&quot;: &quot;574c9a266dff87000562eaf6&quot;,
+    &quot;collection_id&quot;: &quot;september_vacation&quot;,
+    &quot;content_type&quot;: &quot;image/png&quot;,
+    &quot;date_created&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;document_id&quot;: &quot;574d48cf32d2c69274322585&quot;,
+    &quot;last_access&quot;: &quot;2016-05-31T19:53:10.43Z&quot;,
+    &quot;md5&quot;: &quot;a6a859273c133cdf168295a3b7d83a0f&quot;,
+    &quot;name&quot;: &quot;vacation.png&quot;,
+    &quot;size&quot;: 3421
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_id</td>
+<td>string</td>
+<td>unique identity of the file</td>
+</tr>
+<tr>
+<td>collection_id</td>
+<td>string</td>
+<td>identity of a collection file attached to</td>
+</tr>
+<tr>
+<td>content_type</td>
+<td>string</td>
+<td>content-type of a file</td>
+</tr>
+<tr>
+<td>date_created</td>
+<td>datetime</td>
+<td>date when the file was uploaded</td>
+</tr>
+<tr>
+<td>document_id</td>
+<td>string</td>
+<td>identity of a document file attached to</td>
+</tr>
+<tr>
+<td>last_access</td>
+<td>datetime</td>
+<td>date when the file was accessed</td>
+</tr>
+<tr>
+<td>md5</td>
+<td>string</td>
+<td>md5 of a file's content</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>name of a file</td>
+</tr>
+<tr>
+<td>size</td>
+<td>integer</td>
+<td>size of a file's content</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collection_id"><a class="toclink" href="#collection_id">collection_id</a></h3>
+<p>Identity of a collection file attached to. You can filter all files by a collection unique identifier.</p>
+<h3 id="date_created"><a class="toclink" href="#date_created">date_created</a></h3>
+<p>Date when your file was uploaded.</p>
+<h3 id="document_id"><a class="toclink" href="#document_id">document_id</a></h3>
+<p>Identity of a document file attached to.</p>
+<h3 id="last_access"><a class="toclink" href="#last_access">last_access</a></h3>
+<p>Date of last access to file.</p>
+<h3 id="md5"><a class="toclink" href="#md5">md5</a></h3>
+<p>Md5 of document's content. <a href="https://en.wikipedia.org/wiki/MD5">Link to wiki</a></p>
+<h3 id="name"><a class="toclink" href="#name">name</a></h3>
+<p>Name of uploaded file. Sometime you will want to find a file by name <code>vacation.png</code>.</p>
+<h3 id="size"><a class="toclink" href="#size">size</a></h3>
+<p>Size of a uploaded file.</p>
+<h3 id="content_type"><a class="toclink" href="#content_type">content_type</a></h3>
+<p>File's content-type is determined automatically.</p>
+<p>If your file's content-type is not in allowed list you will get 422 error when uploading a file.</p>
+<p>Allowed content-types are:</p>
+<ul>
+<li>application/andrew-inset</li>
+<li>application/applixware</li>
+<li>application/atom+xml</li>
+<li>application/atomcat+xml</li>
+<li>application/atomsvc+xml</li>
+<li>application/ccxml+xml</li>
+<li>application/cdmi-capability</li>
+<li>application/cdmi-container</li>
+<li>application/cdmi-domain</li>
+<li>application/cdmi-object</li>
+<li>application/cdmi-queue</li>
+<li>application/cu-seeme</li>
+<li>application/davmount+xml</li>
+<li>application/docbook+xml</li>
+<li>application/dssc+der</li>
+<li>application/dssc+xml</li>
+<li>application/ecmascript</li>
+<li>application/emma+xml</li>
+<li>application/epub+zip</li>
+<li>application/exi</li>
+<li>application/font-tdpfr</li>
+<li>application/gml+xml</li>
+<li>application/gpx+xml</li>
+<li>application/gxf</li>
+<li>application/hyperstudio</li>
+<li>application/inkml+xml</li>
+<li>application/ipfix</li>
+<li>application/java-archive</li>
+<li>application/java-serialized-object</li>
+<li>application/java-vm</li>
+<li>application/javascript</li>
+<li>application/json</li>
+<li>application/jsonml+json</li>
+<li>application/lost+xml</li>
+<li>application/mac-binhex40</li>
+<li>application/mac-compactpro</li>
+<li>application/mads+xml</li>
+<li>application/marc</li>
+<li>application/marcxml+xml</li>
+<li>application/mathematica</li>
+<li>application/mathml+xml</li>
+<li>application/mbox</li>
+<li>application/mediaservercontrol+xml</li>
+<li>application/metalink+xml</li>
+<li>application/metalink4+xml</li>
+<li>application/mets+xml</li>
+<li>application/mods+xml</li>
+<li>application/mp21</li>
+<li>application/mp4</li>
+<li>application/msword</li>
+<li>application/mxf</li>
+<li>application/octet-stream</li>
+<li>application/oda</li>
+<li>application/oebps-package+xml</li>
+<li>application/ogg</li>
+<li>application/omdoc+xml</li>
+<li>application/onenote</li>
+<li>application/oxps</li>
+<li>application/patch-ops-error+xml</li>
+<li>application/pdf</li>
+<li>application/pgp-encrypted</li>
+<li>application/pgp-signature</li>
+<li>application/pics-rules</li>
+<li>application/pkcs10</li>
+<li>application/pkcs7-mime</li>
+<li>application/pkcs7-signature</li>
+<li>application/pkcs8</li>
+<li>application/pkix-attr-cert</li>
+<li>application/pkix-cert</li>
+<li>application/pkix-crl</li>
+<li>application/pkix-pkipath</li>
+<li>application/pkixcmp</li>
+<li>application/pls+xml</li>
+<li>application/postscript</li>
+<li>application/prs.cww</li>
+<li>application/pskc+xml</li>
+<li>application/rdf+xml</li>
+<li>application/reginfo+xml</li>
+<li>application/relax-ng-compact-syntax</li>
+<li>application/resource-lists+xml</li>
+<li>application/resource-lists-diff+xml</li>
+<li>application/rls-services+xml</li>
+<li>application/rpki-ghostbusters</li>
+<li>application/rpki-manifest</li>
+<li>application/rpki-roa</li>
+<li>application/rsd+xml</li>
+<li>application/rss+xml</li>
+<li>application/rtf</li>
+<li>application/sbml+xml</li>
+<li>application/scvp-cv-request</li>
+<li>application/scvp-cv-response</li>
+<li>application/scvp-vp-request</li>
+<li>application/scvp-vp-response</li>
+<li>application/sdp</li>
+<li>application/set-payment-initiation</li>
+<li>application/set-registration-initiation</li>
+<li>application/shf+xml</li>
+<li>application/smil+xml</li>
+<li>application/sparql-query</li>
+<li>application/sparql-results+xml</li>
+<li>application/srgs</li>
+<li>application/srgs+xml</li>
+<li>application/sru+xml</li>
+<li>application/ssdl+xml</li>
+<li>application/ssml+xml</li>
+<li>application/tei+xml</li>
+<li>application/thraud+xml</li>
+<li>application/timestamped-data</li>
+<li>application/vnd.3gpp.pic-bw-large</li>
+<li>application/vnd.3gpp.pic-bw-small</li>
+<li>application/vnd.3gpp.pic-bw-var</li>
+<li>application/vnd.3gpp2.tcap</li>
+<li>application/vnd.3m.post-it-notes</li>
+<li>application/vnd.accpac.simply.aso</li>
+<li>application/vnd.accpac.simply.imp</li>
+<li>application/vnd.acucobol</li>
+<li>application/vnd.acucorp</li>
+<li>application/vnd.adobe.air-application-installer-package+zip</li>
+<li>application/vnd.adobe.formscentral.fcdt</li>
+<li>application/vnd.adobe.fxp</li>
+<li>application/vnd.adobe.xdp+xml</li>
+<li>application/vnd.adobe.xfdf</li>
+<li>application/vnd.ahead.space</li>
+<li>application/vnd.airzip.filesecure.azf</li>
+<li>application/vnd.airzip.filesecure.azs</li>
+<li>application/vnd.amazon.ebook</li>
+<li>application/vnd.americandynamics.acc</li>
+<li>application/vnd.amiga.ami</li>
+<li>application/vnd.android.package-archive</li>
+<li>application/vnd.anser-web-certificate-issue-initiation</li>
+<li>application/vnd.anser-web-funds-transfer-initiation</li>
+<li>application/vnd.antix.game-component</li>
+<li>application/vnd.apple.installer+xml</li>
+<li>application/vnd.apple.mpegurl</li>
+<li>application/vnd.aristanetworks.swi</li>
+<li>application/vnd.astraea-software.iota</li>
+<li>application/vnd.audiograph</li>
+<li>application/vnd.blueice.multipass</li>
+<li>application/vnd.bmi</li>
+<li>application/vnd.businessobjects</li>
+<li>application/vnd.chemdraw+xml</li>
+<li>application/vnd.chipnuts.karaoke-mmd</li>
+<li>application/vnd.cinderella</li>
+<li>application/vnd.claymore</li>
+<li>application/vnd.cloanto.rp9</li>
+<li>application/vnd.clonk.c4group</li>
+<li>application/vnd.cluetrust.cartomobile-config</li>
+<li>application/vnd.cluetrust.cartomobile-config-pkg</li>
+<li>application/vnd.commonspace</li>
+<li>application/vnd.contact.cmsg</li>
+<li>application/vnd.cosmocaller</li>
+<li>application/vnd.crick.clicker</li>
+<li>application/vnd.crick.clicker.keyboard</li>
+<li>application/vnd.crick.clicker.palette</li>
+<li>application/vnd.crick.clicker.template</li>
+<li>application/vnd.crick.clicker.wordbank</li>
+<li>application/vnd.criticaltools.wbs+xml</li>
+<li>application/vnd.ctc-posml</li>
+<li>application/vnd.cups-ppd</li>
+<li>application/vnd.curl.car</li>
+<li>application/vnd.curl.pcurl</li>
+<li>application/vnd.dart</li>
+<li>application/vnd.data-vision.rdz</li>
+<li>application/vnd.dece.data</li>
+<li>application/vnd.dece.ttml+xml</li>
+<li>application/vnd.dece.unspecified</li>
+<li>application/vnd.dece.zip</li>
+<li>application/vnd.denovo.fcselayout-link</li>
+<li>application/vnd.dna</li>
+<li>application/vnd.dolby.mlp</li>
+<li>application/vnd.dpgraph</li>
+<li>application/vnd.dreamfactory</li>
+<li>application/vnd.ds-keypoint</li>
+<li>application/vnd.dvb.ait</li>
+<li>application/vnd.dvb.service</li>
+<li>application/vnd.dynageo</li>
+<li>application/vnd.ecowin.chart</li>
+<li>application/vnd.enliven</li>
+<li>application/vnd.epson.esf</li>
+<li>application/vnd.epson.msf</li>
+<li>application/vnd.epson.quickanime</li>
+<li>application/vnd.epson.salt</li>
+<li>application/vnd.epson.ssf</li>
+<li>application/vnd.eszigno3+xml</li>
+<li>application/vnd.ezpix-album</li>
+<li>application/vnd.ezpix-package</li>
+<li>application/vnd.fdf</li>
+<li>application/vnd.fdsn.mseed</li>
+<li>application/vnd.fdsn.seed</li>
+<li>application/vnd.flographit</li>
+<li>application/vnd.fluxtime.clip</li>
+<li>application/vnd.framemaker</li>
+<li>application/vnd.frogans.fnc</li>
+<li>application/vnd.frogans.ltf</li>
+<li>application/vnd.fsc.weblaunch</li>
+<li>application/vnd.fujitsu.oasys</li>
+<li>application/vnd.fujitsu.oasys2</li>
+<li>application/vnd.fujitsu.oasys3</li>
+<li>application/vnd.fujitsu.oasysgp</li>
+<li>application/vnd.fujitsu.oasysprs</li>
+<li>application/vnd.fujixerox.ddd</li>
+<li>application/vnd.fujixerox.docuworks</li>
+<li>application/vnd.fujixerox.docuworks.binder</li>
+<li>application/vnd.fuzzysheet</li>
+<li>application/vnd.genomatix.tuxedo</li>
+<li>application/vnd.geogebra.file</li>
+<li>application/vnd.geogebra.tool</li>
+<li>application/vnd.geometry-explorer</li>
+<li>application/vnd.geonext</li>
+<li>application/vnd.geoplan</li>
+<li>application/vnd.geospace</li>
+<li>application/vnd.gmx</li>
+<li>application/vnd.google-earth.kml+xml</li>
+<li>application/vnd.google-earth.kmz</li>
+<li>application/vnd.grafeq</li>
+<li>application/vnd.groove-account</li>
+<li>application/vnd.groove-help</li>
+<li>application/vnd.groove-identity-message</li>
+<li>application/vnd.groove-injector</li>
+<li>application/vnd.groove-tool-message</li>
+<li>application/vnd.groove-tool-template</li>
+<li>application/vnd.groove-vcard</li>
+<li>application/vnd.hal+xml</li>
+<li>application/vnd.handheld-entertainment+xml</li>
+<li>application/vnd.hbci</li>
+<li>application/vnd.hhe.lesson-player</li>
+<li>application/vnd.hp-hpgl</li>
+<li>application/vnd.hp-hpid</li>
+<li>application/vnd.hp-hps</li>
+<li>application/vnd.hp-jlyt</li>
+<li>application/vnd.hp-pcl</li>
+<li>application/vnd.hp-pclxl</li>
+<li>application/vnd.hydrostatix.sof-data</li>
+<li>application/vnd.ibm.minipay</li>
+<li>application/vnd.ibm.modcap</li>
+<li>application/vnd.ibm.rights-management</li>
+<li>application/vnd.ibm.secure-container</li>
+<li>application/vnd.iccprofile</li>
+<li>application/vnd.igloader</li>
+<li>application/vnd.immervision-ivp</li>
+<li>application/vnd.immervision-ivu</li>
+<li>application/vnd.insors.igm</li>
+<li>application/vnd.intercon.formnet</li>
+<li>application/vnd.intergeo</li>
+<li>application/vnd.intu.qbo</li>
+<li>application/vnd.intu.qfx</li>
+<li>application/vnd.ipunplugged.rcprofile</li>
+<li>application/vnd.irepository.package+xml</li>
+<li>application/vnd.is-xpr</li>
+<li>application/vnd.isac.fcs</li>
+<li>application/vnd.jam</li>
+<li>application/vnd.jcp.javame.midlet-rms</li>
+<li>application/vnd.jisp</li>
+<li>application/vnd.joost.joda-archive</li>
+<li>application/vnd.kahootz</li>
+<li>application/vnd.kde.karbon</li>
+<li>application/vnd.kde.kchart</li>
+<li>application/vnd.kde.kformula</li>
+<li>application/vnd.kde.kivio</li>
+<li>application/vnd.kde.kontour</li>
+<li>application/vnd.kde.kpresenter</li>
+<li>application/vnd.kde.kspread</li>
+<li>application/vnd.kde.kword</li>
+<li>application/vnd.kenameaapp</li>
+<li>application/vnd.kidspiration</li>
+<li>application/vnd.kinar</li>
+<li>application/vnd.koan</li>
+<li>application/vnd.kodak-descriptor</li>
+<li>application/vnd.las.las+xml</li>
+<li>application/vnd.llamagraphics.life-balance.desktop</li>
+<li>application/vnd.llamagraphics.life-balance.exchange+xml</li>
+<li>application/vnd.lotus-1-2-3</li>
+<li>application/vnd.lotus-approach</li>
+<li>application/vnd.lotus-freelance</li>
+<li>application/vnd.lotus-notes</li>
+<li>application/vnd.lotus-organizer</li>
+<li>application/vnd.lotus-screencam</li>
+<li>application/vnd.lotus-wordpro</li>
+<li>application/vnd.macports.portpkg</li>
+<li>application/vnd.mcd</li>
+<li>application/vnd.medcalcdata</li>
+<li>application/vnd.mediastation.cdkey</li>
+<li>application/vnd.mfer</li>
+<li>application/vnd.mfmp</li>
+<li>application/vnd.micrografx.flo</li>
+<li>application/vnd.micrografx.igx</li>
+<li>application/vnd.mif</li>
+<li>application/vnd.mobius.daf</li>
+<li>application/vnd.mobius.dis</li>
+<li>application/vnd.mobius.mbk</li>
+<li>application/vnd.mobius.mqy</li>
+<li>application/vnd.mobius.msl</li>
+<li>application/vnd.mobius.plc</li>
+<li>application/vnd.mobius.txf</li>
+<li>application/vnd.mophun.application</li>
+<li>application/vnd.mophun.certificate</li>
+<li>application/vnd.mozilla.xul+xml</li>
+<li>application/vnd.ms-artgalry</li>
+<li>application/vnd.ms-cab-compressed</li>
+<li>application/vnd.ms-excel</li>
+<li>application/vnd.ms-excel.addin.macroenabled.12</li>
+<li>application/vnd.ms-excel.sheet.binary.macroenabled.12</li>
+<li>application/vnd.ms-excel.sheet.macroenabled.12</li>
+<li>application/vnd.ms-excel.template.macroenabled.12</li>
+<li>application/vnd.ms-fontobject</li>
+<li>application/vnd.ms-htmlhelp</li>
+<li>application/vnd.ms-ims</li>
+<li>application/vnd.ms-lrm</li>
+<li>application/vnd.ms-officetheme</li>
+<li>application/vnd.ms-pki.seccat</li>
+<li>application/vnd.ms-pki.stl</li>
+<li>application/vnd.ms-powerpoint</li>
+<li>application/vnd.ms-powerpoint.addin.macroenabled.12</li>
+<li>application/vnd.ms-powerpoint.presentation.macroenabled.12</li>
+<li>application/vnd.ms-powerpoint.slide.macroenabled.12</li>
+<li>application/vnd.ms-powerpoint.slideshow.macroenabled.12</li>
+<li>application/vnd.ms-powerpoint.template.macroenabled.12</li>
+<li>application/vnd.ms-project</li>
+<li>application/vnd.ms-word.document.macroenabled.12</li>
+<li>application/vnd.ms-word.template.macroenabled.12</li>
+<li>application/vnd.ms-works</li>
+<li>application/vnd.ms-wpl</li>
+<li>application/vnd.ms-xpsdocument</li>
+<li>application/vnd.mseq</li>
+<li>application/vnd.musician</li>
+<li>application/vnd.muvee.style</li>
+<li>application/vnd.mynfc</li>
+<li>application/vnd.neurolanguage.nlu</li>
+<li>application/vnd.nitf</li>
+<li>application/vnd.noblenet-directory</li>
+<li>application/vnd.noblenet-sealer</li>
+<li>application/vnd.noblenet-web</li>
+<li>application/vnd.nokia.n-gage.data</li>
+<li>application/vnd.nokia.n-gage.symbian.install</li>
+<li>application/vnd.nokia.radio-preset</li>
+<li>application/vnd.nokia.radio-presets</li>
+<li>application/vnd.novadigm.edm</li>
+<li>application/vnd.novadigm.edx</li>
+<li>application/vnd.novadigm.ext</li>
+<li>application/vnd.oasis.opendocument.chart</li>
+<li>application/vnd.oasis.opendocument.chart-template</li>
+<li>application/vnd.oasis.opendocument.database</li>
+<li>application/vnd.oasis.opendocument.formula</li>
+<li>application/vnd.oasis.opendocument.formula-template</li>
+<li>application/vnd.oasis.opendocument.graphics</li>
+<li>application/vnd.oasis.opendocument.graphics-template</li>
+<li>application/vnd.oasis.opendocument.image</li>
+<li>application/vnd.oasis.opendocument.image-template</li>
+<li>application/vnd.oasis.opendocument.presentation</li>
+<li>application/vnd.oasis.opendocument.presentation-template</li>
+<li>application/vnd.oasis.opendocument.spreadsheet</li>
+<li>application/vnd.oasis.opendocument.spreadsheet-template</li>
+<li>application/vnd.oasis.opendocument.text</li>
+<li>application/vnd.oasis.opendocument.text-master</li>
+<li>application/vnd.oasis.opendocument.text-template</li>
+<li>application/vnd.oasis.opendocument.text-web</li>
+<li>application/vnd.olpc-sugar</li>
+<li>application/vnd.oma.dd2+xml</li>
+<li>application/vnd.openofficeorg.extension</li>
+<li>application/vnd.openxmlformats-officedocument.presentationml.presentation</li>
+<li>application/vnd.openxmlformats-officedocument.presentationml.slide</li>
+<li>application/vnd.openxmlformats-officedocument.presentationml.slideshow</li>
+<li>application/vnd.openxmlformats-officedocument.presentationml.template</li>
+<li>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li>
+<li>application/vnd.openxmlformats-officedocument.spreadsheetml.template</li>
+<li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li>
+<li>application/vnd.openxmlformats-officedocument.wordprocessingml.template</li>
+<li>application/vnd.osgeo.mapguide.package</li>
+<li>application/vnd.osgi.dp</li>
+<li>application/vnd.osgi.subsystem</li>
+<li>application/vnd.palm</li>
+<li>application/vnd.pawaafile</li>
+<li>application/vnd.pg.format</li>
+<li>application/vnd.pg.osasli</li>
+<li>application/vnd.picsel</li>
+<li>application/vnd.pmi.widget</li>
+<li>application/vnd.pocketlearn</li>
+<li>application/vnd.powerbuilder6</li>
+<li>application/vnd.previewsystems.box</li>
+<li>application/vnd.proteus.magazine</li>
+<li>application/vnd.publishare-delta-tree</li>
+<li>application/vnd.pvi.ptid1</li>
+<li>application/vnd.quark.quarkxpress</li>
+<li>application/vnd.realvnc.bed</li>
+<li>application/vnd.recordare.musicxml</li>
+<li>application/vnd.recordare.musicxml+xml</li>
+<li>application/vnd.rig.cryptonote</li>
+<li>application/vnd.rim.cod</li>
+<li>application/vnd.rn-realmedia</li>
+<li>application/vnd.rn-realmedia-vbr</li>
+<li>application/vnd.route66.link66+xml</li>
+<li>application/vnd.sailingtracker.track</li>
+<li>application/vnd.seemail</li>
+<li>application/vnd.sema</li>
+<li>application/vnd.semd</li>
+<li>application/vnd.semf</li>
+<li>application/vnd.shana.informed.formdata</li>
+<li>application/vnd.shana.informed.formtemplate</li>
+<li>application/vnd.shana.informed.interchange</li>
+<li>application/vnd.shana.informed.package</li>
+<li>application/vnd.simtech-mindmapper</li>
+<li>application/vnd.smaf</li>
+<li>application/vnd.smart.teacher</li>
+<li>application/vnd.solent.sdkm+xml</li>
+<li>application/vnd.spotfire.dxp</li>
+<li>application/vnd.spotfire.sfs</li>
+<li>application/vnd.stardivision.calc</li>
+<li>application/vnd.stardivision.draw</li>
+<li>application/vnd.stardivision.impress</li>
+<li>application/vnd.stardivision.math</li>
+<li>application/vnd.stardivision.writer</li>
+<li>application/vnd.stardivision.writer-global</li>
+<li>application/vnd.stepmania.package</li>
+<li>application/vnd.stepmania.stepchart</li>
+<li>application/vnd.sun.xml.calc</li>
+<li>application/vnd.sun.xml.calc.template</li>
+<li>application/vnd.sun.xml.draw</li>
+<li>application/vnd.sun.xml.draw.template</li>
+<li>application/vnd.sun.xml.impress</li>
+<li>application/vnd.sun.xml.impress.template</li>
+<li>application/vnd.sun.xml.math</li>
+<li>application/vnd.sun.xml.writer</li>
+<li>application/vnd.sun.xml.writer.global</li>
+<li>application/vnd.sun.xml.writer.template</li>
+<li>application/vnd.sus-calendar</li>
+<li>application/vnd.svd</li>
+<li>application/vnd.symbian.install</li>
+<li>application/vnd.syncml+xml</li>
+<li>application/vnd.syncml.dm+wbxml</li>
+<li>application/vnd.syncml.dm+xml</li>
+<li>application/vnd.tao.intent-module-archive</li>
+<li>application/vnd.tcpdump.pcap</li>
+<li>application/vnd.tmobile-livetv</li>
+<li>application/vnd.trid.tpt</li>
+<li>application/vnd.triscape.mxs</li>
+<li>application/vnd.trueapp</li>
+<li>application/vnd.ufdl</li>
+<li>application/vnd.uiq.theme</li>
+<li>application/vnd.umajin</li>
+<li>application/vnd.unity</li>
+<li>application/vnd.uoml+xml</li>
+<li>application/vnd.vcx</li>
+<li>application/vnd.visio</li>
+<li>application/vnd.visionary</li>
+<li>application/vnd.vsf</li>
+<li>application/vnd.wap.wbxml</li>
+<li>application/vnd.wap.wmlc</li>
+<li>application/vnd.wap.wmlscriptc</li>
+<li>application/vnd.webturbo</li>
+<li>application/vnd.wolfram.player</li>
+<li>application/vnd.wordperfect</li>
+<li>application/vnd.wqd</li>
+<li>application/vnd.wt.stf</li>
+<li>application/vnd.xara</li>
+<li>application/vnd.xfdl</li>
+<li>application/vnd.yamaha.hv-dic</li>
+<li>application/vnd.yamaha.hv-script</li>
+<li>application/vnd.yamaha.hv-voice</li>
+<li>application/vnd.yamaha.openscoreformat</li>
+<li>application/vnd.yamaha.openscoreformat.osfpvg+xml</li>
+<li>application/vnd.yamaha.smaf-audio</li>
+<li>application/vnd.yamaha.smaf-phrase</li>
+<li>application/vnd.yellowriver-custom-menu</li>
+<li>application/vnd.zul</li>
+<li>application/vnd.zzazz.deck+xml</li>
+<li>application/voicexml+xml</li>
+<li>application/widget</li>
+<li>application/winhlp</li>
+<li>application/wsdl+xml</li>
+<li>application/wspolicy+xml</li>
+<li>application/x-7z-compressed</li>
+<li>application/x-abiword</li>
+<li>application/x-ace-compressed</li>
+<li>application/x-apple-diskimage</li>
+<li>application/x-authorware-bin</li>
+<li>application/x-authorware-map</li>
+<li>application/x-authorware-seg</li>
+<li>application/x-bcpio</li>
+<li>application/x-bittorrent</li>
+<li>application/x-blorb</li>
+<li>application/x-bzip</li>
+<li>application/x-bzip2</li>
+<li>application/x-cbr</li>
+<li>application/x-cdlink</li>
+<li>application/x-cfs-compressed</li>
+<li>application/x-chat</li>
+<li>application/x-chess-pgn</li>
+<li>application/x-conference</li>
+<li>application/x-cpio</li>
+<li>application/x-csh</li>
+<li>application/x-debian-package</li>
+<li>application/x-dgc-compressed</li>
+<li>application/x-director</li>
+<li>application/x-doom</li>
+<li>application/x-dtbncx+xml</li>
+<li>application/x-dtbook+xml</li>
+<li>application/x-dtbresource+xml</li>
+<li>application/x-dvi</li>
+<li>application/x-envoy</li>
+<li>application/x-eva</li>
+<li>application/x-font-bdf</li>
+<li>application/x-font-ghostscript</li>
+<li>application/x-font-linux-psf</li>
+<li>application/x-font-otf</li>
+<li>application/x-font-pcf</li>
+<li>application/x-font-snf</li>
+<li>application/x-font-ttf</li>
+<li>application/x-font-type1</li>
+<li>application/font-woff</li>
+<li>application/x-freearc</li>
+<li>application/x-futuresplash</li>
+<li>application/x-gca-compressed</li>
+<li>application/x-glulx</li>
+<li>application/x-gnumeric</li>
+<li>application/x-gramps-xml</li>
+<li>application/x-gtar</li>
+<li>application/x-hdf</li>
+<li>application/x-install-instructions</li>
+<li>application/x-iso9660-image</li>
+<li>application/x-java-jnlp-file</li>
+<li>application/x-latex</li>
+<li>application/x-lzh-compressed</li>
+<li>application/x-mie</li>
+<li>application/x-mobipocket-ebook</li>
+<li>application/x-ms-application</li>
+<li>application/x-ms-shortcut</li>
+<li>application/x-ms-wmd</li>
+<li>application/x-ms-wmz</li>
+<li>application/x-ms-xbap</li>
+<li>application/x-msaccess</li>
+<li>application/x-msbinder</li>
+<li>application/x-mscardfile</li>
+<li>application/x-msclip</li>
+<li>application/x-msdownload</li>
+<li>application/x-msmediaview</li>
+<li>application/x-msmetafile</li>
+<li>application/x-msmoney</li>
+<li>application/x-mspublisher</li>
+<li>application/x-msschedule</li>
+<li>application/x-msterminal</li>
+<li>application/x-mswrite</li>
+<li>application/x-netcdf</li>
+<li>application/x-nzb</li>
+<li>application/x-pkcs12</li>
+<li>application/x-pkcs7-certificates</li>
+<li>application/x-pkcs7-certreqresp</li>
+<li>application/x-rar-compressed</li>
+<li>application/x-research-info-systems</li>
+<li>application/x-sh</li>
+<li>application/x-shar</li>
+<li>application/x-shockwave-flash</li>
+<li>application/x-silverlight-app</li>
+<li>application/x-sql</li>
+<li>application/x-stuffit</li>
+<li>application/x-stuffitx</li>
+<li>application/x-subrip</li>
+<li>application/x-sv4cpio</li>
+<li>application/x-sv4crc</li>
+<li>application/x-t3vm-image</li>
+<li>application/x-tads</li>
+<li>application/x-tar</li>
+<li>application/x-tcl</li>
+<li>application/x-tex</li>
+<li>application/x-tex-tfm</li>
+<li>application/x-texinfo</li>
+<li>application/x-tgif</li>
+<li>application/x-ustar</li>
+<li>application/x-wais-source</li>
+<li>application/x-x509-ca-cert</li>
+<li>application/x-xfig</li>
+<li>application/x-xliff+xml</li>
+<li>application/x-xpinstall</li>
+<li>application/x-xz</li>
+<li>application/x-zmachine</li>
+<li>application/xaml+xml</li>
+<li>application/xcap-diff+xml</li>
+<li>application/xenc+xml</li>
+<li>application/xhtml+xml</li>
+<li>application/xml</li>
+<li>application/xml-dtd</li>
+<li>application/xop+xml</li>
+<li>application/xproc+xml</li>
+<li>application/xslt+xml</li>
+<li>application/xspf+xml</li>
+<li>application/xv+xml</li>
+<li>application/yang</li>
+<li>application/yin+xml</li>
+<li>application/zip</li>
+<li>audio/adpcm</li>
+<li>audio/basic</li>
+<li>audio/midi</li>
+<li>audio/mp4</li>
+<li>audio/mpeg</li>
+<li>audio/ogg</li>
+<li>audio/s3m</li>
+<li>audio/silk</li>
+<li>audio/vnd.dece.audio</li>
+<li>audio/vnd.digital-winds</li>
+<li>audio/vnd.dra</li>
+<li>audio/vnd.dts</li>
+<li>audio/vnd.dts.hd</li>
+<li>audio/vnd.lucent.voice</li>
+<li>audio/vnd.ms-playready.media.pya</li>
+<li>audio/vnd.nuera.ecelp4800</li>
+<li>audio/vnd.nuera.ecelp7470</li>
+<li>audio/vnd.nuera.ecelp9600</li>
+<li>audio/vnd.rip</li>
+<li>audio/webm</li>
+<li>audio/x-aac</li>
+<li>audio/x-aiff</li>
+<li>audio/x-caf</li>
+<li>audio/x-flac</li>
+<li>audio/x-matroska</li>
+<li>audio/x-mpegurl</li>
+<li>audio/x-ms-wax</li>
+<li>audio/x-ms-wma</li>
+<li>audio/x-pn-realaudio</li>
+<li>audio/x-pn-realaudio-plugin</li>
+<li>audio/x-wav</li>
+<li>audio/wave</li>
+<li>audio/xm</li>
+<li>chemical/x-cdx</li>
+<li>chemical/x-cif</li>
+<li>chemical/x-cmdf</li>
+<li>chemical/x-cml</li>
+<li>chemical/x-csml</li>
+<li>chemical/x-xyz</li>
+<li>image/bmp</li>
+<li>image/cgm</li>
+<li>image/g3fax</li>
+<li>image/gif</li>
+<li>image/ief</li>
+<li>image/jpeg</li>
+<li>image/ktx</li>
+<li>image/png</li>
+<li>image/prs.btif</li>
+<li>image/sgi</li>
+<li>image/svg+xml</li>
+<li>image/tiff</li>
+<li>image/vnd.adobe.photoshop</li>
+<li>image/vnd.dece.graphic</li>
+<li>image/vnd.dvb.subtitle</li>
+<li>image/vnd.djvu</li>
+<li>image/vnd.dwg</li>
+<li>image/vnd.dxf</li>
+<li>image/vnd.fastbidsheet</li>
+<li>image/vnd.fpx</li>
+<li>image/vnd.fst</li>
+<li>image/vnd.fujixerox.edmics-mmr</li>
+<li>image/vnd.fujixerox.edmics-rlc</li>
+<li>image/vnd.ms-modi</li>
+<li>image/vnd.ms-photo</li>
+<li>image/vnd.net-fpx</li>
+<li>image/vnd.wap.wbmp</li>
+<li>image/vnd.xiff</li>
+<li>image/webp</li>
+<li>image/x-3ds</li>
+<li>image/x-cmu-raster</li>
+<li>image/x-cmx</li>
+<li>image/x-freehand</li>
+<li>image/x-icon</li>
+<li>image/x-mrsid-image</li>
+<li>image/x-pcx</li>
+<li>image/x-pict</li>
+<li>image/x-portable-anymap</li>
+<li>image/x-portable-bitmap</li>
+<li>image/x-portable-graymap</li>
+<li>image/x-portable-pixmap</li>
+<li>image/x-rgb</li>
+<li>image/x-tga</li>
+<li>image/x-xbitmap</li>
+<li>image/x-xpixmap</li>
+<li>image/x-xwindowdump</li>
+<li>message/rfc822</li>
+<li>model/iges</li>
+<li>model/mesh</li>
+<li>model/vnd.collada+xml</li>
+<li>model/vnd.dwf</li>
+<li>model/vnd.gdl</li>
+<li>model/vnd.gtw</li>
+<li>model/vnd.mts</li>
+<li>model/vnd.vtu</li>
+<li>model/vrml</li>
+<li>model/x3d+binary</li>
+<li>model/x3d+vrml</li>
+<li>model/x3d+xml</li>
+<li>text/cache-manifest</li>
+<li>text/calendar</li>
+<li>text/css</li>
+<li>text/csv</li>
+<li>text/html</li>
+<li>text/n3</li>
+<li>text/plain</li>
+<li>text/prs.lines.tag</li>
+<li>text/richtext</li>
+<li>text/sgml</li>
+<li>text/tab-separated-values</li>
+<li>text/troff</li>
+<li>text/turtle</li>
+<li>text/uri-list</li>
+<li>text/vcard</li>
+<li>text/vnd.curl</li>
+<li>text/vnd.curl.dcurl</li>
+<li>text/vnd.curl.scurl</li>
+<li>text/vnd.curl.mcurl</li>
+<li>text/vnd.dvb.subtitle</li>
+<li>text/vnd.fly</li>
+<li>text/vnd.fmi.flexstor</li>
+<li>text/vnd.graphviz</li>
+<li>text/vnd.in3d.3dml</li>
+<li>text/vnd.in3d.spot</li>
+<li>text/vnd.sun.j2me.app-descriptor</li>
+<li>text/vnd.wap.wml</li>
+<li>text/vnd.wap.wmlscript</li>
+<li>text/x-asm</li>
+<li>text/x-c</li>
+<li>text/x-fortran</li>
+<li>text/x-java-source</li>
+<li>text/x-opml</li>
+<li>text/x-pascal</li>
+<li>text/x-nfo</li>
+<li>text/x-setext</li>
+<li>text/x-sfv</li>
+<li>text/x-uuencode</li>
+<li>text/x-vcalendar</li>
+<li>text/x-vcard</li>
+<li>video/3gpp</li>
+<li>video/3gpp2</li>
+<li>video/h261</li>
+<li>video/h263</li>
+<li>video/h264</li>
+<li>video/jpeg</li>
+<li>video/jpm</li>
+<li>video/mj2</li>
+<li>video/mp4</li>
+<li>video/mpeg</li>
+<li>video/ogg</li>
+<li>video/quicktime</li>
+<li>video/vnd.dece.hd</li>
+<li>video/vnd.dece.mobile</li>
+<li>video/vnd.dece.pd</li>
+<li>video/vnd.dece.sd</li>
+<li>video/vnd.dece.video</li>
+<li>video/vnd.dvb.file</li>
+<li>video/vnd.fvt</li>
+<li>video/vnd.mpegurl</li>
+<li>video/vnd.ms-playready.media.pyv</li>
+<li>video/vnd.uvvu.mp4</li>
+<li>video/vnd.vivo</li>
+<li>video/webm</li>
+<li>video/x-f4v</li>
+<li>video/x-fli</li>
+<li>video/x-flv</li>
+<li>video/x-m4v</li>
+<li>video/x-matroska</li>
+<li>video/x-mng</li>
+<li>video/x-ms-asf</li>
+<li>video/x-ms-vob</li>
+<li>video/x-ms-wm</li>
+<li>video/x-ms-wmv</li>
+<li>video/x-ms-wmx</li>
+<li>video/x-ms-wvx</li>
+<li>video/x-msvideo</li>
+<li>video/x-sgi-movie</li>
+<li>video/x-smv</li>
+<li>x-conference/x-cooltalk</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tokens/" class="btn btn-neutral float-right" title="Tokens">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../schemas/" class="btn btn-neutral" title="Schemas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38777730 = new Ya.Metrika({ id:38777730, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } });
+var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38777730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../schemas/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tokens/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

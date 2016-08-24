@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Quickstart - Deform</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Quickstart";
+    var mkdocs_page_input_path = "quickstart/index.md";
+    var mkdocs_page_url = "/quickstart/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Deform</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Quickstart</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#setup">Setup</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#registration">Registration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#collections">Collections</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#documents">Documents</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#schema">Schema</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#files">Files</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#website">Website</a></li>
+                
+                    <li><a class="toctree-l4" href="#retrieving-the-venues">Retrieving the venues</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-a-token">Creating a token</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-templates">Creating templates</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#search">Search</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#processing">Processing</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../user/">User</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../projects/">Projects</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../users/">Users</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../debug/">Debug</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../collections/">Collections</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../documents/">Documents</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../schemas/">Schemas</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../files/">Files</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tokens/">Tokens</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../notifications/">Notifications</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../usage/">Usage</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../processors/">Processors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../embeds/">Embeds</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../hooks/">Hooks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../http_status_codes/">HTTP Status Codes</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../cli/">CLI</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../api/">HTTP API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../changelog/">Changelog</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Deform</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Quickstart</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="setup"><a class="toclink" href="#setup">Setup</a></h2>
+<p>This quickstart assumes you have a working installation of <a href="../cli/">Deform cli</a>.
+To verify cli is installed, use the following command:</p>
+<pre><code class="bash">$ deform
+</code></pre>
+
+<p>If you get <code>deform: command not found</code> you must install the CLI by
+<a href="../cli/#installation">following instructions</a>.</p>
+<pre><code class="bash">$ pip install cli-deform
+</code></pre>
+
+<h2 id="registration"><a class="toclink" href="#registration">Registration</a></h2>
+<p>If you are new to Deform you must create an account:</p>
+<pre><code class="bash">$ deform signup -e email@example.com -p mypassword
+</code></pre>
+
+<p>On the email you will get a confirmation code. Use it for confirming you identity:</p>
+<pre><code class="bash">$ deform confirm CODE
+</code></pre>
+
+<p>When you confirm the email you automatically become logged in.</p>
+<pre><code class="bash">$ deform whoami
+
+You are email@example.com
+</code></pre>
+
+<p>Let's create a new project:</p>
+<pre><code class="bash">$ deform project create -d '{&quot;_id&quot;: &quot;mysquare&quot;, &quot;name&quot;: &quot;My square&quot;}'
+
+Project created
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be careful with the <code>_id</code>.
+It should be unique across the all the Deform projects (even if it doesn't belong to your account!).
+If you have some conflict errors just set the project's id as <code>mysquare1</code>, <code>mysquare2</code>, etc...</p>
+</div>
+<p>Let's look at the <code>mysquare</code> project info:</p>
+<pre><code>$ deform project get mysquare
+</code></pre>
+<p>If you created the project with the id <code>mysquare3000</code> then use it:</p>
+<pre><code class="bash">$ deform use-project mysquare3000
+
+Switched to project mysquare3000
+</code></pre>
+
+<p>We will use <code>mysquare</code> project id through all the documentation. Just don't forget
+to use your own id.</p>
+<h2 id="collections"><a class="toclink" href="#collections">Collections</a></h2>
+<p>Deform follows the <a href="https://docs.mongodb.org/manual/reference/glossary/">MongoDB</a> paradigm
+and operates over <code>collections</code> and <code>documents</code>. To see what collections are already in
+project you can type command:</p>
+<pre><code>$ deform collections find --pretty
+</code></pre>
+<pre><code class="json">{  
+    &quot;_id&quot;: &quot;_files&quot;,
+    &quot;name&quot;: &quot;Files&quot;,
+    &quot;schema&quot;: ...,
+    &quot;indexes&quot;: ...,
+...
+},
+...
+</code></pre>
+
+<p>Every project in Deform contains system collections which names starts with <code>_</code> prefix.
+You can't remove them. <a href="../collections/#system-collections">Read more about system collections</a>.</p>
+<h2 id="documents"><a class="toclink" href="#documents">Documents</a></h2>
+<p>Let's create a document in a collection called <code>venues</code>:</p>
+<pre><code class="bash">$ deform document create -c venues -d '{&quot;name&quot;: &quot;Starbucks&quot;}'
+
+{&quot;_id&quot;: &quot;5754065208888f00052b7315&quot;,&quot;name&quot;: &quot;Starbucks&quot;}
+</code></pre>
+
+<p>We don't have to create the collection before inserting documents. If there is no collection
+<code>venues</code> in the project it will be created automatically.</p>
+<p>If you don't provide <code>_id</code> for the document it will be generated. <code>_id</code> is the only
+system field. It should be unique and can't be changed. We can remove the document
+and recreate it with a custom id:</p>
+<pre><code class="bash">$ deform document remove 5754065208888f00052b7315 -c venues
+
+Document removed
+
+$ deform document create -c venues \
+    -d '{&quot;_id&quot;: &quot;starbucks&quot;, &quot;name&quot;: &quot;Starbucks&quot;}'
+
+{&quot;_id&quot;: &quot;starbucks&quot;,&quot;name&quot;: &quot;Starbucks&quot;}
+</code></pre>
+
+<p><a href="../documents">Read more about documents</a>.</p>
+<h2 id="schema"><a class="toclink" href="#schema">Schema</a></h2>
+<p>Deform doesn't force you to use a schema for the documents in any collection. This
+is the power of the nosql databases.
+You can create a venue without the <code>name</code> property but with a <code>rating</code> property:</p>
+<pre><code class="bash">$ deform document create -c venues \
+    -d '{&quot;_id&quot;: &quot;mcdonalds&quot;, &quot;rating&quot;: 5}'
+
+{&quot;_id&quot;: &quot;mcdonalds&quot;,&quot;rating&quot;: 5}
+</code></pre>
+
+<p>But what if you want the <code>name</code> property to be mandatory? That's where you can change
+the schema of the <code>venues</code> collection.
+Deform uses <a href="http://json-schema.org/">JSON schema</a> and by default it allows you to insert
+any properties. Let's look at the <code>venues</code> collection schema:</p>
+<pre><code class="bash">$ deform collection get venues --property schema --pretty
+
+{  
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {},
+    &quot;additionalProperties&quot;: true
+}
+</code></pre>
+
+<p>Providing <code>additionalProperties</code> is <code>true</code> you are not limited to use any properties.</p>
+<p>Let's make the <code>name</code> property required:</p>
+<pre><code class="bash">$ deform collection save venues --property schema.properties.name \
+    -d '{&quot;type&quot;: &quot;string&quot;, &quot;required&quot;: true}'
+
+Property updated
+</code></pre>
+
+<p>Let's look at the schema again:</p>
+<pre><code class="bash">$ deform collection get venues --property schema --pretty
+
+{  
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;required&quot;: true
+    }
+  },
+  &quot;additionalProperties&quot;: true,
+}
+</code></pre>
+
+<p>Let's try to create a venue without the <code>name</code> property:</p>
+<pre><code class="bash">$ deform document create -c venues -d '{&quot;_id&quot;: &quot;kfc&quot;, &quot;rating&quot;: 5}'
+
+Validation error:
+* &quot;name&quot; - name is required
+</code></pre>
+
+<p>Oops. Validation error. That's what we've expected. Let's provide the <code>name</code>:</p>
+<pre><code class="bash">$ deform document create -c venues \
+    -d '{&quot;_id&quot;: &quot;kfc&quot;, &quot;name&quot;: &quot;KFC&quot;, &quot;rating&quot;: 5}'
+
+{&quot;_id&quot;: &quot;kfc&quot;,&quot;name&quot;: &quot;KFC&quot;,&quot;rating&quot;: 5}
+</code></pre>
+
+<p>The document've been successfully created. You may be curious what've happened with
+the <code>mcdonalds</code> venue? Actually nothing, it's still in the <code>venues</code> collection:</p>
+<pre><code class="bash">$ deform documents find -c venues --pretty
+
+{
+    &quot;_id&quot;: &quot;starbucks&quot;,
+    &quot;name&quot;: &quot;Starbucks&quot;
+}
+{
+    &quot;_id&quot;: &quot;mcdonalds&quot;,
+    &quot;rating&quot;: 10
+}
+{
+    &quot;_id&quot;: &quot;kfc&quot;,
+    &quot;name&quot;: &quot;KFC&quot;,
+    &quot;rating&quot;: 5
+}
+</code></pre>
+
+<p>Deform doesn't force you to migrate existing documents when the collection's schema is changed.
+But when you try to update a document you will be asked to provide the required property:</p>
+<pre><code class="bash">$ deform document update mcdonalds -c venues -d '{&quot;rating&quot;: 6}'
+
+Validation error:
+* &quot;name&quot; - name is required
+</code></pre>
+
+<p>Let's set the name for McDonalds:</p>
+<pre><code class="bash">$ deform document update mcdonalds -c venues -d '{&quot;name&quot;: &quot;McDonalds&quot;}'
+
+{&quot;_id&quot;: &quot;mcdonalds&quot;,&quot;name&quot;: &quot;McDonalds&quot;,&quot;rating&quot;: 5}
+</code></pre>
+
+<p><a href="../schemas">Read more about schemas</a>.</p>
+<h2 id="files"><a class="toclink" href="#files">Files</a></h2>
+<p>Our <code>venues</code> collection contains venues with the names but that is not enough.
+Let's add some photos!</p>
+<p>Deform operates with files like with any data.
+Let's add an array property which will contain all the venue photos:</p>
+<pre><code class="bash">$ deform collection save venues --property schema.properties.photos \
+    -d '{&quot;type&quot;: &quot;array&quot;, &quot;items&quot;: {&quot;type&quot;: &quot;file&quot;}}'
+
+Property saved
+</code></pre>
+
+<p>Let's look at the schema:</p>
+<pre><code class="bash">$ deform collection get venues --property schema --pretty
+
+{  
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;required&quot;: true
+    },
+    &quot;photos&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;file&quot;
+      }
+    }
+  },
+  &quot;additionalProperties&quot;: true,
+}
+</code></pre>
+
+<p>Providing directory <code>/tmp/</code> on your local machine contains two photos:</p>
+<p><strong>1.jpg</strong></p>
+<p><img alt="1.jpg" src="./images/1.jpg" /></p>
+<p><strong>2.jpg</strong></p>
+<p><img alt="2.jpg" src="./images/2.jpg" /></p>
+<p>Let's create a new venue:</p>
+<pre><code class="bash">$ deform document create -c venues \
+    -d '{
+            &quot;_id&quot;:&quot;subway&quot;,
+            &quot;name&quot;:&quot;Subway&quot;,
+            &quot;photos&quot;: [
+                @&quot;/tmp/1.jpg&quot;,
+                @&quot;/tmp/2.jpg&quot;
+            ]
+        }'
+</code></pre>
+
+<p>The output is:</p>
+<pre><code class="json">{
+  &quot;_id&quot;: &quot;subway&quot;,
+  &quot;name&quot;: &quot;Subway&quot;,
+  &quot;photos&quot;: [
+    {
+      &quot;_id&quot;: &quot;57540c5b94d5de000528f78a&quot;,
+      &quot;collection_id&quot;: &quot;venues&quot;,
+      &quot;content_type&quot;: &quot;image/jpeg&quot;,
+      &quot;date_created&quot;: &quot;2016-06-05T11:26:19.810844798Z&quot;,
+      &quot;document_id&quot;: &quot;subway&quot;,
+      &quot;last_access&quot;: &quot;2016-06-05T11:26:19.810844798Z&quot;,
+      &quot;md5&quot;: &quot;18517f889a64cf4e00e14fe9c85f8cac&quot;,
+      &quot;name&quot;: &quot;1.jpg&quot;,
+      &quot;size&quot;: 185679
+    },
+    {
+      &quot;_id&quot;: &quot;57540c5c94d5de000528f78c&quot;,
+      &quot;collection_id&quot;: &quot;venues&quot;,
+      &quot;content_type&quot;: &quot;image/jpeg&quot;,
+      &quot;date_created&quot;: &quot;2016-06-05T11:26:20.262771094Z&quot;,
+      &quot;document_id&quot;: &quot;subway&quot;,
+      &quot;last_access&quot;: &quot;2016-06-05T11:26:20.262771094Z&quot;,
+      &quot;md5&quot;: &quot;75b44ca2849e817b58435d6a80fff5fd&quot;,
+      &quot;name&quot;: &quot;2.jpg&quot;,
+      &quot;size&quot;: 171555
+    }
+  ]
+}
+</code></pre>
+
+<p>Every item in <code>photos</code> attribute contains information about saved files.
+Let's get a content of the first image:</p>
+<pre><code class="bash">$ deform document get-file subway -c venues \
+    --property photos[0] &gt; download.jpg
+</code></pre>
+
+<p>If you open downloaded image you will see the original <code>1.jpg</code>:</p>
+<p><strong>download.jpg</strong></p>
+<p><img alt="1.jpg" src="./images/1.jpg" /></p>
+<p><a href="../files">Read more about files</a>.</p>
+<h1 id="website"><a class="toclink" href="#website">Website</a></h1>
+<p>Let's build a small website with two pages:</p>
+<ul>
+<li>List page of the all venues</li>
+<li>Detail page of the one venue</li>
+</ul>
+<p>We will use python with <a href="http://flask.pocoo.org/">Flask</a> and <a href="http://docs.python-requests.org/en/master/">requests</a>. Install both packages first:</p>
+<pre><code>$ pip install Flask requests
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a <a href="http://deformio.github.io/python-deform/">deform's python client</a>.
+Use it for your python projects. For this tutorial we'll use <a href="../api/">HTTP API</a>
+for more general overview.</p>
+</div>
+<p>Let's create a <code>mysquare.py</code> file and write some code:</p>
+<pre><code class="python">from flask import Flask
+import requests
+
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    return 'Venues list'
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    return 'Venue with id &quot;%s&quot;' % venue_id
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p>Run the site:</p>
+<pre><code>$ python mysquare.py
+* Restarting with fsevents reloader
+* Debugger is active!
+* Debugger pin code: 120-616-853
+</code></pre>
+<p>Website should be running on you local machine.</p>
+<p>Open address <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a> in your web browser. You should see the venues list page:</p>
+<p><img alt="venues list" src="./examples/001/screens/venues_list.png" /></p>
+<p>If you open <a href="http://127.0.0.1:5000/hello">http://127.0.0.1:5000/hello</a> in your web browser you should see
+the venue detail page:</p>
+<p><img alt="venues list" src="./examples/001/screens/venue_detail.png" /></p>
+<h2 id="retrieving-the-venues"><a class="toclink" href="#retrieving-the-venues">Retrieving the venues</a></h2>
+<p>We know how to retrieve the documents from the collections using Deform CLI.
+For retrieving the venues for the website we will use Deform's <a href="../http-api-reference/">HTTP API</a>.</p>
+<p>For retrieving documents from the projects collection you must make the <code>GET</code> HTTP
+request for url compound by next pattern:</p>
+<pre><code class="text">https://&lt;project-id&gt;.deform.io/api/collections/&lt;collection-id&gt;/documents/
+</code></pre>
+
+<p>Let's try to make the HTTP request inside the <code>venues_list</code> function.</p>
+<pre><code class="python">from flask import Flask
+import requests
+
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    # make HTTP requests
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/'
+    )
+    # raise error if bad response code
+    response.raise_for_status()
+    # return raw content from the response
+    return response.content
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    return 'Venue with id &quot;%s&quot;' % venue_id
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p>Let's try to open <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a> again. You should see something like this:</p>
+<p><img alt="venues list" src="./examples/002/screens/venues_list.png" /></p>
+<p>We got <code>401 UNAUTHORIZED</code> response code. Why did it happen?</p>
+<p>Deform does not allow to work with the project data without authorization.
+When you've been using CLI you were authorized with login and password.
+How to authorize our website application? Let's create a token.</p>
+<h2 id="creating-a-token"><a class="toclink" href="#creating-a-token">Creating a token</a></h2>
+<p>If you want to authorize any client making changes or retrieving data from any
+project you must create the <a href="../tokens">authorization token</a>. Let's create the token
+and allow the clients using this token to read the documents from the <code>venues</code> collection:</p>
+<pre><code class="bash">$ deform document create -c _tokens -d '{
+    &quot;_id&quot;:&quot;TFWaTgjB&quot;,
+    &quot;name&quot;: &quot;Read venues&quot;,
+    &quot;is_active&quot;: true,
+    &quot;permission&quot;: {
+      &quot;allow&quot;: {
+        &quot;read&quot;: [
+          {
+            &quot;what&quot;: &quot;document&quot;,
+            &quot;where&quot;: &quot;venues&quot;
+          }
+        ]
+      }
+    }
+  }'
+</code></pre>
+
+<pre><code class="json">{
+  &quot;_id&quot;: &quot;TFWaTgjB&quot;,
+  &quot;is_active&quot;: true,
+  &quot;name&quot;: &quot;Read venues&quot;,
+  &quot;permission&quot;: {
+    &quot;allow&quot;: {
+      &quot;read&quot;: [
+        {
+          &quot;what&quot;: &quot;document&quot;,
+          &quot;where&quot;: &quot;venues&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<p>Let's use the token for retrieving document with <a href="../api/">HTTP API</a>. You must provide
+<code>Authorization</code> header with value compound by template <code>Token &lt;token-id&gt;</code>:</p>
+<pre><code class="python">from flask import Flask
+import requests
+
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/',
+        # use authorization token
+        headers={
+            'Authorization': 'Token TFWaTgjB'
+        }
+    )
+    response.raise_for_status()
+    return response.content
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    return 'Venue with id &quot;%s&quot;' % venue_id
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p><img alt="venues list" src="./examples/003/screens/venues_list.png" /></p>
+<p>Cool, we've retrieved all the documents from the <code>venues</code> collection.</p>
+<p>The final step would be to retrieve a venue document for the venue detail view.
+We should add some logic to <code>venue_detail</code> function:</p>
+<pre><code class="python">from flask import Flask
+import requests
+
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/',
+        headers={
+            'Authorization': 'Token TFWaTgjB'
+        }
+    )
+    response.raise_for_status()
+    return response.content
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    # retrieving a document by venue_id
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/%s/' % (
+            venue_id,
+        ),
+        headers={
+            'Authorization': 'Token TFWaTgjB'
+        }
+    )
+    if response.status_code == 404:
+        # if no document with venue_id then return 404 error
+        return 'Venue with id &quot;%s&quot; is not found' % venue_id, 404
+    else:
+        response.raise_for_status()
+        return response.content
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p>If you visit <a href="http://127.0.0.1/kf">http://127.0.0.1/kf</a> you will get <code>404</code> error because there is no
+venue with <code>_id</code> equals <code>kf</code>:</p>
+<p><img alt="venue not found" src="./examples/004/screens/venue_not_found.png" /></p>
+<p>But there is the venue with <code>_id</code> equals <code>kfc</code> on page <a href="http://127.0.0.1/kfc">http://127.0.0.1/kfc</a>:</p>
+<p><img alt="venue found" src="./examples/004/screens/venue_found.png" /></p>
+<h2 id="creating-templates"><a class="toclink" href="#creating-templates">Creating templates</a></h2>
+<p>We've finished with retrieving data from Deform and now let's add templates
+for rendering HTML pages.</p>
+<pre><code class="python">from flask import Flask
+# function for rendering templates
+from flask import render_template
+import requests
+
+app = Flask(__name__)
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/',
+        headers={
+            'Authorization': 'Token TFWaTgjB'
+        }
+    )
+    response.raise_for_status()
+    # render venues_list.html template
+    return render_template(
+        'venues_list.html',
+        venues=response.json()['result']['items']
+    )
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/%s/' % (
+            venue_id,
+        ),
+        headers={
+            'Authorization': 'Token TFWaTgjB'
+        }
+    )
+    if response.status_code == 404:
+        return 'Venue with id &quot;%s&quot; is not found' % venue_id, 404
+    else:
+        response.raise_for_status()
+        # render venue_detail.html template
+        return render_template(
+            'venue_detail.html',
+            venue=response.json()['result']
+        )
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p><code>response.json()</code> function converts json from response to the python's native object.
+This object will be used inside the templates. Let's add the template for the venues list:</p>
+<p><strong>templates/venues_list.html</strong></p>
+<pre><code class="html">&lt;ul&gt;
+  {% for venue in venues %}
+  &lt;li&gt;
+    &lt;a href=&quot;{{ venue._id }}&quot;&gt;{{ venue.name }}&lt;/a&gt;
+  &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>If you open index page of the website you will see a list of the links for the
+every venue detail page:</p>
+<p><img alt="venues list" src="./examples/005/screens/venues_list.png" /></p>
+<p>Let's add the venue detail template:</p>
+<p><strong>templates/venue_detail.html</strong></p>
+<pre><code class="html">&lt;div&gt;
+  &lt;h3&gt;{{ venue.name }}&lt;/h3&gt;
+  &lt;div&gt;
+    {% for photo in venue.photos %}
+      &lt;img src=&quot;https://mysquare.deform.io/api/collections/venues/documents/{{venue._id}}/photos[{{loop.index-1}}]/content/?token={{token}}&quot;
+           style=&quot;width: 100px; height: 100px&quot;
+           alt=&quot;&quot; /&gt;
+    {% endfor %}
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Open the <a href="http://127.0.0.1:5000/subway">http://127.0.0.1:5000/subway</a> page:</p>
+<p><img alt="venue detail" src="./examples/005/screens/venue_detail.png" /></p>
+<p>As you remember it's possible to get file's content with CLI. For retrieving
+file's content with HTTP API you can build a full url by next pattern:</p>
+<pre><code>https://&lt;project-id&gt;.deform.io/api/collections/&lt;collection-id&gt;/documents/&lt;document-id&gt;/&lt;path-to-file-property&gt;/content/
+</code></pre>
+
+<p>Why don't we see the images on the venue page? Let's look at the developer console:</p>
+<p><img alt="developer console" src="./examples/005/screens/developer_console.png" /></p>
+<p>You should remember that Deform does not allow to work with the project data without authorization.
+Browser is yet another client that should authorize it's requests to the HTTP API.
+It's possible to send authorization token with <code>token</code> query parameter. For example:</p>
+<pre><code>https://&lt;project-id&gt;.deform.io/.../content/?token=&lt;token&gt;
+</code></pre>
+
+<p>Let's send the token to the template context:</p>
+<pre><code class="python">from flask import Flask
+from flask import render_template
+import requests
+
+app = Flask(__name__)
+
+# store token value in a variable
+TOKEN = 'TFWaTgjB'
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/',
+        headers={
+            # reuse the variable
+            'Authorization': 'Token %s' % TOKEN
+        }
+    )
+    response.raise_for_status()
+    return render_template(
+        'venues_list.html',
+        venues=response.json()['result']['items']
+    )
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/%s/' % (
+            venue_id,
+        ),
+        headers={
+            # reuse the variable
+            'Authorization': 'Token %s' % TOKEN
+        }
+    )
+    if response.status_code == 404:
+        return 'Venue with id &quot;%s&quot; is not found' % venue_id, 404
+    else:
+        response.raise_for_status()
+        return render_template(
+            'venue_detail.html',
+            venue=response.json()['result'],
+            # send token to the template
+            token=TOKEN
+        )
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p>Use the token in image's content url:</p>
+<p><strong>templates/venue_detail.html</strong></p>
+<pre><code class="html">&lt;div&gt;
+  &lt;h3&gt;{{ venue.name }}&lt;/h3&gt;
+  &lt;div&gt;
+    {% for photo in venue.photos %}
+      &lt;!-- Use the token as the query parameter (at the and of the next line) --&gt;
+      &lt;img src=&quot;https://mysquare.deform.io/api/collections/venues/documents/{{venue._id}}/photos[{{loop.index-1}}]/content/?token={{token}}&quot;
+           style=&quot;width: 100px; height: 100px&quot;
+           alt=&quot;&quot; /&gt;
+    {% endfor %}
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Now all the images are shown.</p>
+<p><img alt="venue detail" src="./examples/006/screens/venue_detail.png" /></p>
+<p><a href="../tokens/">Read more about tokens</a>.</p>
+<h1 id="search"><a class="toclink" href="#search">Search</a></h1>
+<p>Let's add a search input at the venues list page. We're going to use a new
+<code>info</code> field for venues. Deform comes with <a href="../collections/#indexes">full-text search indexes</a>. Let's add an full-text index:</p>
+<pre><code class="bash">$ deform collection update venues -d '{
+    &quot;indexes&quot;: [
+        {
+            &quot;type&quot;: &quot;text&quot;,
+            &quot;property&quot;: &quot;info&quot;,
+            &quot;language&quot;: &quot;en&quot;
+        }
+    ]
+}'
+</code></pre>
+
+<p>Let's update <code>info</code> field for every venue:</p>
+<pre><code class="bash">$ deform document save subway -c venues --property info \
+    -d '&quot;Breakfast, Sandwiches, Salads &amp; More&quot;'
+
+$ deform document save mcdonalds -c venues --property info \
+    -d '&quot;the largest chain of hamburger fast food restaurants&quot;'
+
+$ deform document save kfc -c venues --property info \
+    -d '&quot;Kentucky Fried Chicken&quot;'
+
+$ deform document save starbucks -c venues --property info \
+    -d '&quot;coffee company and coffeehouse chain&quot;'
+</code></pre>
+
+<p>You can try to search by CLI:</p>
+<pre><code class="bash">$ deform documents find -c venues --text 'chicken or coffee' --pretty
+
+{
+    &quot;_id&quot;: &quot;kfc&quot;,
+    &quot;info&quot;: &quot;Kentucky Fried Chicken&quot;,
+    &quot;name&quot;: &quot;KFC&quot;,
+    &quot;rating&quot;: 5
+}
+{
+    &quot;_id&quot;: &quot;starbucks&quot;,
+    &quot;info&quot;: &quot;coffee company and coffeehouse chain&quot;,
+    &quot;name&quot;: &quot;Starbucks&quot;
+}
+</code></pre>
+
+<p>Add search form to the template:</p>
+<p><strong>templates/venues_list.html</strong></p>
+<pre><code class="html">&lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
+  &lt;input type=&quot;text&quot; name=&quot;search&quot; value=&quot;{{ search_text }}&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;search&quot;&gt;
+&lt;/form&gt;
+
+&lt;ul&gt;
+  {% for venue in venues %}
+  &lt;li&gt;
+    &lt;a href=&quot;{{ venue._id }}&quot;&gt;{{ venue.name }}&lt;/a&gt;
+  &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>Add search logic to the view:</p>
+<pre><code class="python">from flask import Flask
+from flask import render_template
+# flask request object
+from flask import request
+import requests
+
+app = Flask(__name__)
+
+TOKEN = 'TFWaTgjB'
+
+@app.route(&quot;/&quot;)
+def venues_list():
+    # get search text
+    search_text = request.args.get('search')
+    if search_text:
+        # search documents if search query
+        response = requests.post(
+            'https://mysquare.deform.io/api/collections/venues/documents/',
+            headers={
+                'Authorization': 'Token %s' % TOKEN,
+                'X-Action': 'find'
+            },
+            json={
+                'payload': {
+                    'text': search_text
+                }
+            }
+        )
+    else:
+        # get all documents if no search query
+        response = requests.get(
+            'https://mysquare.deform.io/api/collections/venues/documents/',
+            headers={
+                'Authorization': 'Token %s' % TOKEN
+            }
+        )
+    response.raise_for_status()
+    return render_template(
+        'venues_list.html',
+        venues=response.json()['result']['items'],
+        # send search_text to template
+        search_text=search_text
+    )
+
+@app.route(&quot;/&lt;venue_id&gt;&quot;)
+def venue_detail(venue_id):
+    response = requests.get(
+        'https://mysquare.deform.io/api/collections/venues/documents/%s/' % (
+            venue_id,
+        ),
+        headers={
+            # reuse the variable
+            'Authorization': 'Token %s' % TOKEN
+        }
+    )
+    if response.status_code == 404:
+        return 'Venue with id &quot;%s&quot; is not found' % venue_id, 404
+    else:
+        response.raise_for_status()
+        return render_template(
+            'venue_detail.html',
+            venue=response.json()['result'],
+            # send token to the template
+            token=TOKEN
+        )
+
+if __name__ == &quot;__main__&quot;:
+    app.run(debug=True)
+</code></pre>
+
+<p>Open the venues list page and try to search for a chicken or coffee:</p>
+<p><img alt="venue detail" src="./examples/007/screens/search_results.png" /></p>
+<p><a href="../collections/#indexes">Read more about indexes</a>.</p>
+<h1 id="processing"><a class="toclink" href="#processing">Processing</a></h1>
+<p>There is one problem with our full-text search. If you try to search for a venue
+name you won't see any results.</p>
+<p><img alt="venue detail" src="./examples/007/screens/search_no_results.png" /></p>
+<p>That's because we have full-text index on <code>info</code> field. If this field doesn't contain
+venue's name it won't be found. How would we solve such kind of problem?</p>
+<p>Deform comes with <a href="../processors/#template">template processor</a>.
+Processors should be assigned to collection's schema properties. Every time
+document is created or updated processors do their job. We're going to set
+full-text index to another field called <code>search_data</code> and automatically save
+venue's <code>name</code> and <code>info</code> to that field.</p>
+<p>First of all we must add <code>info</code> field to the schema. Only the fields from schema
+could be used in processors:</p>
+<pre><code class="bash">$ deform collection save venues --property schema.properties.info -d '{
+    &quot;type&quot;: &quot;string&quot;
+}'
+</code></pre>
+
+<p>Let's add the new <code>search_data</code> field and the template processor to the <code>venues</code> collection schema:</p>
+<pre><code class="bash">$ deform collection save venues --property schema.properties.search_data -d '{
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;processors&quot;: [
+        {
+            &quot;name&quot;: &quot;template&quot;,
+            &quot;in&quot;: {
+                &quot;context&quot;: {
+                    &quot;name&quot;: {
+                        &quot;property&quot;: &quot;name&quot;
+                    },
+                    &quot;info&quot;: {
+                        &quot;property&quot;: &quot;info&quot;
+                    }
+                },
+                &quot;syntax&quot;: {
+                    &quot;value&quot;: &quot;handlebars&quot;
+                },
+                &quot;template_string&quot;: {
+                    &quot;value&quot;: &quot;{{name}}, {{info}}&quot;
+                }
+            }  
+        }
+    ]
+}'
+</code></pre>
+
+<p>Let's check the <code>mcdonalds</code> venue:</p>
+<pre><code class="bash">$ deform document get mcdonalds -c venues --pretty
+
+{
+    &quot;_id&quot;: &quot;mcdonalds&quot;,
+    &quot;info&quot;: &quot;the largest chain of hamburger fast food restaurants&quot;,
+    &quot;name&quot;: &quot;McDonalds&quot;,
+    &quot;rating&quot;: 5
+}
+</code></pre>
+
+<p>As mentioned above processors works only when document is created or updated.
+We have to "touch" our documents to perform processing:</p>
+<pre><code class="bash">$ deform document save mcdonalds -c venues \
+  -d &quot;$(deform document get mcdonalds -c venues)&quot; --pretty
+
+{
+    &quot;created&quot;: false,
+    &quot;result&quot;: {
+        &quot;_id&quot;: &quot;mcdonalds&quot;,
+        &quot;info&quot;: &quot;the largest chain of hamburger fast food restaurants&quot;,
+        &quot;name&quot;: &quot;McDonalds&quot;,
+        &quot;rating&quot;: 5,
+        &quot;search_data&quot;: &quot;McDonalds, the largest chain of hamburger fast food restaurants&quot;
+    }
+}
+</code></pre>
+
+<p>Let's touch other venues:</p>
+<pre><code class="bash">$ deform document save subway -c venues \
+  -d &quot;$(deform document get subway -c venues)&quot;
+
+$ deform document save kfc -c venues \
+  -d &quot;$(deform document get kfc -c venues)&quot;
+
+$ deform document save starbucks -c venues \
+  -d &quot;$(deform document get starbucks -c venues)&quot;
+</code></pre>
+
+<p>The last step is to change the full-text index field:</p>
+<pre><code class="bash">$ deform collection update venues -d '{
+    &quot;indexes&quot;: [
+        {
+            &quot;type&quot;: &quot;text&quot;,
+            &quot;property&quot;: &quot;search_data&quot;,
+            &quot;language&quot;: &quot;en&quot;
+        }
+    ]
+}'
+</code></pre>
+
+<p>Let's search for KFC or coffee:</p>
+<p><img alt="venue detail" src="./examples/007/screens/name_and_info_search.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../user/" class="btn btn-neutral float-right" title="User">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38777730 = new Ya.Metrika({ id:38777730, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } });
+var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38777730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../user/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
