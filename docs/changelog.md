@@ -2,13 +2,17 @@
 
 ## v0.0.1
 
+### 24.08.2016
+  
+  * Collections has new properties: `description` and `documents_count`
+
 ### 04.08.2016
   
   * HTTP Interface of type `multipart/form-data` now works different. The example:
 
       Old payload:
 
-        curl -X POST -H "Content-Type: multipart/form-data" -F name=andrey -F age=27 -F hobbies=Programming -F hobbies=Cinema -F hobbies=Music
+        curl -X POST -H "Content-Type: multipart/form-data" -F name=andrey -F age=27 -F hobbies=Programming -F hobbies=Cinema -F hobbies=Music https://myproject.deform.io/api/collections/test/documents/
       
       New payload:
 

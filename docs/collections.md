@@ -39,6 +39,8 @@ is\_system             | bool          | If is true then this is a [system colle
 name                   | string        | Name of a collection
 repr_property          | string        | Reproducive property of a collection
 schema                 | object        | Is a [JSON Schema](/schemas/) a documents should match
+description            | string        | Description of a collection
+documents_count        | interger      | Number of documents containing in a collection
 
 
 ## indexes
